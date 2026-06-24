@@ -66,8 +66,8 @@ declare namespace AMap {
     on(event: string, handler: (...args: unknown[]) => void): void;
     off(event: string, handler: (...args: unknown[]) => void): void;
     setFitView(overlays?: Marker[] | null, immediately?: boolean, bounds?: [number, number, number, number]): void;
-    add(overlay: Marker | Marker[]): void;
-    remove(overlay: Marker | Marker[]): void;
+    add(overlay: Marker | Marker[] | Polyline): void;
+    remove(overlay: Marker | Marker[] | Polyline): void;
     panTo(position: LngLat): void;
   }
 
@@ -104,6 +104,21 @@ declare namespace AMap {
         }>;
       }) => void
     ): void;
+  }
+
+  class Polyline {
+    constructor(opts: {
+      path: [number, number][];
+      strokeColor?: string;
+      strokeWeight?: number;
+      strokeOpacity?: number;
+      strokeStyle?: string;
+      lineJoin?: string;
+      showDir?: boolean;
+      zIndex?: number;
+    });
+    setMap(map: Map | null): void;
+    remove(): void;
   }
 
   class Walking {

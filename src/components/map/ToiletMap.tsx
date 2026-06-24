@@ -44,7 +44,7 @@ export function ToiletMap() {
   const nearestToiletRef = useRef<ToiletSummary | null>(null);
   const markersRef = useRef<AMap.Marker[]>([]);
   const userMarkerRef = useRef<AMap.Marker | null>(null);
-  const routeRef = useRef<{ clear: () => void } | null>(null);
+  const polylineRef = useRef<AMap.Polyline | null>(null);
 
   // Initialize map — use userLocation if available, fallback to Beijing
   useEffect(() => {
@@ -166,59 +166,40 @@ export function ToiletMap() {
     );
   }, [mapInstance, setCenter]);
 
-  // Draw route to nearest toilet with given transport mode
+  // Draw route to nearest toilet — uses AMap.Polyline (core API, no plugin needed)
   const drawRoute = useCallback((loc: { lng: number; lat: number }, toilet: ToiletSummary, mode: "walking" | "riding" | "driving") => {
     if (!amapInstance || !mapInstance) return;
 
-    // Clear previous route
-    routeRef.current?.clear();
-    routeRef.current = null;
+    // Clear previous polyline
+    if (polylineRef.current) {
+      mapInstance.remove(polylineRef.current);
+      polylineRef.current = null;
+    }
 
     const start = wgs84ToGcj02(loc);
     const end = wgs84ToGcj02({ lng: toilet.lng, lat: toilet.lat });
 
-    const pluginName = mode === "riding" ? "AMap.Riding"
-      : mode === "driving" ? "AMap.Driving"
-      : "AMap.Walking";
+    const colors = { walking: "#22c55e", riding: "#3b82f6", driving: "#f97316" };
+    const color = colors[mode];
 
-    const RouteClass = mode === "riding" ? amapInstance.Riding
-      : mode === "driving" ? amapInstance.Driving
-      : amapInstance.Walking;
+    const polyline = new amapInstance.Polyline({
+      path: [
+        [start.lng, start.lat],
+        [end.lng, end.lat],
+      ],
+      strokeColor: color,
+      strokeWeight: 6,
+      strokeOpacity: 0.7,
+      strokeStyle: "solid",
+      lineJoin: "round",
+      showDir: true,
+      zIndex: 50,
+    });
+    polyline.setMap(mapInstance);
+    polylineRef.current = polyline;
 
-    // Fit map view first
+    // Fit both points on screen
     mapInstance.setFitView(null, false, [start.lng, start.lat, end.lng, end.lat]);
-
-    const doSearch = () => {
-      const Cls = mode === "riding" ? (amapInstance as unknown as { Riding: new (o: object) => { search: Function; clear: () => void } }).Riding
-        : mode === "driving" ? (amapInstance as unknown as { Driving: new (o: object) => { search: Function; clear: () => void } }).Driving
-        : (amapInstance as unknown as { Walking: new (o: object) => { search: Function; clear: () => void } }).Walking;
-      if (!Cls) return;
-
-      const router = new Cls({ map: mapInstance, hideMarkers: true });
-      routeRef.current = router;
-
-      router.search(
-        new amapInstance.LngLat(start.lng, start.lat),
-        new amapInstance.LngLat(end.lng, end.lat),
-        (status: string, result: { info?: { distance?: string; duration?: string } }) => {
-          if (status === "complete") {
-            const d = result?.info?.distance ? Number(result.info.distance) : 0;
-            const t = result?.info?.duration ? Math.round(Number(result.info.duration) / 60) : 0;
-            const labels = { walking: "步行", riding: "骑行", driving: "驾车" };
-            console.log(`✅ ${labels[mode]}路线：${d}米，${t}分钟 → ${toilet.name}`);
-          }
-        }
-      );
-    };
-
-    // Use AMap.plugin() to ensure plugin is loaded before instantiation
-    if (RouteClass) {
-      doSearch();
-    } else {
-      (amapInstance as unknown as { plugin: (names: string[], cb: () => void) => void }).plugin([pluginName], () => {
-        doSearch();
-      });
-    }
   }, [amapInstance, mapInstance]);
 
   // Find nearest toilet + draw route
@@ -354,31 +335,8 @@ export function ToiletMap() {
         </button>
       </div>
 
-      {/* Nearest toilet FAB + mode selector */}
-      <div className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2 flex flex-col items-center gap-2">
-        {nearestToilet && !isFindingNearest && (
-          <div className="flex gap-2 rounded-full bg-card/95 p-1 shadow-xl backdrop-blur animate-fade-in">
-            {([
-              { mode: "walking" as const, icon: Footprints, label: "步行" },
-              { mode: "riding" as const, icon: Bike, label: "骑行" },
-              { mode: "driving" as const, icon: Car, label: "驾车" },
-            ]).map(({ mode, icon: Icon, label }) => (
-              <button
-                key={mode}
-                onClick={() => {
-                  setRouteMode(mode);
-                  if (nearestLocRef.current && nearestToiletRef.current) {
-                    drawRoute(nearestLocRef.current, nearestToiletRef.current, mode);
-                  }
-                }}
-                className={`flex items-center gap-1.5 rounded-full px-3 py-2 text-xs font-medium transition-all
-                  ${routeMode === mode ? "bg-primary text-primary-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"}`}
-              >
-                <Icon className="h-3.5 w-3.5" /> {label}
-              </button>
-            ))}
-          </div>
-        )}
+      {/* Nearest toilet FAB */}
+      <div className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2">
         <button
           onClick={() => handleFindNearest(routeMode)}
           disabled={isFindingNearest || isLoading}
@@ -389,7 +347,7 @@ export function ToiletMap() {
           ) : (
             <Target className="h-4 w-4" />
           )}
-          {isFindingNearest ? "搜索中..." : nearestToilet ? `最近：${nearestToilet.name}` : "一键找厕所"}
+          {isFindingNearest ? "搜索中..." : nearestToilet ? `最近：${nearestToilet.name}（${Math.round(nearestToilet.distance)}m）` : "一键找厕所"}
         </button>
       </div>
 
@@ -423,7 +381,18 @@ export function ToiletMap() {
 
       {selectedToilet && infoWindowPos && (
         <div className="absolute bottom-24 left-4 right-4 z-10">
-          <ToiletInfoWindow toilet={selectedToilet} onClose={() => { setSelectedToilet(null); setInfoWindowPos(null); }} />
+          <ToiletInfoWindow
+            toilet={selectedToilet}
+            onClose={() => { setSelectedToilet(null); setInfoWindowPos(null); }}
+            isNearest={selectedToilet.id === nearestToilet?.id}
+            routeMode={routeMode}
+            onRouteModeChange={(mode) => {
+              setRouteMode(mode);
+              if (nearestLocRef.current && nearestToiletRef.current) {
+                drawRoute(nearestLocRef.current, nearestToiletRef.current, mode);
+              }
+            }}
+          />
         </div>
       )}
 

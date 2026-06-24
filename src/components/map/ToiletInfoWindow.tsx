@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { X, Star, Clock, Navigation, Banknote } from "lucide-react";
+import { X, Star, Clock, Navigation, Banknote, Footprints, Bike, Car } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { formatDistance } from "@/lib/utils";
 import type { ToiletSummary } from "@/types/toilet";
@@ -9,9 +9,12 @@ import type { ToiletSummary } from "@/types/toilet";
 interface ToiletInfoWindowProps {
   toilet: ToiletSummary;
   onClose: () => void;
+  isNearest?: boolean;
+  routeMode?: "walking" | "riding" | "driving";
+  onRouteModeChange?: (mode: "walking" | "riding" | "driving") => void;
 }
 
-export function ToiletInfoWindow({ toilet, onClose }: ToiletInfoWindowProps) {
+export function ToiletInfoWindow({ toilet, onClose, isNearest, routeMode, onRouteModeChange }: ToiletInfoWindowProps) {
   return (
     <div className="animate-slide-up rounded-2xl bg-card p-4 shadow-xl ring-1 ring-border">
       <div className="flex items-start justify-between">
@@ -57,6 +60,26 @@ export function ToiletInfoWindow({ toilet, onClose }: ToiletInfoWindowProps) {
           </span>
         )}
       </div>
+
+      {/* Route mode selector — only shown for nearest toilet */}
+      {isNearest && onRouteModeChange && (
+        <div className="mt-3 flex gap-2">
+          {([
+            { mode: "walking" as const, icon: Footprints, label: "步行", activeBg: "#dcfce7", activeText: "#15803d" },
+            { mode: "riding" as const, icon: Bike, label: "骑行", activeBg: "#dbeafe", activeText: "#1d4ed8" },
+            { mode: "driving" as const, icon: Car, label: "驾车", activeBg: "#ffedd5", activeText: "#c2410c" },
+          ]).map(({ mode, icon: Icon, label, activeBg, activeText }) => (
+            <button
+              key={mode}
+              onClick={() => onRouteModeChange(mode)}
+              style={routeMode === mode ? { backgroundColor: activeBg, color: activeText, boxShadow: `0 0 0 1px ${activeText}40` } : {}}
+              className="flex flex-1 items-center justify-center gap-1.5 rounded-lg py-2 text-xs font-medium transition-all bg-muted text-muted-foreground hover:bg-muted/80"
+            >
+              <Icon className="h-3.5 w-3.5" /> {label}
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* Rating + action */}
       <div className="mt-3 flex items-center justify-between">

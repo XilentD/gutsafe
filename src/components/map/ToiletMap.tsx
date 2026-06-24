@@ -166,7 +166,7 @@ export function ToiletMap() {
     );
   }, [mapInstance, setCenter]);
 
-  // Draw route to nearest toilet — uses AMap.Polyline (core API, no plugin needed)
+  // Draw actual road-following route using AMap Walking/Riding/Driving plugins
   const drawRoute = useCallback((loc: { lng: number; lat: number }, toilet: ToiletSummary, mode: "walking" | "riding" | "driving") => {
     if (!amapInstance || !mapInstance) return;
 
@@ -179,27 +179,38 @@ export function ToiletMap() {
     const start = wgs84ToGcj02(loc);
     const end = wgs84ToGcj02({ lng: toilet.lng, lat: toilet.lat });
 
-    const colors = { walking: "#22c55e", riding: "#3b82f6", driving: "#f97316" };
-    const color = colors[mode];
-
-    const polyline = new amapInstance.Polyline({
-      path: [
-        [start.lng, start.lat],
-        [end.lng, end.lat],
-      ],
-      strokeColor: color,
-      strokeWeight: 6,
-      strokeOpacity: 0.7,
-      strokeStyle: "solid",
-      lineJoin: "round",
-      showDir: true,
-      zIndex: 50,
-    });
-    polyline.setMap(mapInstance);
-    polylineRef.current = polyline;
-
-    // Fit both points on screen
+    // Fit both points on screen first
     mapInstance.setFitView(null, false, [start.lng, start.lat, end.lng, end.lat]);
+
+    // Use AMap.plugin() — the official async plugin loader
+    const pluginNames: Record<string, string> = {
+      walking: "AMap.Walking",
+      riding: "AMap.Riding",
+      driving: "AMap.Driving",
+    };
+
+    type RouteType = { new (o: object): { search: (a: AMap.LngLat, b: AMap.LngLat, cb: (s: string, r: unknown) => void) => void } };
+
+    // Get AMap global (which has .plugin() and the route classes)
+    const AMapGlobal = (window as unknown as Record<string, unknown>).AMap as
+      Record<string, unknown> & { plugin: (names: string[], cb: () => void) => void } | undefined;
+
+    if (!AMapGlobal) return;
+
+    AMapGlobal.plugin([pluginNames[mode]], () => {
+      if (!mapInstance) return;
+
+      const Cls = AMapGlobal[pluginNames[mode]] as RouteType | undefined;
+      if (!Cls) return;
+
+      const router = new Cls({ map: mapInstance });
+
+      router.search(
+        new amapInstance.LngLat(start.lng, start.lat) as AMap.LngLat,
+        new amapInstance.LngLat(end.lng, end.lat) as AMap.LngLat,
+        () => {} // route is drawn on the map automatically
+      );
+    });
   }, [amapInstance, mapInstance]);
 
   // Find nearest toilet + draw route

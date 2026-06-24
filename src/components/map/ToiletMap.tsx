@@ -111,25 +111,29 @@ export function ToiletMap() {
     const isHighlighted = (id: string) => id === nearestToilet?.id;
 
     toilets.forEach((toilet) => {
-      // Guard against NaN coordinates (e.g., from bad API data)
-      if (!Number.isFinite(toilet.lng) || !Number.isFinite(toilet.lat)) return;
-      const gcj = wgs84ToGcj02(toilet);
-      if (!Number.isFinite(gcj.lng) || !Number.isFinite(gcj.lat)) return;
-      const highlight = isHighlighted(toilet.id);
-      const el = document.createElement("div");
-      el.innerHTML = highlight
-        ? `<div style="position:relative;width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:22px;border-radius:50%;background:#f97316;box-shadow:0 0 0 6px rgba(249,115,22,0.3),0 4px 12px rgba(0,0,0,0.3);z-index:999;animation: pulse-soft 1.2s ease-in-out infinite">${toilet.feeCents > 0 ? "💰" : "🚻"}</div>`
-        : `<div style="width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;background:${toilet.avgCleanliness >= 4 ? '#22c55e' : toilet.avgCleanliness >= 3 ? '#3b82f6' : '#eab308'};box-shadow:0 2px 6px rgba(0,0,0,0.2);cursor:pointer">${toilet.feeCents > 0 ? "💰" : "🚻"}</div>`;
+      try {
+        // Guard against NaN coordinates (e.g., from bad API data)
+        if (!Number.isFinite(toilet.lng) || !Number.isFinite(toilet.lat)) return;
+        const gcj = wgs84ToGcj02(toilet);
+        if (!Number.isFinite(gcj.lng) || !Number.isFinite(gcj.lat)) return;
+        const highlight = isHighlighted(toilet.id);
+        const el = document.createElement("div");
+        el.innerHTML = highlight
+          ? `<div style="position:relative;width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:22px;border-radius:50%;background:#f97316;box-shadow:0 0 0 6px rgba(249,115,22,0.3),0 4px 12px rgba(0,0,0,0.3);z-index:999;animation: pulse-soft 1.2s ease-in-out infinite">${toilet.feeCents > 0 ? "💰" : "🚻"}</div>`
+          : `<div style="width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;background:${toilet.avgCleanliness >= 4 ? '#22c55e' : toilet.avgCleanliness >= 3 ? '#3b82f6' : '#eab308'};box-shadow:0 2px 6px rgba(0,0,0,0.2);cursor:pointer">${toilet.feeCents > 0 ? "💰" : "🚻"}</div>`;
 
-      const marker = new amapInstance.Marker({
-        position: new amapInstance.LngLat(gcj.lng, gcj.lat),
-        content: el,
-        offset: highlight ? new amapInstance.Pixel(-24, -24) : new amapInstance.Pixel(-18, -18),
-        zIndex: highlight ? 999 : 100,
-      });
-      marker.on("click", () => { setSelectedToilet(toilet); setInfoWindowPos(toilet); });
-      marker.setMap(mapInstance);
-      markersRef.current.push(marker);
+        const marker = new amapInstance.Marker({
+          position: new amapInstance.LngLat(gcj.lng, gcj.lat),
+          content: el,
+          offset: highlight ? new amapInstance.Pixel(-24, -24) : new amapInstance.Pixel(-18, -18),
+          zIndex: highlight ? 999 : 100,
+        });
+        marker.on("click", () => { setSelectedToilet(toilet); setInfoWindowPos(toilet); });
+        marker.setMap(mapInstance);
+        markersRef.current.push(marker);
+      } catch (err) {
+        console.warn("Failed to render toilet marker:", toilet.name, err);
+      }
     });
   }, [toilets, amapInstance, mapInstance, nearestToilet?.id]);
 
@@ -137,22 +141,26 @@ export function ToiletMap() {
   useEffect(() => {
     if (!amapInstance || !mapInstance || !userLocation) return;
     if (!Number.isFinite(userLocation.lng) || !Number.isFinite(userLocation.lat)) return;
-    userMarkerRef.current?.remove();
-    const gcj = wgs84ToGcj02(userLocation);
-    if (!Number.isFinite(gcj.lng) || !Number.isFinite(gcj.lat)) return;
-    const dot = document.createElement("div");
-    dot.style.cssText = `width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#4A90D9,#2563EB);border:3px solid white;box-shadow:0 2px 8px rgba(37,99,235,0.4);`;
-    const pulse = document.createElement("div");
-    pulse.style.cssText = `position:absolute;top:-8px;left:-8px;width:36px;height:36px;border-radius:50%;background:rgba(37,99,235,0.15);animation:pulse-soft 2s ease-in-out infinite;`;
-    dot.appendChild(pulse);
-    const marker = new amapInstance.Marker({
-      position: new amapInstance.LngLat(gcj.lng, gcj.lat),
-      content: dot,
-      offset: new amapInstance.Pixel(-18, -18),
-      zIndex: 1000,
-    });
-    marker.setMap(mapInstance);
-    userMarkerRef.current = marker;
+    try {
+      userMarkerRef.current?.remove();
+      const gcj = wgs84ToGcj02(userLocation);
+      if (!Number.isFinite(gcj.lng) || !Number.isFinite(gcj.lat)) return;
+      const dot = document.createElement("div");
+      dot.style.cssText = `width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#4A90D9,#2563EB);border:3px solid white;box-shadow:0 2px 8px rgba(37,99,235,0.4);`;
+      const pulse = document.createElement("div");
+      pulse.style.cssText = `position:absolute;top:-8px;left:-8px;width:36px;height:36px;border-radius:50%;background:rgba(37,99,235,0.15);animation:pulse-soft 2s ease-in-out infinite;`;
+      dot.appendChild(pulse);
+      const marker = new amapInstance.Marker({
+        position: new amapInstance.LngLat(gcj.lng, gcj.lat),
+        content: dot,
+        offset: new amapInstance.Pixel(-18, -18),
+        zIndex: 1000,
+      });
+      marker.setMap(mapInstance);
+      userMarkerRef.current = marker;
+    } catch (err) {
+      console.warn("Failed to render user location marker:", err);
+    }
   }, [userLocation, amapInstance, mapInstance]);
 
   // Manual geolocate
@@ -179,6 +187,9 @@ export function ToiletMap() {
   // Draw route — polyline fallback + backend proxy for real road path
   const drawRoute = useCallback((loc: { lng: number; lat: number }, toilet: ToiletSummary, mode: "walking" | "riding" | "driving") => {
     if (!amapInstance || !mapInstance) return;
+    // Validate all coordinates before touching AMap — NaN will crash
+    if (!Number.isFinite(loc.lng) || !Number.isFinite(loc.lat)) return;
+    if (!Number.isFinite(toilet.lng) || !Number.isFinite(toilet.lat)) return;
     const m = mapInstance; // capture for stable ref
 
     // Increment sequence so stale responses are discarded
@@ -193,6 +204,8 @@ export function ToiletMap() {
 
     const start = wgs84ToGcj02(loc);
     const end = wgs84ToGcj02({ lng: toilet.lng, lat: toilet.lat });
+    if (!Number.isFinite(start.lng) || !Number.isFinite(start.lat)) return;
+    if (!Number.isFinite(end.lng) || !Number.isFinite(end.lat)) return;
 
     const colors: Record<string, string> = { walking: "#22c55e", riding: "#3b82f6", driving: "#f97316" };
 

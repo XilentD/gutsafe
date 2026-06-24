@@ -114,6 +114,7 @@ export function ToiletMap() {
       // Guard against NaN coordinates (e.g., from bad API data)
       if (!Number.isFinite(toilet.lng) || !Number.isFinite(toilet.lat)) return;
       const gcj = wgs84ToGcj02(toilet);
+      if (!Number.isFinite(gcj.lng) || !Number.isFinite(gcj.lat)) return;
       const highlight = isHighlighted(toilet.id);
       const el = document.createElement("div");
       el.innerHTML = highlight
@@ -135,8 +136,10 @@ export function ToiletMap() {
   // User location blue dot
   useEffect(() => {
     if (!amapInstance || !mapInstance || !userLocation) return;
+    if (!Number.isFinite(userLocation.lng) || !Number.isFinite(userLocation.lat)) return;
     userMarkerRef.current?.remove();
     const gcj = wgs84ToGcj02(userLocation);
+    if (!Number.isFinite(gcj.lng) || !Number.isFinite(gcj.lat)) return;
     const dot = document.createElement("div");
     dot.style.cssText = `width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#4A90D9,#2563EB);border:3px solid white;box-shadow:0 2px 8px rgba(37,99,235,0.4);`;
     const pulse = document.createElement("div");

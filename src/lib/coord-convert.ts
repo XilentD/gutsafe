@@ -17,6 +17,10 @@ export type Coord = {
  * Use this ONLY in the frontend map layer when placing markers on Gaode tiles.
  */
 export function wgs84ToGcj02(coord: Coord): Coord {
+  // Guard against NaN/infinite inputs
+  if (!Number.isFinite(coord.lng) || !Number.isFinite(coord.lat)) {
+    return { lng: NaN, lat: NaN };
+  }
   const result = coordtransform.wgs84togcj02(coord.lng, coord.lat);
   return { lng: result[0], lat: result[1] };
 }
@@ -26,6 +30,9 @@ export function wgs84ToGcj02(coord: Coord): Coord {
  * Use this when ingesting data from Gaode API into the database.
  */
 export function gcj02ToWgs84(coord: Coord): Coord {
+  if (!Number.isFinite(coord.lng) || !Number.isFinite(coord.lat)) {
+    return { lng: NaN, lat: NaN };
+  }
   const result = coordtransform.gcj02towgs84(coord.lng, coord.lat);
   return { lng: result[0], lat: result[1] };
 }

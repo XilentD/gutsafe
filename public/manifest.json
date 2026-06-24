@@ -1,0 +1,22 @@
+{
+  "name": "肠安地图 — 肠道友好地图",
+  "short_name": "肠安地图",
+  "description": "标记厕所细节，规划肠易激友好路线，记录肠道日志",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f0fdf4",
+  "theme_color": "#16a34a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

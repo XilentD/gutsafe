@@ -1,0 +1,294 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Auth.js Models ──────────────────────────────────
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ─── User ────────────────────────────────────────────
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  accounts      Account[]
+  sessions      Session[]
+
+  // Preferences
+  defaultMaxToiletDistance Int     @default(500)
+  homeLat                  Float?
+  homeLng                  Float?
+  theme                    String  @default("system")
+  locale                   String  @default("zh-CN")
+  gutLogAnonymize          Boolean @default(true)
+
+  // Relations
+  gutLogs  GutLog[]
+  reviews  ToiletReview[]
+  routes   Route[]
+
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  lastActiveAt   DateTime?
+}
+
+// ─── Toilet ──────────────────────────────────────────
+
+model Toilet {
+  id       String @id @default(cuid())
+  name     String @db.VarChar(300)
+  // location stored as raw SQL geometry, managed via Prisma raw queries for PostGIS operations
+  // We store lat/lng as doubles for easy Prisma access + use raw SQL for spatial queries
+  lat      Float
+  lng      Float
+  address  String? @db.Text
+  city     String  @db.VarChar(100)
+  district String? @db.VarChar(100)
+
+  // Amenities
+  hasSquat          Boolean @default(false)
+  hasSeated         Boolean @default(false)
+  hasToiletPaper    Boolean @default(false)
+  hasHandWash       Boolean @default(false)
+  hasHandicap       Boolean @default(false)
+  hasChangingTable  Boolean @default(false)
+  hasMirror         Boolean @default(false)
+
+  // Operations
+  feeCents          Int     @default(0)
+  feeDescription    String? @db.VarChar(100)
+  openingHours      String? @db.Text
+  openingHoursType  String  @default("unknown") @db.VarChar(20)
+
+  // Derived
+  avgQueueMin       Float?
+  avgCleanliness    Float   @default(0)
+  reviewCount       Int     @default(0)
+
+  // Provenance
+  dataSource        String  @db.VarChar(30)
+  sourceId          String? @db.VarChar(255)
+  verified          Boolean @default(false)
+  rawAttributes     Json?
+
+  // Relations
+  reviews    ToiletReview[]
+  gutLogs    GutLog[]
+  routeToilets RouteToilet[]
+
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([city])
+  @@index([city, avgCleanliness(sort: Desc)])
+  @@index([dataSource])
+  @@index([verified])
+}
+
+// ─── Toilet Reviews ──────────────────────────────────
+
+model ToiletReview {
+  id            String   @id @default(cuid())
+  toiletId      String
+  userId        String
+  cleanliness   Int
+  queueMinutes  Int?
+  hasTissue     Boolean?
+  isFunctioning Boolean  @default(true)
+  comment       String?  @db.Text
+  visitedAt     DateTime @db.Date
+  createdAt     DateTime @default(now())
+
+  toilet Toilet @relation(fields: [toiletId], references: [id], onDelete: Cascade)
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([toiletId, userId, visitedAt])
+  @@index([toiletId, createdAt(sort: Desc)])
+}
+
+// ─── Gut Log ─────────────────────────────────────────
+
+model GutLog {
+  id           String   @id @default(cuid())
+  userId       String
+  loggedAt     DateTime
+  bristolScore Int
+  urgencyLevel Int
+  painLevel    Int
+  toiletId     String?
+  lat          Float?
+  lng          Float?
+  notes        String?  @db.Text
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  toilet    Toilet?          @relation(fields: [toiletId], references: [id], onDelete: SetNull)
+  meals     MealRecord[]
+  symptoms  SymptomRecord[]
+
+  @@index([userId, loggedAt(sort: Desc)])
+  @@index([userId, bristolScore])
+}
+
+// ─── Meal Records ────────────────────────────────────
+
+model MealRecord {
+  id             String  @id @default(cuid())
+  gutLogId       String
+  foodName       String  @db.VarChar(255)
+  category       String? @db.VarChar(50)
+  foodSubtype    String? @db.VarChar(100)
+  portion        String  @default("medium") @db.VarChar(20)
+  mealTime       String  @default("snack") @db.VarChar(20)
+  hoursBeforeLog Int?
+
+  gutLog GutLog @relation(fields: [gutLogId], references: [id], onDelete: Cascade)
+
+  @@index([gutLogId])
+}
+
+// ─── Symptom Records ─────────────────────────────────
+
+model SymptomRecord {
+  id          String @id @default(cuid())
+  gutLogId    String
+  symptomType String @db.VarChar(50)
+  severity    Int
+
+  gutLog GutLog @relation(fields: [gutLogId], references: [id], onDelete: Cascade)
+
+  @@index([gutLogId])
+  @@index([symptomType])
+}
+
+// ─── Route ───────────────────────────────────────────
+
+model Route {
+  id                      String   @id @default(cuid())
+  userId                  String
+  name                    String?  @db.VarChar(255)
+  startName               String   @db.VarChar(255)
+  startLat                Float
+  startLng                Float
+  endName                 String   @db.VarChar(255)
+  endLat                  Float
+  endLng                  Float
+  maxToiletDistanceMeters Int      @default(500)
+  totalDistanceMeters     Float?
+  estimatedDurationMin    Int?
+  toiletCount             Int      @default(0)
+  toiletDensity           Float?
+  maxGapMeters            Float?
+  safetyScore             Float?
+  polylineEncoded         String?  @db.Text
+  waypointsGeojson        Json?
+  isPublic                Boolean  @default(false)
+  shareToken              String?  @unique @db.VarChar(64)
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+
+  user          User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  routeToilets  RouteToilet[]
+
+  @@index([userId, createdAt(sort: Desc)])
+}
+
+// ─── Route Toilets ───────────────────────────────────
+
+model RouteToilet {
+  id                     String  @id @default(cuid())
+  routeId                String
+  toiletId               String
+  sequenceOrder          Int
+  distanceFromStartMeters Float?
+  detourMeters           Float   @default(0)
+  isRecommended          Boolean @default(false)
+
+  route  Route  @relation(fields: [routeId], references: [id], onDelete: Cascade)
+  toilet Toilet @relation(fields: [toiletId], references: [id], onDelete: Cascade)
+
+  @@unique([routeId, sequenceOrder])
+  @@index([routeId, sequenceOrder])
+}
+
+// ─── Data Import Jobs ────────────────────────────────
+
+model DataImportJob {
+  id              String    @id @default(cuid())
+  dataSource      String    @db.VarChar(30)
+  city            String    @db.VarChar(100)
+  status          String    @default("pending") @db.VarChar(20)
+  totalFetched    Int       @default(0)
+  totalNew        Int       @default(0)
+  totalUpdated    Int       @default(0)
+  totalDuplicates Int       @default(0)
+  errorMessage    String?   @db.Text
+  startedAt       DateTime?
+  completedAt     DateTime?
+  createdAt       DateTime  @default(now())
+
+  @@index([dataSource, city])
+  @@index([status])
+}
+
+// ─── Space Metadata ──────────────────────────────────
+
+model SpaceMetadata {
+  id            String   @id @default(cuid())
+  city          String   @db.VarChar(100)
+  district      String?  @db.VarChar(100)
+  dataSource    String   @db.VarChar(30)
+  northBound    Float?
+  southBound    Float?
+  eastBound     Float?
+  westBound     Float?
+  lastScrapedAt DateTime?
+  toiletCount   Int      @default(0)
+
+  @@unique([city, district, dataSource])
+}

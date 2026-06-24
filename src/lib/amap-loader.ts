@@ -1,6 +1,6 @@
 /**
  * Gaode (高德) Map JS API loader wrapper.
- * Uses dynamic import() to avoid SSR crash — the package checks window at module top level.
+ * Dynamic import keeps this SSR-safe.
  */
 const GAODE_KEY =
   process.env.NEXT_PUBLIC_GAODE_JS_API_KEY ||
@@ -15,44 +15,50 @@ let loadPromise: Promise<typeof AMap> | null = null;
 export async function loadAMap(
   options: { key?: string; version?: string; plugins?: string[] } = {}
 ): Promise<typeof AMap> {
+  // Reuse cached promise — only load SDK once
   if (loadPromise) return loadPromise;
 
   const key = options.key || GAODE_KEY;
   if (!key) {
-    return Promise.reject(new Error("高德地图 API Key 未配置。请在 .env.local 中设置 GAODE_JS_API_KEY"));
+    return Promise.reject(
+      new Error("高德地图 API Key 未配置。请在 .env.local 中设置 NEXT_PUBLIC_GAODE_JS_API_KEY")
+    );
   }
 
-  // Dynamic import to avoid SSR crash
-  loadPromise = new Promise<typeof AMap>(async (resolve, reject) => {
-    const timeout = setTimeout(() => reject(new Error("高德地图加载超时，请检查网络或刷新重试")), LOAD_TIMEOUT);
-
-    try {
-      const mod = await import("@amap/amap-jsapi-loader");
-      // Handle both CJS and ESM interop
-      const loadAPI =
-        typeof mod.load === "function"
-          ? mod.load
-          : typeof (mod as unknown as { default: { load?: Function } }).default?.load === "function"
-            ? (mod as unknown as { default: { load: Function } }).default.load
-            : null;
-
-      if (typeof loadAPI !== "function") {
+  loadPromise = new Promise<typeof AMap>((resolve, reject) => {
+    const timeout = setTimeout(
+      () => reject(new Error("高德地图加载超时，请检查网络或刷新重试")),
+      LOAD_TIMEOUT
+    );
+    // Dynamic import avoids SSR crash (package checks `window` at top level)
+    import("@amap/amap-jsapi-loader")
+      .then((mod) => {
         clearTimeout(timeout);
-        reject(new Error("高德地图加载器初始化失败"));
-        return;
-      }
-
-      const amap = await loadAPI({
-        key,
-        version: options.version || "2.0",
-        plugins: options.plugins || REQUIRED_PLUGINS,
+        // CJS interop: try named export first, then default
+        const loadAPI: Function | undefined =
+          mod?.load || (mod as any)?.default?.load;
+        if (typeof loadAPI !== "function") {
+          reject(new Error("高德地图 SDK 格式异常"));
+          return;
+        }
+        return loadAPI({
+          key,
+          version: options.version || "2.0",
+          plugins: options.plugins || REQUIRED_PLUGINS,
+        });
+      })
+      .then((amap) => {
+        clearTimeout(timeout);
+        if (amap) resolve(amap as typeof AMap);
+      })
+      .catch((err) => {
+        clearTimeout(timeout);
+        reject(
+          new Error(
+            (err as Error)?.message || "高德地图 SDK 加载失败"
+          )
+        );
       });
-      clearTimeout(timeout);
-      resolve(amap as typeof AMap);
-    } catch (err) {
-      clearTimeout(timeout);
-      reject(new Error((err as Error)?.message || "高德地图 SDK 加载失败"));
-    }
   });
 
   return loadPromise;

@@ -176,14 +176,18 @@ export async function planRoute(input: RoutePlanInput): Promise<RoutePlanResult>
 async function findToiletsInCorridor(
   S: { lng: number; lat: number },
   E: { lng: number; lat: number },
-  bufferMeters: number
+  maxToiletDistance: number
 ) {
-  // Compute bounding box with buffer
-  const bufferDeg = (bufferMeters / 111000) * 1.5;
-  const minLat = Math.min(S.lat, E.lat) - bufferDeg;
-  const maxLat = Math.max(S.lat, E.lat) + bufferDeg;
-  const minLng = Math.min(S.lng, E.lng) - bufferDeg;
-  const maxLng = Math.max(S.lng, E.lng) + bufferDeg;
+  // Plan says: expand bbox by T*2 in all directions
+  const bufferMeters = maxToiletDistance * 2;
+  const latDegPerMeter = 1 / 111000;
+  const lngDegPerMeter = 1 / (111000 * Math.cos(((S.lat + E.lat) / 2) * Math.PI / 180));
+  const bufferLatDeg = bufferMeters * latDegPerMeter;
+  const bufferLngDeg = bufferMeters * lngDegPerMeter;
+  const minLat = Math.min(S.lat, E.lat) - bufferLatDeg;
+  const maxLat = Math.max(S.lat, E.lat) + bufferLatDeg;
+  const minLng = Math.min(S.lng, E.lng) - bufferLngDeg;
+  const maxLng = Math.max(S.lng, E.lng) + bufferLngDeg;
 
   const toilets = await db.toilet.findMany({
     where: {

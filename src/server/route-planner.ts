@@ -72,9 +72,8 @@ export async function planRoute(input: RoutePlanInput): Promise<RoutePlanResult>
   // Phase 1: Query toilets in expanded corridor
   const toilets = await findToiletsInCorridor(S, E, T);
 
-  // Phase 2: Generate base path (interpolated line for MVP)
-  const pathPoints = interpolatePath(S, E, SAMPLE_INTERVAL);
-  const totalDistance = haversineDistance(S, E);
+  // Phase 2: Get real walking path from Gaode API, fall back to straight line
+  const { pathPoints, totalDistance } = await getWalkingPath(S, E, SAMPLE_INTERVAL);
 
   // Phase 3: Coverage analysis
   const coverage = analyzeCoverage(pathPoints, toilets, S, T);
@@ -217,8 +216,108 @@ async function findToiletsInCorridor(
 }
 
 /**
+ * Fetch real walking path from Gaode Directions API.
+ * Falls back to straight-line interpolation if API unavailable.
+ */
+async function getWalkingPath(
+  S: { lng: number; lat: number },
+  E: { lng: number; lat: number },
+  intervalMeters: number
+): Promise<{ pathPoints: [number, number][]; totalDistance: number }> {
+  const key = process.env.GAODE_WEB_API_KEY;
+
+  if (!key) {
+    console.log("[route-planner] No Gaode key, using straight-line path");
+    return {
+      pathPoints: interpolatePath(S, E, intervalMeters),
+      totalDistance: haversineDistance(S, E),
+    };
+  }
+
+  try {
+    const url = `https://restapi.amap.com/v3/direction/walking?key=${key}&origin=${S.lng},${S.lat}&destination=${E.lng},${E.lat}&output=JSON`;
+    const res = await fetch(url);
+
+    if (!res.ok) throw new Error(`Gaode API ${res.status}`);
+
+    const data = await res.json();
+    if (data.status !== "1" || !data.route?.paths?.[0]) {
+      throw new Error("Gaode API returned no route");
+    }
+
+    const path = data.route.paths[0];
+    const totalDistance = parseInt(path.distance, 10); // meters
+
+    // Parse polyline steps into path points
+    const points: [number, number][] = [];
+    for (const step of path.steps) {
+      const polyline = step.polyline;
+      if (!polyline) continue;
+      // Gaode polyline format: "lng1,lat1;lng2,lat2;..."
+      const coords = polyline.split(";");
+      for (const coord of coords) {
+        const [lng, lat] = coord.split(",").map(Number);
+        if (!isNaN(lng) && !isNaN(lat)) {
+          points.push([lng, lat]);
+        }
+      }
+    }
+
+    // Resample to uniform interval
+    const resampled = resamplePath(points, intervalMeters);
+    console.log(`[route-planner] Gaode walking path: ${resampled.length} points, ${totalDistance}m`);
+    return { pathPoints: resampled, totalDistance };
+  } catch (err) {
+    console.warn("[route-planner] Gaode API failed, falling back to straight-line:", (err as Error).message);
+    return {
+      pathPoints: interpolatePath(S, E, intervalMeters),
+      totalDistance: haversineDistance(S, E),
+    };
+  }
+}
+
+/**
+ * Resample a path polyline to uniform interval spacing.
+ */
+function resamplePath(
+  points: [number, number][],
+  intervalMeters: number
+): [number, number][] {
+  if (points.length < 2) return points;
+
+  const result: [number, number][] = [points[0]];
+  let accumulated = 0;
+  let prev = points[0];
+
+  for (let i = 1; i < points.length; i++) {
+    const dist = haversineDistance(
+      { lng: prev[0], lat: prev[1] },
+      { lng: points[i][0], lat: points[i][1] }
+    );
+    accumulated += dist;
+
+    while (accumulated >= intervalMeters) {
+      const t = (dist - (accumulated - intervalMeters)) / dist;
+      result.push([
+        prev[0] + (points[i][0] - prev[0]) * t,
+        prev[1] + (points[i][1] - prev[1]) * t,
+      ]);
+      accumulated -= intervalMeters;
+    }
+    prev = points[i];
+  }
+
+  // Add last point if not already there
+  const last = points[points.length - 1];
+  if (result[result.length - 1][0] !== last[0] || result[result.length - 1][1] !== last[1]) {
+    result.push(last);
+  }
+
+  return result;
+}
+
+/**
  * Interpolate points along a straight line path.
- * In production, replace with Gaode Walking API polyline.
  */
 function interpolatePath(
   S: { lng: number; lat: number },

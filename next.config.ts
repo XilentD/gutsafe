@@ -18,10 +18,6 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-// Serwist PWA config — enable in Phase 5:
+// PWA via Serwist — enable when @serwist deps are compatible:
 // import withSerwist from "@serwist/next";
-// export default withSerwist({
-//   swSrc: "src/app/sw.ts",
-//   swDest: "public/sw.js",
-//   disable: process.env.NODE_ENV === "development",
-// })(nextConfig);
+// export default withSerwist({ swSrc: "src/app/sw.ts", swDest: "public/sw.js" })(nextConfig);

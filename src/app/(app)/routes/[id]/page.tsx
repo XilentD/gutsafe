@@ -8,6 +8,9 @@ import {
   Trash2,
   MapPin,
   Navigation,
+  Share2,
+  Copy,
+  Check,
 } from "lucide-react";
 import { formatDistance, formatDuration } from "@/lib/utils";
 import { cn } from "@/lib/utils";
@@ -18,6 +21,9 @@ export default function RouteDetailPage() {
   const params = useParams();
   const router = useRouter();
   const [route, setRoute] = useState<RouteDetail | null>(null);
+  const [isSharing, setIsSharing] = useState(false);
+  const [shareUrl, setShareUrl] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -27,6 +33,27 @@ export default function RouteDetailPage() {
       .catch(console.error)
       .finally(() => setIsLoading(false));
   }, [params.id]);
+
+  const handleShare = async () => {
+    setIsSharing(true);
+    try {
+      const res = await fetch(`/api/routes/${params.id}/share`, { method: "POST" });
+      if (res.ok) {
+        const data = await res.json();
+        setShareUrl(data.data.shareUrl);
+      }
+    } catch { /* ignore */ }
+    setIsSharing(false);
+  };
+
+  const handleCopy = async () => {
+    if (shareUrl) {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      toast.success("链接已复制");
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
 
   const handleDelete = async () => {
     if (!confirm("确定删除这条路线？")) return;
@@ -80,12 +107,23 @@ export default function RouteDetailPage() {
         >
           <ArrowLeft className="h-4 w-4" /> 返回
         </button>
-        <button
-          onClick={handleDelete}
-          className="rounded-full p-2 text-red-500 hover:bg-red-50"
-        >
-          <Trash2 className="h-4 w-4" />
-        </button>
+        <div className="flex items-center gap-1">
+          <button
+            onClick={handleShare}
+            disabled={isSharing}
+            className="rounded-full p-2 text-primary hover:bg-primary/10"
+            title="分享路线"
+          >
+            <Share2 className="h-4 w-4" />
+          </button>
+          <button
+            onClick={handleDelete}
+            className="rounded-full p-2 text-red-500 hover:bg-red-50"
+            title="删除路线"
+          >
+            <Trash2 className="h-4 w-4" />
+          </button>
+        </div>
       </div>
 
       {/* Route name + safety */}
@@ -136,6 +174,25 @@ export default function RouteDetailPage() {
           </p>
         </div>
       </div>
+
+      {/* Share URL */}
+      {shareUrl && (
+        <div className="mx-4 mt-3 flex items-center gap-2 rounded-lg bg-primary/5 p-3">
+          <input
+            type="text"
+            value={shareUrl}
+            readOnly
+            className="flex-1 bg-transparent text-xs text-muted-foreground outline-none"
+          />
+          <button
+            onClick={handleCopy}
+            className="flex items-center gap-1 rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground"
+          >
+            {copied ? <Check className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
+            {copied ? "已复制" : "复制"}
+          </button>
+        </div>
+      )}
 
       {/* Route points */}
       <div className="mx-4 mt-6">

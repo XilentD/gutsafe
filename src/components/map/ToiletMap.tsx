@@ -190,15 +190,15 @@ export function ToiletMap() {
     // Validate all coordinates before touching AMap — NaN will crash
     if (!Number.isFinite(loc.lng) || !Number.isFinite(loc.lat)) return;
     if (!Number.isFinite(toilet.lng) || !Number.isFinite(toilet.lat)) return;
-    const m = mapInstance; // capture for stable ref
+    mapRef.current = mapInstance; // always track latest
 
     // Increment sequence so stale responses are discarded
     routeSeqRef.current++;
     const seq = routeSeqRef.current;
 
     // Clear previous
-    if (polylineRef.current) {
-      m.remove(polylineRef.current);
+    if (polylineRef.current && mapRef.current) {
+      mapRef.current.remove(polylineRef.current);
       polylineRef.current = null;
     }
 
@@ -219,7 +219,7 @@ export function ToiletMap() {
       showDir: true,
       zIndex: 50,
     });
-    fallbackLine.setMap(m);
+    fallbackLine.setMap(mapRef.current!);
     polylineRef.current = fallbackLine;
 
     // ── Real road path via backend proxy ──
@@ -229,9 +229,8 @@ export function ToiletMap() {
       .then(r => r.json())
       .then(data => {
         // Discard stale responses
-        if (routeSeqRef.current !== seq) { console.warn("[drawRoute] stale seq", seq, "current", routeSeqRef.current); return; }
-        const ok = String(data.status) === "1" && !!data.route?.paths?.[0]?.steps;
-        if (!ok) { console.warn("[drawRoute] bad response", { status: data.status, hasRoute: !!data.route, hasPaths: !!data.route?.paths?.[0], steps: data.route?.paths?.[0]?.steps?.length }); return; }
+        if (routeSeqRef.current !== seq) return;
+        if (String(data.status) !== "1" || !data.route?.paths?.[0]?.steps) return;
         const steps = data.route.paths[0].steps;
         const pathPoints: [number, number][] = [];
         for (const step of steps) {
@@ -244,9 +243,10 @@ export function ToiletMap() {
         }
         if (pathPoints.length < 2) return;
 
-        console.log("[drawRoute] drawing real route:", pathPoints.length, "points");
+        const map = mapRef.current;
+        if (!map) return;
         // Replace fallback dashed line with solid road path
-        if (polylineRef.current) { m.remove(polylineRef.current); polylineRef.current = null; }
+        if (polylineRef.current) { map.remove(polylineRef.current); polylineRef.current = null; }
 
         const realLine = new amapInstance.Polyline({
           path: pathPoints,
@@ -256,20 +256,18 @@ export function ToiletMap() {
           strokeStyle: "solid",
           lineJoin: "round",
           showDir: true,
-          zIndex: 51,
+          zIndex: 999,
         });
-        realLine.setMap(m);
+        realLine.setMap(map);
         polylineRef.current = realLine;
-        console.log("[drawRoute] real route set on map");
         // Fit view to show the full route
-        const pts = pathPoints;
-        if (pts.length >= 2) {
-          const swLng = Math.min(...pts.map(p => p[0]));
-          const swLat = Math.min(...pts.map(p => p[1]));
-          const neLng = Math.max(...pts.map(p => p[0]));
-          const neLat = Math.max(...pts.map(p => p[1]));
+        if (pathPoints.length >= 2) {
+          const swLng = Math.min(...pathPoints.map(p => p[0]));
+          const swLat = Math.min(...pathPoints.map(p => p[1]));
+          const neLng = Math.max(...pathPoints.map(p => p[0]));
+          const neLat = Math.max(...pathPoints.map(p => p[1]));
           const b = new amapInstance.Bounds(swLng, swLat, neLng, neLat);
-          m.setFitView(null, false, b);
+          map.setFitView(null, false, b);
         }
       })
       .catch(() => { /* keep fallback */ });

@@ -261,7 +261,8 @@ export function ToiletMap() {
 
   // Find nearest toilet + draw route
   const handleFindNearest = useCallback(async (mode: "walking" | "riding" | "driving" = "walking") => {
-    if (!amapInstance || !mapInstance) return;
+    console.log("[handleFindNearest] called, amap:", !!amapInstance, "map:", !!mapInstance, "loc:", !!userLocation);
+    if (!amapInstance || !mapInstance) { console.log("[handleFindNearest] no amap/map, abort"); return; }
     setRouteMode(mode);
 
     // Get user location
@@ -298,6 +299,7 @@ export function ToiletMap() {
       setInfoWindowPos({ lng: toilet.lng, lat: toilet.lat });
       nearestLocRef.current = loc;
       nearestToiletRef.current = toilet;
+      console.log("[handleFindNearest] found toilet:", toilet.name, "calling drawRoute");
       drawRoute(loc, toilet, mode);
     } catch {
       setLocationError("搜索附近厕所时出错");

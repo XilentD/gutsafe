@@ -184,12 +184,12 @@ export function ToiletMap() {
     );
   }, [mapInstance, setCenter]);
 
-  // Draw route — polyline fallback + backend proxy for real road path
+  // Draw route — polyline fallback + AMap plugin for real road path
   const drawRoute = useCallback((loc: { lng: number; lat: number }, toilet: ToiletSummary, mode: "walking" | "riding" | "driving") => {
-    if (!amapInstance || !mapInstance) return;
-    // Validate all coordinates before touching AMap — NaN will crash
-    if (!Number.isFinite(loc.lng) || !Number.isFinite(loc.lat)) return;
-    if (!Number.isFinite(toilet.lng) || !Number.isFinite(toilet.lat)) return;
+    console.log("[drawRoute] entry, amap:", !!amapInstance, "map:", !!mapInstance, "loc:", loc, "toilet:", toilet.lng, toilet.lat);
+    if (!amapInstance || !mapInstance) { console.log("[drawRoute] no amap/map"); return; }
+    if (!Number.isFinite(loc.lng) || !Number.isFinite(loc.lat)) { console.log("[drawRoute] bad loc"); return; }
+    if (!Number.isFinite(toilet.lng) || !Number.isFinite(toilet.lat)) { console.log("[drawRoute] bad toilet coords"); return; }
     mapRef.current = mapInstance; // always track latest
 
     // Increment sequence so stale responses are discarded

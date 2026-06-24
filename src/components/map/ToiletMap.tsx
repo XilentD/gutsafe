@@ -71,7 +71,7 @@ export function ToiletMap() {
     const dist = Math.round(haversineDistance({ lng: c.getLng(), lat: c.getLat() }, { lng: ne.getLng(), lat: ne.getLat() }));
     const params = new URLSearchParams({
       lat: String(c.getLat()), lng: String(c.getLng()),
-      radius: String(Math.min(dist, 5000)),
+      radius: String(Math.max(500, Math.min(dist, 5000))),
     });
     if (filters.hasSquat !== undefined) params.set("hasSquat", String(filters.hasSquat));
     if (filters.hasToiletPaper !== undefined) params.set("hasToiletPaper", String(filters.hasToiletPaper));
@@ -222,14 +222,6 @@ export function ToiletMap() {
     fallbackLine.setMap(m);
     polylineRef.current = fallbackLine;
 
-    // Fit view using AMap.Bounds
-    const swLng = Math.min(start.lng, end.lng);
-    const swLat = Math.min(start.lat, end.lat);
-    const neLng = Math.max(start.lng, end.lng);
-    const neLat = Math.max(start.lat, end.lat);
-    const bounds = new amapInstance.Bounds(swLng, swLat, neLng, neLat);
-    m.setFitView(null, false, bounds);
-
     // ── Real road path via backend proxy ──
     const apiUrl = `/api/directions?mode=${mode}&origin=${start.lng},${start.lat}&destination=${end.lng},${end.lat}`;
 
@@ -266,6 +258,16 @@ export function ToiletMap() {
         });
         realLine.setMap(m);
         polylineRef.current = realLine;
+        // Fit view to show the full route
+        const pts = pathPoints;
+        if (pts.length >= 2) {
+          const swLng = Math.min(...pts.map(p => p[0]));
+          const swLat = Math.min(...pts.map(p => p[1]));
+          const neLng = Math.max(...pts.map(p => p[0]));
+          const neLat = Math.max(...pts.map(p => p[1]));
+          const b = new amapInstance.Bounds(swLng, swLat, neLng, neLat);
+          m.setFitView(null, false, b);
+        }
       })
       .catch(() => { /* keep fallback */ });
   }, [amapInstance, mapInstance]);

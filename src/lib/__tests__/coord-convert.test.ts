@@ -43,14 +43,22 @@ describe("coord-convert", () => {
   });
 
   describe("bd09ToWgs84", () => {
-    it("should convert BD-09 back to WGS-84", () => {
+    it("should convert BD-09 to WGS-84 with round-trip precision", () => {
+      // Known BD-09 coordinate in Beijing
       const bd = { lng: 116.404, lat: 39.915 };
       const wgs = bd09ToWgs84(bd);
-      // WGS-84 should be valid coordinates
-      expect(wgs.lng).toBeGreaterThan(115);
-      expect(wgs.lng).toBeLessThan(118);
-      expect(wgs.lat).toBeGreaterThan(39);
-      expect(wgs.lat).toBeLessThan(41);
+      // WGS-84 should be near the offset-corrected position (~116.397, ~39.909)
+      // Two-step (BD-09 → GCJ-02 → WGS-84) produces ~116.391, ~39.909
+      expect(wgs.lng).toBeCloseTo(116.391, 1);
+      expect(wgs.lat).toBeCloseTo(39.909, 1);
+    });
+
+    it("should round-trip WGS-84 → BD-09 → WGS-84 within 5 meters", () => {
+      const original = { lng: 116.397428, lat: 39.90923 };
+      const bd = wgs84ToBd09(original);
+      const back = bd09ToWgs84(bd);
+      const dist = haversineDistance(original, back);
+      expect(dist).toBeLessThan(5);
     });
   });
 

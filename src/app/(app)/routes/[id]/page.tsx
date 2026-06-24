@@ -41,17 +41,25 @@ export default function RouteDetailPage() {
       if (res.ok) {
         const data = await res.json();
         setShareUrl(data.data.shareUrl);
+      } else {
+        toast.error("生成分享链接失败");
       }
-    } catch { /* ignore */ }
+    } catch {
+      toast.error("网络错误，生成分享链接失败");
+    }
     setIsSharing(false);
   };
 
   const handleCopy = async () => {
     if (shareUrl) {
-      await navigator.clipboard.writeText(shareUrl);
-      setCopied(true);
-      toast.success("链接已复制");
-      setTimeout(() => setCopied(false), 2000);
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+        setCopied(true);
+        toast.success("链接已复制");
+        setTimeout(() => setCopied(false), 2000);
+      } catch {
+        toast.error("复制失败，请手动复制链接");
+      }
     }
   };
 

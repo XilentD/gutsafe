@@ -4,54 +4,13 @@
  */
 import { describe, it, expect } from "vitest";
 import { haversineDistance } from "@/lib/coord-convert";
-
-/**
- * Re-implement the pure functions from route-planner for testing.
- * We test the algorithm logic in isolation from DB and API.
- */
+import { findUncoveredSegments, computeSafetyScore } from "@/server/route-planner";
 
 interface CoverageSample {
   index: number;
   point: [number, number];
   distance: number;
   nearestToilet?: { id: string } | null;
-}
-
-function findUncoveredSegments(
-  samples: CoverageSample[],
-  threshold: number
-): Array<{ start: number; end: number }> {
-  const segments: Array<{ start: number; end: number }> = [];
-  let currentStart: number | null = null;
-
-  for (const s of samples) {
-    if (s.distance > threshold) {
-      if (currentStart === null) currentStart = s.index;
-    } else {
-      if (currentStart !== null) {
-        segments.push({ start: currentStart, end: s.index });
-        currentStart = null;
-      }
-    }
-  }
-
-  if (currentStart !== null) {
-    segments.push({ start: currentStart, end: samples.length - 1 });
-  }
-
-  return segments;
-}
-
-function computeSafetyScore(
-  coverage: number,
-  maxGap: number,
-  density: number,
-  userTolerance: number
-): number {
-  const coverageScore = coverage * 0.4;
-  const gapScore = Math.max(0, 1 - maxGap / (userTolerance * 4)) * 0.3;
-  const densityScore = Math.min(1, density / 5) * 0.3;
-  return coverageScore + gapScore + densityScore;
 }
 
 describe("findUncoveredSegments", () => {

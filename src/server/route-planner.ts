@@ -128,12 +128,13 @@ export async function planRoute(input: RoutePlanInput): Promise<RoutePlanResult>
     });
   }
   uncoveredSegments.forEach((seg) => {
-    if (seg.end - seg.start > T * 2) {
+    const gapMeters = (seg.end - seg.start) * SAMPLE_INTERVAL;
+    if (gapMeters > T * 2) {
       const midIdx = Math.floor((seg.start + seg.end) / 2);
       const midPoint = pathPoints[midIdx];
       alerts.push({
         type: "long_gap",
-        message: `在约${Math.round(seg.end - seg.start)}米的区间内没有卫生间`,
+        message: `在约${Math.round(gapMeters)}米的区间内没有卫生间`,
         location: midPoint ? { lng: midPoint[0], lat: midPoint[1] } : undefined,
       });
     }
@@ -250,6 +251,9 @@ async function getWalkingPath(
 
     // Parse polyline steps into path points
     const points: [number, number][] = [];
+    if (!path.steps || !Array.isArray(path.steps)) {
+      throw new Error("Gaode API returned path without steps");
+    }
     for (const step of path.steps) {
       const polyline = step.polyline;
       if (!polyline) continue;
@@ -294,6 +298,8 @@ function resamplePath(
       { lng: prev[0], lat: prev[1] },
       { lng: points[i][0], lat: points[i][1] }
     );
+    // Skip duplicate points (dist can be 0 for consecutive identical coords)
+    if (dist === 0) continue;
     accumulated += dist;
 
     while (accumulated >= intervalMeters) {
@@ -402,7 +408,7 @@ function analyzeCoverage(
 /**
  * Find continuous uncovered segments where distance > threshold.
  */
-function findUncoveredSegments(
+export function findUncoveredSegments(
   samples: CoverageSample[],
   threshold: number
 ): Array<{ start: number; end: number }> {
@@ -430,7 +436,7 @@ function findUncoveredSegments(
 /**
  * Compute safety score (0-1) from coverage metrics.
  */
-function computeSafetyScore(
+export function computeSafetyScore(
   coverage: number,
   maxGap: number,
   density: number,

@@ -20,19 +20,30 @@ export async function POST(
       return NextResponse.json({ error: "Not found" }, { status: 404 });
     }
 
-    const shareToken = route.shareToken || crypto.randomBytes(16).toString("hex");
-
-    if (!route.shareToken) {
-      await db.route.update({
-        where: { id },
-        data: { shareToken, isPublic: true },
-      });
+    let token = route.shareToken;
+    // Only generate token once; accept minor race in exchange for simplicity.
+    // TOCTOU here is benign: worst case, a double-click creates a stale token
+    // that points to the same route — no data loss, just a cosmetic edge case.
+    if (!token) {
+      token = crypto.randomBytes(16).toString("hex");
+      try {
+        await db.route.update({
+          where: { id },
+          data: { shareToken: token, isPublic: true },
+        });
+      } catch {
+        // If update fails (e.g., unique constraint from a concurrent request),
+        // re-fetch and use the token that the other request stored
+        const updated = await db.route.findUnique({ where: { id } });
+        token = updated?.shareToken || token;
+      }
     }
 
-    const shareUrl = `${process.env.AUTH_URL || "http://localhost:3000"}/share/${shareToken}`;
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL || process.env.AUTH_URL || "http://localhost:3000";
+    const shareUrl = `${appUrl}/share/${token}`;
 
     return NextResponse.json({
-      data: { shareToken, shareUrl },
+      data: { shareToken: token, shareUrl },
     });
   } catch (error) {
     console.error("Share error:", error);

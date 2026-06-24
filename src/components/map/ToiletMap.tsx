@@ -225,14 +225,13 @@ export function ToiletMap() {
     // ── Real road path via backend proxy ──
     const apiUrl = `/api/directions?mode=${mode}&origin=${start.lng},${start.lat}&destination=${end.lng},${end.lat}`;
 
-    console.log("[drawRoute] fetching:", apiUrl);
     fetch(apiUrl)
       .then(r => r.json())
       .then(data => {
-        console.log("[drawRoute] response:", { seq, current: routeSeqRef.current, status: data.status, hasSteps: !!data.route?.paths?.[0]?.steps });
         // Discard stale responses
-        if (routeSeqRef.current !== seq) { console.log("[drawRoute] stale, discarding"); return; }
-        if (data.status !== "1" || !data.route?.paths?.[0]?.steps) { console.log("[drawRoute] no steps"); return; }
+        if (routeSeqRef.current !== seq) return;
+        // Status may be string "1" or number 1
+        if (String(data.status) !== "1" || !data.route?.paths?.[0]?.steps) return;
         const steps = data.route.paths[0].steps;
         const pathPoints: [number, number][] = [];
         for (const step of steps) {

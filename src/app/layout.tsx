@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { Providers } from "@/components/providers";
+import { ErrorBoundary } from "@/components/shared/ErrorBoundary";
 import "./globals.css";
 
 const inter = Inter({
@@ -50,7 +51,9 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
       </head>
       <body className={`${inter.variable} font-sans`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <ErrorBoundary>{children}</ErrorBoundary>
+        </Providers>
       </body>
     </html>
   );

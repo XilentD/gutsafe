@@ -203,11 +203,13 @@ export function ToiletMap() {
     fetch(apiUrl)
       .then(r => r.json())
       .then(data => {
-        if (data.status !== "1" || !data.route?.paths?.[0]?.steps) return;
-        const steps = data.route.paths[0].steps;
+        if (data.status !== "1" || !data.route?.paths?.[0]) return;
+        const path = data.route.paths[0];
+        const segments = path.steps || path.rides; // walking→steps, riding→rides
+        if (!segments) return;
         const pathPoints: [number, number][] = [];
-        for (const step of steps) {
-          const poly = step.polyline;
+        for (const seg of segments) {
+          const poly = seg.polyline;
           if (!poly) continue;
           for (const coord of poly.split(";")) {
             const [lng, lat] = coord.split(",").map(Number);

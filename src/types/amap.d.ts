@@ -106,11 +106,31 @@ declare namespace AMap {
   }
 
   class Walking {
-    constructor(opts?: { map?: Map; panel?: unknown; hideMarkers?: boolean });
+    constructor(opts?: { map?: Map; hideMarkers?: boolean });
     search(
       origin: LngLat,
       destination: LngLat,
-      callback: (status: string, result: unknown) => void
+      callback: (status: string, result: { info?: { distance?: string; duration?: string } }) => void
+    ): void;
+    clear(): void;
+  }
+
+  class Riding {
+    constructor(opts?: { map?: Map; hideMarkers?: boolean });
+    search(
+      origin: LngLat,
+      destination: LngLat,
+      callback: (status: string, result: { info?: { distance?: string; duration?: string } }) => void
+    ): void;
+    clear(): void;
+  }
+
+  class Driving {
+    constructor(opts?: { map?: Map; hideMarkers?: boolean });
+    search(
+      origin: LngLat,
+      destination: LngLat,
+      callback: (status: string, result: { info?: { distance?: string; duration?: string } }) => void
     ): void;
     clear(): void;
   }

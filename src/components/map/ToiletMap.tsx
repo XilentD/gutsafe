@@ -40,6 +40,8 @@ export function ToiletMap() {
   const [isFindingNearest, setIsFindingNearest] = useState(false);
   const [nearestToilet, setNearestToilet] = useState<ToiletSummary | null>(null);
   const [routeMode, setRouteMode] = useState<"walking" | "riding" | "driving">("walking");
+  const nearestLocRef = useRef<{ lng: number; lat: number } | null>(null);
+  const nearestToiletRef = useRef<ToiletSummary | null>(null);
   const markersRef = useRef<AMap.Marker[]>([]);
   const userMarkerRef = useRef<AMap.Marker | null>(null);
   const routeRef = useRef<{ clear: () => void } | null>(null);
@@ -93,26 +95,35 @@ export function ToiletMap() {
     return () => mapInstance.off("moveend", handleMoveEnd);
   }, [mapInstance, setCenter]);
 
-  // Toilet markers
+  const nearestToiletIdRef = useRef<string | null>(null);
+
+  // Toilet markers — highlight the nearest/focused toilet
   useEffect(() => {
     if (!amapInstance || !mapInstance) return;
     markersRef.current.forEach((m) => m.remove());
     markersRef.current = [];
+
+    const isHighlighted = (id: string) => id === nearestToilet?.id;
+
     toilets.forEach((toilet) => {
       const gcj = wgs84ToGcj02(toilet);
+      const highlight = isHighlighted(toilet.id);
       const el = document.createElement("div");
-      el.textContent = toilet.feeCents > 0 ? "💰" : "🚻";
-      el.style.cssText = `width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;background:${toilet.avgCleanliness >= 4 ? '#22c55e' : toilet.avgCleanliness >= 3 ? '#3b82f6' : '#eab308'};box-shadow:0 2px 6px rgba(0,0,0,0.2);cursor:pointer;`;
+      el.innerHTML = highlight
+        ? `<div style="position:relative;width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:22px;border-radius:50%;background:#f97316;box-shadow:0 0 0 6px rgba(249,115,22,0.3),0 4px 12px rgba(0,0,0,0.3);z-index:999;animation: pulse-soft 1.2s ease-in-out infinite">${toilet.feeCents > 0 ? "💰" : "🚻"}</div>`
+        : `<div style="width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;background:${toilet.avgCleanliness >= 4 ? '#22c55e' : toilet.avgCleanliness >= 3 ? '#3b82f6' : '#eab308'};box-shadow:0 2px 6px rgba(0,0,0,0.2);cursor:pointer">${toilet.feeCents > 0 ? "💰" : "🚻"}</div>`;
+
       const marker = new amapInstance.Marker({
         position: new amapInstance.LngLat(gcj.lng, gcj.lat),
         content: el,
-        offset: new amapInstance.Pixel(-18, -18),
+        offset: highlight ? new amapInstance.Pixel(-24, -24) : new amapInstance.Pixel(-18, -18),
+        zIndex: highlight ? 999 : 100,
       });
       marker.on("click", () => { setSelectedToilet(toilet); setInfoWindowPos(toilet); });
       marker.setMap(mapInstance);
       markersRef.current.push(marker);
     });
-  }, [toilets, amapInstance, mapInstance]);
+  }, [toilets, amapInstance, mapInstance, nearestToilet?.id]);
 
   // User location blue dot
   useEffect(() => {
@@ -230,6 +241,8 @@ export function ToiletMap() {
       setNearestToilet(toilet);
       setSelectedToilet(toilet);
       setInfoWindowPos({ lng: toilet.lng, lat: toilet.lat });
+      nearestLocRef.current = loc;
+      nearestToiletRef.current = toilet;
       drawRoute(loc, toilet, mode);
     } catch {
       setLocationError("搜索附近厕所时出错");
@@ -335,7 +348,12 @@ export function ToiletMap() {
             ]).map(({ mode, icon: Icon, label }) => (
               <button
                 key={mode}
-                onClick={() => handleFindNearest(mode)}
+                onClick={() => {
+                  setRouteMode(mode);
+                  if (nearestLocRef.current && nearestToiletRef.current) {
+                    drawRoute(nearestLocRef.current, nearestToiletRef.current, mode);
+                  }
+                }}
                 className={`flex items-center gap-1.5 rounded-full px-3 py-2 text-xs font-medium transition-all
                   ${routeMode === mode ? "bg-primary text-primary-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"}`}
               >

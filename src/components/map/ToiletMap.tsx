@@ -8,7 +8,7 @@ import { ToiletInfoWindow } from "./ToiletInfoWindow";
 import { FilterChips } from "./FilterChips";
 import { FilterSheet } from "./FilterSheet";
 import type { ToiletSummary } from "@/types/toilet";
-import { SlidersHorizontal, MapPin, Loader2, LocateFixed } from "lucide-react";
+import { SlidersHorizontal, MapPin, Loader2, LocateFixed, ChevronDown } from "lucide-react";
 
 export function ToiletMap() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -38,17 +38,6 @@ export function ToiletMap() {
     return () => destroyMap();
   }, [amapInstance]);
 
-  // Track map movement
-  useEffect(() => {
-    if (!mapInstance) return;
-    const handleMoveEnd = () => {
-      const c = mapInstance.getCenter();
-      if (c) setCenter([c.getLng(), c.getLat()]);
-    };
-    mapInstance.on("moveend", handleMoveEnd);
-    return () => mapInstance.off("moveend", handleMoveEnd);
-  }, [mapInstance, setCenter]);
-
   // Fetch toilets when map moves or filters change
   const fetchToilets = useCallback(async () => {
     if (!mapInstance) return;
@@ -74,6 +63,20 @@ export function ToiletMap() {
   }, [mapInstance, filters]);
 
   useEffect(() => { fetchToilets(); }, [fetchToilets]);
+
+  // Track map movement — refresh toilets on drag
+  const fetchToiletsRef = useRef(fetchToilets);
+  fetchToiletsRef.current = fetchToilets;
+  useEffect(() => {
+    if (!mapInstance) return;
+    const handleMoveEnd = () => {
+      const c = mapInstance.getCenter();
+      if (c) setCenter([c.getLng(), c.getLat()]);
+      fetchToiletsRef.current();
+    };
+    mapInstance.on("moveend", handleMoveEnd);
+    return () => mapInstance.off("moveend", handleMoveEnd);
+  }, [mapInstance, setCenter]);
 
   // Place toilet markers
   useEffect(() => {
@@ -155,6 +158,27 @@ export function ToiletMap() {
 
   const handleGeolocate = () => getUserLocation(true);
 
+  // Quick city switch
+  const CITIES = [
+    { name: "北京", center: [116.397428, 39.90923] as [number, number] },
+    { name: "广州", center: [113.264385, 23.12911] as [number, number] },
+    { name: "深圳", center: [114.057868, 22.543099] as [number, number] },
+    { name: "珠海", center: [113.576726, 22.270715] as [number, number] },
+    { name: "佛山", center: [113.121416, 23.021478] as [number, number] },
+    { name: "东莞", center: [113.751765, 23.020536] as [number, number] },
+    { name: "惠州", center: [114.416783, 23.111847] as [number, number] },
+    { name: "上海", center: [121.473701, 31.230416] as [number, number] },
+  ];
+  const [showCityPicker, setShowCityPicker] = useState(false);
+
+  const jumpToCity = (city: typeof CITIES[number]) => {
+    if (!mapInstance || !amapInstance) return;
+    const gcj = wgs84ToGcj02({ lng: city.center[0], lat: city.center[1] });
+    mapInstance.setCenter(new amapInstance.LngLat(gcj.lng, gcj.lat));
+    mapInstance.setZoom(13);
+    setShowCityPicker(false);
+  };
+
   // Loading state
   if (isLoading) {
     return (
@@ -190,8 +214,36 @@ export function ToiletMap() {
     <div className="relative h-full w-full">
       <div ref={containerRef} className="h-full w-full" />
 
+      {/* City quick-switch */}
+      <div className="absolute left-3 top-3 z-10">
+        <button
+          onClick={() => setShowCityPicker(!showCityPicker)}
+          className="flex items-center gap-1.5 rounded-xl bg-card/95 px-3 py-2 text-sm font-medium shadow-lg backdrop-blur transition-all hover:bg-card"
+        >
+          <MapPin className="h-4 w-4 text-primary" />
+          切换城市
+          <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
+        </button>
+
+        {showCityPicker && (
+          <div className="mt-1 overflow-hidden rounded-xl bg-card shadow-xl ring-1 ring-border animate-fade-in">
+            {CITIES.map((city) => (
+              <button
+                key={city.name}
+                onClick={() => jumpToCity(city)}
+                className="flex w-full items-center gap-2 px-4 py-2.5 text-sm transition-colors hover:bg-muted"
+              >
+                <MapPin className="h-3.5 w-3.5 text-muted-foreground" />
+                {city.name}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Filter chips */}
       {Object.keys(filters).length > 0 && (
-        <div className="absolute left-0 right-0 top-2 flex justify-center">
+        <div className="absolute left-0 right-0 top-14 flex justify-center">
           <FilterChips />
         </div>
       )}

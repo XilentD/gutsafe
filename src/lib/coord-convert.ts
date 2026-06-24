@@ -32,18 +32,20 @@ export function gcj02ToWgs84(coord: Coord): Coord {
 
 /**
  * Convert WGS-84 coordinates to BD-09 (Baidu map).
+ * Two-step: WGS-84 → GCJ-02 → BD-09
  */
 export function wgs84ToBd09(coord: Coord): Coord {
-  const result = coordtransform.wgs84tobd09(coord.lng, coord.lat);
-  return { lng: result[0], lat: result[1] };
+  const gcj = coordtransform.wgs84togcj02(coord.lng, coord.lat);
+  return gcj02ToBd09({ lng: gcj[0], lat: gcj[1] });
 }
 
 /**
  * Convert BD-09 coordinates to WGS-84.
+ * Two-step: BD-09 → GCJ-02 → WGS-84
  */
 export function bd09ToWgs84(coord: Coord): Coord {
-  const result = coordtransform.bd09towgs84(coord.lng, coord.lat);
-  return { lng: result[0], lat: result[1] };
+  const gcj = coordtransform.bd09togcj02(coord.lng, coord.lat);
+  return gcj02ToWgs84({ lng: gcj[0], lat: gcj[1] });
 }
 
 /**

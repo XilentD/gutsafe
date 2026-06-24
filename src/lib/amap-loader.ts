@@ -2,7 +2,7 @@
  * Gaode (高德) Map JS API loader wrapper.
  * Lazy-loads the AMap SDK and tracks loading state.
  */
-import AMapLoader from "@amap/amap-jsapi-loader";
+import { load as loadAMapAPI } from "@amap/amap-jsapi-loader";
 
 const GAODE_KEY = process.env.NEXT_PUBLIC_GAODE_JS_API_KEY || process.env.GAODE_JS_API_KEY || "";
 
@@ -31,7 +31,7 @@ export async function loadAMap(
     );
   }
 
-  loadPromise = AMapLoader({
+  loadPromise = loadAMapAPI({
     key,
     version: options.version || "2.0",
     plugins: options.plugins || DEFAULT_PLUGINS,

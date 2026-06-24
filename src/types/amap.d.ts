@@ -120,5 +120,5 @@ declare module "@amap/amap-jsapi-loader" {
     };
   }
   function load(options: AMapLoaderOptions): Promise<typeof AMap>;
-  export = load;
+  export { load };
 }

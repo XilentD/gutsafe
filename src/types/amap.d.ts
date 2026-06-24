@@ -17,6 +17,7 @@ declare namespace AMap {
   }
 
   class Bounds {
+    constructor(minLng: number, minLat: number, maxLng: number, maxLat: number);
     getCenter(): LngLat;
     getNorthEast(): LngLat;
     getSouthWest(): LngLat;
@@ -65,7 +66,7 @@ declare namespace AMap {
     destroy(): void;
     on(event: string, handler: (...args: unknown[]) => void): void;
     off(event: string, handler: (...args: unknown[]) => void): void;
-    setFitView(overlays?: Marker[] | null, immediately?: boolean, bounds?: [number, number, number, number]): void;
+    setFitView(overlays?: Marker[] | null, immediately?: boolean, bounds?: Bounds | [number, number, number, number]): void;
     add(overlay: Marker | Marker[] | Polyline): void;
     remove(overlay: Marker | Marker[] | Polyline): void;
     panTo(position: LngLat): void;

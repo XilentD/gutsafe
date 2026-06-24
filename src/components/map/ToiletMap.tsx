@@ -3,7 +3,7 @@
 import { useEffect, useRef, useCallback, useState } from "react";
 import { useMapContext } from "./MapProvider";
 import { useMapStore } from "@/lib/stores";
-import { wgs84ToGcj02 } from "@/lib/coord-convert";
+import { wgs84ToGcj02, haversineDistance } from "@/lib/coord-convert";
 import { ToiletInfoWindow } from "./ToiletInfoWindow";
 import { FilterChips } from "./FilterChips";
 import { FilterSheet } from "./FilterSheet";
@@ -45,6 +45,8 @@ export function ToiletMap() {
   const markersRef = useRef<AMap.Marker[]>([]);
   const userMarkerRef = useRef<AMap.Marker | null>(null);
   const polylineRef = useRef<AMap.Polyline | null>(null);
+  const routeSeqRef = useRef(0);
+  const mapRef = useRef<AMap.Map | null>(null);
 
   // Initialize map — use userLocation if available, fallback to Beijing
   useEffect(() => {
@@ -56,6 +58,9 @@ export function ToiletMap() {
     return () => destroyMap();
   }, [amapInstance, userLocation]);
 
+  // Keep mapRef in sync
+  useEffect(() => { mapRef.current = mapInstance; }, [mapInstance]);
+
   // Fetch toilets when map moves or filters change
   const fetchToilets = useCallback(async () => {
     if (!mapInstance) return;
@@ -63,7 +68,7 @@ export function ToiletMap() {
     if (!bounds) return;
     const c = bounds.getCenter();
     const ne = bounds.getNorthEast();
-    const dist = Math.round(AMap.GeometryUtil.distance([c.getLng(), c.getLat()], [ne.getLng(), ne.getLat()]));
+    const dist = Math.round(haversineDistance({ lng: c.getLng(), lat: c.getLat() }, { lng: ne.getLng(), lat: ne.getLat() }));
     const params = new URLSearchParams({
       lat: String(c.getLat()), lng: String(c.getLng()),
       radius: String(Math.min(dist, 5000)),
@@ -166,13 +171,18 @@ export function ToiletMap() {
     );
   }, [mapInstance, setCenter]);
 
-  // Draw route — polyline fallback + attempt AMap.Directions plugin for real road path
+  // Draw route — polyline fallback + backend proxy for real road path
   const drawRoute = useCallback((loc: { lng: number; lat: number }, toilet: ToiletSummary, mode: "walking" | "riding" | "driving") => {
     if (!amapInstance || !mapInstance) return;
+    const m = mapInstance; // capture for stable ref
+
+    // Increment sequence so stale responses are discarded
+    routeSeqRef.current++;
+    const seq = routeSeqRef.current;
 
     // Clear previous
     if (polylineRef.current) {
-      mapInstance.remove(polylineRef.current);
+      m.remove(polylineRef.current);
       polylineRef.current = null;
     }
 
@@ -181,7 +191,7 @@ export function ToiletMap() {
 
     const colors: Record<string, string> = { walking: "#22c55e", riding: "#3b82f6", driving: "#f97316" };
 
-    // ── Fallback: always draw a straight polyline immediately (always works) ──
+    // ── Fallback: always draw a straight dashed polyline immediately ──
     const fallbackLine = new amapInstance.Polyline({
       path: [[start.lng, start.lat], [end.lng, end.lat]],
       strokeColor: colors[mode],
@@ -191,25 +201,30 @@ export function ToiletMap() {
       showDir: true,
       zIndex: 50,
     });
-    fallbackLine.setMap(mapInstance);
+    fallbackLine.setMap(m);
     polylineRef.current = fallbackLine;
 
-    // Fit view
-    mapInstance.setFitView(null, false, [start.lng, start.lat, end.lng, end.lat]);
+    // Fit view using AMap.Bounds
+    const swLng = Math.min(start.lng, end.lng);
+    const swLat = Math.min(start.lat, end.lat);
+    const neLng = Math.max(start.lng, end.lng);
+    const neLat = Math.max(start.lat, end.lat);
+    const bounds = new amapInstance.Bounds(swLng, swLat, neLng, neLat);
+    m.setFitView(null, false, bounds);
 
-    // ── Try getting real road path via our backend proxy ──
+    // ── Real road path via backend proxy ──
     const apiUrl = `/api/directions?mode=${mode}&origin=${start.lng},${start.lat}&destination=${end.lng},${end.lat}`;
 
     fetch(apiUrl)
       .then(r => r.json())
       .then(data => {
-        if (data.status !== "1" || !data.route?.paths?.[0]) return;
-        const path = data.route.paths[0];
-        const segments = path.steps || path.rides; // walking→steps, riding→rides
-        if (!segments) return;
+        // Discard stale responses
+        if (routeSeqRef.current !== seq) return;
+        if (data.status !== "1" || !data.route?.paths?.[0]?.steps) return;
+        const steps = data.route.paths[0].steps;
         const pathPoints: [number, number][] = [];
-        for (const seg of segments) {
-          const poly = seg.polyline;
+        for (const step of steps) {
+          const poly = step.polyline;
           if (!poly) continue;
           for (const coord of poly.split(";")) {
             const [lng, lat] = coord.split(",").map(Number);
@@ -219,7 +234,7 @@ export function ToiletMap() {
         if (pathPoints.length < 2) return;
 
         // Replace fallback dashed line with solid road path
-        if (polylineRef.current) mapInstance.remove(polylineRef.current);
+        if (polylineRef.current) m.remove(polylineRef.current);
 
         const realLine = new amapInstance.Polyline({
           path: pathPoints,
@@ -231,7 +246,7 @@ export function ToiletMap() {
           showDir: true,
           zIndex: 51,
         });
-        realLine.setMap(mapInstance);
+        realLine.setMap(m);
         polylineRef.current = realLine;
       })
       .catch(() => { /* keep fallback */ });
@@ -286,8 +301,8 @@ export function ToiletMap() {
 
   const jumpToCity = (city: typeof CITIES[number]) => {
     if (!mapInstance || !amapInstance) return;
-    const gcj = wgs84ToGcj02({ lng: city.center[0], lat: city.center[1] });
-    mapInstance.setCenter(new amapInstance.LngLat(gcj.lng, gcj.lat));
+    // CITIES already holds GCJ-02 coords — no conversion needed
+    mapInstance.setCenter(new amapInstance.LngLat(city.center[0], city.center[1]));
     mapInstance.setZoom(13);
     setShowCityPicker(false);
   };

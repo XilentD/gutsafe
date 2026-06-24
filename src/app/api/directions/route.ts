@@ -5,7 +5,15 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const GAODE_KEY = process.env.GAODE_WEB_API_KEY || "";
-const BASE_URL = "https://restapi.amap.com/v3/direction";
+const V3_BASE = "https://restapi.amap.com/v3/direction";
+const V4_BASE = "https://restapi.amap.com/v4/direction";
+
+// Frontend uses "riding", bicycling needs v4 API
+const MODE_CONFIG: Record<string, { path: string; version: "v3" | "v4" }> = {
+  walking: { path: "walking", version: "v3" },
+  riding:  { path: "bicycling", version: "v4" },
+  driving: { path: "driving", version: "v3" },
+};
 
 export async function GET(request: NextRequest) {
   try {
@@ -17,18 +25,31 @@ export async function GET(request: NextRequest) {
     if (!origin || !destination) {
       return NextResponse.json({ error: "origin and destination required" }, { status: 400 });
     }
+
+    const config = MODE_CONFIG[mode];
+    if (!config) {
+      return NextResponse.json({ error: `Invalid mode: ${mode}` }, { status: 400 });
+    }
+
     if (!GAODE_KEY) {
       return NextResponse.json({ error: "GAODE_WEB_API_KEY not configured" }, { status: 500 });
     }
 
-    const url = `${BASE_URL}/${mode}?key=${GAODE_KEY}&origin=${origin}&destination=${destination}&output=JSON`;
+    const base = config.version === "v4" ? V4_BASE : V3_BASE;
+    const params = new URLSearchParams({ key: GAODE_KEY, origin, destination, output: "JSON" });
+    const url = `${base}/${config.path}?${params}`;
 
     const res = await fetch(url);
     if (!res.ok) {
       return NextResponse.json({ error: `Gaode API ${res.status}` }, { status: 502 });
     }
 
-    const data = await res.json();
+    // v4 returns { data: { paths } }, v3 returns { status, route: { paths } }
+    // Normalize both to { status: "1", route: { paths } }
+    const raw = await res.json();
+    const data = config.version === "v4"
+      ? { status: raw.data ? "1" : "0", route: { paths: raw.data?.paths || [] } }
+      : raw;
     return NextResponse.json(data);
   } catch (err) {
     return NextResponse.json({ error: (err as Error).message }, { status: 500 });

@@ -101,7 +101,7 @@ export function ToiletInfoWindow({ toilet, onClose, isNearest, routeMode, onRout
           <span className="text-xs text-muted-foreground">
             ({toilet.reviewCount}条评价)
           </span>
-          {toilet.avgQueueMin && (
+          {toilet.avgQueueMin != null && (
             <span className="ml-2 flex items-center gap-1 text-xs text-muted-foreground">
               <Clock className="h-3 w-3" />
               排队{toilet.avgQueueMin}分钟

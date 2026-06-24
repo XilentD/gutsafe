@@ -248,15 +248,18 @@ export function ToiletMap() {
         // Replace fallback dashed line with solid road path
         if (polylineRef.current) { map.remove(polylineRef.current); polylineRef.current = null; }
 
+        // Log a sample point to verify coordinates are valid
+        console.log("[drawRoute] sample points:", pathPoints.slice(0, 3), "total:", pathPoints.length);
+
         const realLine = new amapInstance.Polyline({
           path: pathPoints,
-          strokeColor: colors[mode],
-          strokeWeight: 6,
-          strokeOpacity: 0.8,
+          strokeColor: "#ff0000", // bright red for debugging
+          strokeWeight: 8,        // extra thick
+          strokeOpacity: 1.0,
           strokeStyle: "solid",
           lineJoin: "round",
           showDir: true,
-          zIndex: 999,
+          zIndex: 9999,           // super high z-index
         });
         realLine.setMap(map);
         polylineRef.current = realLine;

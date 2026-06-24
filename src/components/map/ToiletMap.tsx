@@ -197,12 +197,8 @@ export function ToiletMap() {
     // Fit view
     mapInstance.setFitView(null, false, [start.lng, start.lat, end.lng, end.lat]);
 
-    // ── Try AMap Directions API (REST) for real road path ──
-    const key = process.env.NEXT_PUBLIC_GAODE_JS_API_KEY || process.env.GAODE_JS_API_KEY || "";
-    if (!key) return;
-
-    const typeMap: Record<string, string> = { walking: "walking", riding: "riding", driving: "driving" };
-    const apiUrl = `https://restapi.amap.com/v3/direction/${typeMap[mode]}?key=${key}&origin=${start.lng},${start.lat}&destination=${end.lng},${end.lat}&output=JSON`;
+    // ── Try getting real road path via our backend proxy ──
+    const apiUrl = `/api/directions?mode=${mode}&origin=${start.lng},${start.lat}&destination=${end.lng},${end.lat}`;
 
     fetch(apiUrl)
       .then(r => r.json())

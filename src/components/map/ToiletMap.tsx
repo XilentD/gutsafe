@@ -8,12 +8,23 @@ import { ToiletInfoWindow } from "./ToiletInfoWindow";
 import { FilterChips } from "./FilterChips";
 import { FilterSheet } from "./FilterSheet";
 import type { ToiletSummary } from "@/types/toilet";
-import { SlidersHorizontal, MapPin, Loader2, LocateFixed, ChevronDown } from "lucide-react";
+import { SlidersHorizontal, MapPin, Loader2, LocateFixed, ChevronDown, Navigation } from "lucide-react";
+
+const CITIES = [
+  { name: "北京", center: [116.397428, 39.90923] as [number, number] },
+  { name: "广州", center: [113.264385, 23.12911] as [number, number] },
+  { name: "深圳", center: [114.057868, 22.543099] as [number, number] },
+  { name: "珠海", center: [113.576726, 22.270715] as [number, number] },
+  { name: "佛山", center: [113.121416, 23.021478] as [number, number] },
+  { name: "东莞", center: [113.751765, 23.020536] as [number, number] },
+  { name: "惠州", center: [114.416783, 23.111847] as [number, number] },
+  { name: "上海", center: [121.473701, 31.230416] as [number, number] },
+];
 
 export function ToiletMap() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { amapInstance, mapInstance, isLoading, error, initMap, destroyMap, retry } =
-    useMapContext();
+  const ctx = useMapContext();
+  const { amapInstance, mapInstance, isLoading, loadingStage, error, initMap, destroyMap, retry, userLocation } = ctx;
   const setCenter = useMapStore((s) => s.setCenter);
   const filters = useMapStore((s) => s.filters);
   const toggleFilterSheet = useMapStore((s) => s.toggleFilterSheet);
@@ -21,22 +32,21 @@ export function ToiletMap() {
   const [toilets, setToilets] = useState<ToiletSummary[]>([]);
   const [selectedToilet, setSelectedToilet] = useState<ToiletSummary | null>(null);
   const [infoWindowPos, setInfoWindowPos] = useState<{ lng: number; lat: number } | null>(null);
-  const [userLocation, setUserLocation] = useState<{ lng: number; lat: number } | null>(null);
   const [isLocating, setIsLocating] = useState(false);
   const [locationError, setLocationError] = useState<string | null>(null);
+  const [showCityPicker, setShowCityPicker] = useState(false);
   const markersRef = useRef<AMap.Marker[]>([]);
   const userMarkerRef = useRef<AMap.Marker | null>(null);
-  const initialGeolocateDone = useRef(false);
 
-  // Initialize map
+  // Initialize map — use userLocation if available, fallback to Beijing
   useEffect(() => {
     if (!containerRef.current || !amapInstance) return;
-    initMap(containerRef.current, {
-      center: [116.397428, 39.90923],
-      zoom: 14,
-    });
+    const center = userLocation
+      ? [userLocation.lng, userLocation.lat] as [number, number]
+      : [116.397428, 39.90923] as [number, number];
+    initMap(containerRef.current, { center, zoom: userLocation ? 15 : 14 });
     return () => destroyMap();
-  }, [amapInstance]);
+  }, [amapInstance, userLocation]);
 
   // Fetch toilets when map moves or filters change
   const fetchToilets = useCallback(async () => {
@@ -47,8 +57,7 @@ export function ToiletMap() {
     const ne = bounds.getNorthEast();
     const dist = Math.round(AMap.GeometryUtil.distance([c.getLng(), c.getLat()], [ne.getLng(), ne.getLat()]));
     const params = new URLSearchParams({
-      lat: String(c.getLat()),
-      lng: String(c.getLng()),
+      lat: String(c.getLat()), lng: String(c.getLng()),
       radius: String(Math.min(dist, 5000)),
     });
     if (filters.hasSquat !== undefined) params.set("hasSquat", String(filters.hasSquat));
@@ -64,7 +73,7 @@ export function ToiletMap() {
 
   useEffect(() => { fetchToilets(); }, [fetchToilets]);
 
-  // Track map movement — refresh toilets on drag
+  // Refresh toilets on map drag
   const fetchToiletsRef = useRef(fetchToilets);
   fetchToiletsRef.current = fetchToilets;
   useEffect(() => {
@@ -78,7 +87,7 @@ export function ToiletMap() {
     return () => mapInstance.off("moveend", handleMoveEnd);
   }, [mapInstance, setCenter]);
 
-  // Place toilet markers
+  // Toilet markers
   useEffect(() => {
     if (!amapInstance || !mapInstance) return;
     markersRef.current.forEach((m) => m.remove());
@@ -99,7 +108,7 @@ export function ToiletMap() {
     });
   }, [toilets, amapInstance, mapInstance]);
 
-  // User location blue dot marker
+  // User location blue dot
   useEffect(() => {
     if (!amapInstance || !mapInstance || !userLocation) return;
     userMarkerRef.current?.remove();
@@ -119,57 +128,26 @@ export function ToiletMap() {
     userMarkerRef.current = marker;
   }, [userLocation, amapInstance, mapInstance]);
 
-  // Auto-geolocate on first load
-  useEffect(() => {
-    if (amapInstance && mapInstance && !initialGeolocateDone.current) {
-      initialGeolocateDone.current = true;
-      getUserLocation(true);
-    }
-  }, [amapInstance, mapInstance]);
-
-  const getUserLocation = async (autoCenter = false) => {
+  // Manual geolocate
+  const handleGeolocate = useCallback(() => {
     if (!navigator.geolocation) { setLocationError("您的设备不支持定位功能"); return; }
     setIsLocating(true);
     setLocationError(null);
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         const loc = { lng: pos.coords.longitude, lat: pos.coords.latitude };
-        setUserLocation(loc);
         setIsLocating(false);
         setCenter([loc.lng, loc.lat]);
-        if (autoCenter && mapInstance) {
+        if (mapInstance) {
           const gcj = wgs84ToGcj02(loc);
           mapInstance.setCenter(new AMap.LngLat(gcj.lng, gcj.lat));
           mapInstance.setZoom(16);
         }
       },
-      (err) => {
-        setIsLocating(false);
-        const msgs: Record<number, string> = {
-          [err.PERMISSION_DENIED]: "定位权限被拒绝，请在浏览器设置中允许",
-          [err.POSITION_UNAVAILABLE]: "无法获取位置信息",
-          [err.TIMEOUT]: "定位超时，请重试",
-        };
-        setLocationError(msgs[err.code] || "定位失败");
-      },
-      { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+      () => { setIsLocating(false); setLocationError("定位失败"); },
+      { enableHighAccuracy: true, timeout: 10000 }
     );
-  };
-
-  const handleGeolocate = () => getUserLocation(true);
-
-  // Quick city switch
-  const CITIES = [
-    { name: "北京", center: [116.397428, 39.90923] as [number, number] },
-    { name: "广州", center: [113.264385, 23.12911] as [number, number] },
-    { name: "深圳", center: [114.057868, 22.543099] as [number, number] },
-    { name: "珠海", center: [113.576726, 22.270715] as [number, number] },
-    { name: "佛山", center: [113.121416, 23.021478] as [number, number] },
-    { name: "东莞", center: [113.751765, 23.020536] as [number, number] },
-    { name: "惠州", center: [114.416783, 23.111847] as [number, number] },
-    { name: "上海", center: [121.473701, 31.230416] as [number, number] },
-  ];
-  const [showCityPicker, setShowCityPicker] = useState(false);
+  }, [mapInstance, setCenter]);
 
   const jumpToCity = (city: typeof CITIES[number]) => {
     if (!mapInstance || !amapInstance) return;
@@ -179,13 +157,20 @@ export function ToiletMap() {
     setShowCityPicker(false);
   };
 
-  // Loading state
+  // Loading state — shows while AMap loads AND while getting user location
   if (isLoading) {
     return (
       <div className="flex h-full w-full items-center justify-center bg-muted/30">
         <div className="text-center">
-          <div className="mx-auto h-12 w-12 animate-pulse rounded-full bg-primary/20" />
-          <p className="mt-3 text-sm text-muted-foreground">地图加载中...</p>
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+            {loadingStage.includes("位置") ? (
+              <Navigation className="h-7 w-7 animate-pulse text-primary" />
+            ) : (
+              <Loader2 className="h-7 w-7 animate-spin text-primary" />
+            )}
+          </div>
+          <p className="mt-4 text-sm font-medium text-foreground">{loadingStage}</p>
+          <p className="mt-1 text-xs text-muted-foreground">首次加载可能需要几秒钟</p>
         </div>
       </div>
     );
@@ -198,12 +183,8 @@ export function ToiletMap() {
         <div className="max-w-sm text-center space-y-3">
           <p className="text-sm font-medium text-destructive">地图加载失败</p>
           <p className="text-xs text-muted-foreground">{error}</p>
-          <button
-            onClick={retry}
-            className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-all hover:bg-primary/90 active:scale-95"
-          >
-            <Loader2 className="h-3.5 w-3.5" />
-            重试加载
+          <button onClick={retry} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-all hover:bg-primary/90 active:scale-95">
+            <Loader2 className="h-3.5 w-3.5" /> 重试加载
           </button>
         </div>
       </div>
@@ -216,25 +197,16 @@ export function ToiletMap() {
 
       {/* City quick-switch */}
       <div className="absolute left-3 top-3 z-10">
-        <button
-          onClick={() => setShowCityPicker(!showCityPicker)}
-          className="flex items-center gap-1.5 rounded-xl bg-card/95 px-3 py-2 text-sm font-medium shadow-lg backdrop-blur transition-all hover:bg-card"
-        >
-          <MapPin className="h-4 w-4 text-primary" />
-          切换城市
-          <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
+        <button onClick={() => setShowCityPicker(!showCityPicker)}
+          className="flex items-center gap-1.5 rounded-xl bg-card/95 px-3 py-2 text-sm font-medium shadow-lg backdrop-blur transition-all hover:bg-card">
+          <MapPin className="h-4 w-4 text-primary" /> 切换城市 <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
         </button>
-
         {showCityPicker && (
           <div className="mt-1 overflow-hidden rounded-xl bg-card shadow-xl ring-1 ring-border animate-fade-in">
             {CITIES.map((city) => (
-              <button
-                key={city.name}
-                onClick={() => jumpToCity(city)}
-                className="flex w-full items-center gap-2 px-4 py-2.5 text-sm transition-colors hover:bg-muted"
-              >
-                <MapPin className="h-3.5 w-3.5 text-muted-foreground" />
-                {city.name}
+              <button key={city.name} onClick={() => jumpToCity(city)}
+                className="flex w-full items-center gap-2 px-4 py-2.5 text-sm transition-colors hover:bg-muted">
+                <MapPin className="h-3.5 w-3.5 text-muted-foreground" /> {city.name}
               </button>
             ))}
           </div>
@@ -243,31 +215,18 @@ export function ToiletMap() {
 
       {/* Filter chips */}
       {Object.keys(filters).length > 0 && (
-        <div className="absolute left-0 right-0 top-14 flex justify-center">
-          <FilterChips />
-        </div>
+        <div className="absolute left-0 right-0 top-14 flex justify-center"><FilterChips /></div>
       )}
 
       {/* Control buttons */}
       <div className="absolute right-3 top-3 flex flex-col gap-2">
-        <button
-          onClick={handleGeolocate}
-          disabled={isLocating}
+        <button onClick={handleGeolocate} disabled={isLocating}
           className="flex h-10 w-10 items-center justify-center rounded-xl bg-card shadow-lg transition-all hover:bg-muted active:scale-95 disabled:opacity-50"
-          aria-label="我的位置"
-          title="我的位置"
-        >
-          {isLocating ? (
-            <Loader2 className="h-5 w-5 animate-spin text-primary" />
-          ) : (
-            <LocateFixed className="h-5 w-5 text-primary" />
-          )}
+          aria-label="我的位置" title="我的位置">
+          {isLocating ? <Loader2 className="h-5 w-5 animate-spin text-primary" /> : <LocateFixed className="h-5 w-5 text-primary" />}
         </button>
-        <button
-          onClick={toggleFilterSheet}
-          className="flex h-10 w-10 items-center justify-center rounded-xl bg-card shadow-lg hover:bg-muted"
-          aria-label="筛选"
-        >
+        <button onClick={toggleFilterSheet}
+          className="flex h-10 w-10 items-center justify-center rounded-xl bg-card shadow-lg hover:bg-muted" aria-label="筛选">
           <SlidersHorizontal className="h-5 w-5 text-foreground" />
         </button>
       </div>
@@ -282,11 +241,8 @@ export function ToiletMap() {
           )}
           <div className="ml-auto">
             {locationError && (
-              <button
-                onClick={handleGeolocate}
-                className="flex items-center gap-1.5 rounded-full bg-red-500/90 px-3 py-1.5 text-xs font-medium text-white shadow-lg backdrop-blur hover:bg-red-500"
-              >
-                <MapPin className="h-3 w-3" /> {locationError}
+              <button onClick={handleGeolocate} className="flex items-center gap-1.5 rounded-full bg-red-500/90 px-3 py-1.5 text-xs font-medium text-white shadow-lg backdrop-blur hover:bg-red-500">
+                <MapPin className="h-3 w-3" /> 定位失败
               </button>
             )}
             {isLocating && (
@@ -305,10 +261,7 @@ export function ToiletMap() {
 
       {selectedToilet && infoWindowPos && (
         <div className="absolute bottom-24 left-4 right-4 z-10">
-          <ToiletInfoWindow
-            toilet={selectedToilet}
-            onClose={() => { setSelectedToilet(null); setInfoWindowPos(null); }}
-          />
+          <ToiletInfoWindow toilet={selectedToilet} onClose={() => { setSelectedToilet(null); setInfoWindowPos(null); }} />
         </div>
       )}
 

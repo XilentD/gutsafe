@@ -111,6 +111,8 @@ export function ToiletMap() {
     const isHighlighted = (id: string) => id === nearestToilet?.id;
 
     toilets.forEach((toilet) => {
+      // Guard against NaN coordinates (e.g., from bad API data)
+      if (!Number.isFinite(toilet.lng) || !Number.isFinite(toilet.lat)) return;
       const gcj = wgs84ToGcj02(toilet);
       const highlight = isHighlighted(toilet.id);
       const el = document.createElement("div");

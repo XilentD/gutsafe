@@ -64,6 +64,10 @@ export default function LogDetailPage() {
           <ArrowLeft className="h-4 w-4" /> 返回
         </button>
         <div className="flex gap-2">
+          <button onClick={() => router.push(`/log/${params.id}/edit`)}
+            className="rounded-full p-2 text-primary hover:bg-primary/10">
+            <Edit3 className="h-4 w-4" />
+          </button>
           <button onClick={handleDelete} className="rounded-full p-2 text-red-500 hover:bg-red-50">
             <Trash2 className="h-4 w-4" />
           </button>

@@ -7,8 +7,9 @@ import { wgs84ToGcj02 } from "@/lib/coord-convert";
 import { ToiletInfoWindow } from "./ToiletInfoWindow";
 import { FilterChips } from "./FilterChips";
 import { FilterSheet } from "./FilterSheet";
+import { NewToiletForm } from "./NewToiletForm";
 import type { ToiletSummary } from "@/types/toilet";
-import { SlidersHorizontal, MapPin, Loader2, LocateFixed, ChevronDown, Navigation } from "lucide-react";
+import { SlidersHorizontal, MapPin, Loader2, LocateFixed, ChevronDown, Navigation, Plus } from "lucide-react";
 
 const CITIES = [
   { name: "北京", center: [116.397428, 39.90923] as [number, number] },
@@ -35,6 +36,7 @@ export function ToiletMap() {
   const [isLocating, setIsLocating] = useState(false);
   const [locationError, setLocationError] = useState<string | null>(null);
   const [showCityPicker, setShowCityPicker] = useState(false);
+  const [showNewToilet, setShowNewToilet] = useState(false);
   const markersRef = useRef<AMap.Marker[]>([]);
   const userMarkerRef = useRef<AMap.Marker | null>(null);
 
@@ -226,8 +228,12 @@ export function ToiletMap() {
           {isLocating ? <Loader2 className="h-5 w-5 animate-spin text-primary" /> : <LocateFixed className="h-5 w-5 text-primary" />}
         </button>
         <button onClick={toggleFilterSheet}
-          className="flex h-10 w-10 items-center justify-center rounded-xl bg-card shadow-lg hover:bg-muted" aria-label="筛选">
+          className="flex h-10 w-10 items-center justify-center rounded-xl bg-card shadow-lg hover:bg-muted" aria-label="筛选" title="筛选">
           <SlidersHorizontal className="h-5 w-5 text-foreground" />
+        </button>
+        <button onClick={() => setShowNewToilet(true)}
+          className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary shadow-lg text-primary-foreground hover:bg-primary/90" aria-label="提交新厕所" title="提交新厕所">
+          <Plus className="h-5 w-5" />
         </button>
       </div>
 
@@ -266,6 +272,14 @@ export function ToiletMap() {
       )}
 
       <FilterSheet />
+
+      {showNewToilet && (
+        <NewToiletForm
+          mapCenter={mapInstance?.getCenter() ? { lng: mapInstance.getCenter()!.getLng(), lat: mapInstance.getCenter()!.getLat() } : undefined}
+          onClose={() => setShowNewToilet(false)}
+          onSubmitted={() => { setShowNewToilet(false); fetchToiletsRef.current(); }}
+        />
+      )}
     </div>
   );
 }

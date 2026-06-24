@@ -9,7 +9,7 @@ import { FilterChips } from "./FilterChips";
 import { FilterSheet } from "./FilterSheet";
 import { NewToiletForm } from "./NewToiletForm";
 import type { ToiletSummary } from "@/types/toilet";
-import { SlidersHorizontal, MapPin, Loader2, LocateFixed, ChevronDown, Navigation, Plus } from "lucide-react";
+import { SlidersHorizontal, MapPin, Loader2, LocateFixed, ChevronDown, Navigation, Plus, Target } from "lucide-react";
 
 const CITIES = [
   { name: "北京", center: [116.397428, 39.90923] as [number, number] },
@@ -37,8 +37,11 @@ export function ToiletMap() {
   const [locationError, setLocationError] = useState<string | null>(null);
   const [showCityPicker, setShowCityPicker] = useState(false);
   const [showNewToilet, setShowNewToilet] = useState(false);
+  const [isFindingNearest, setIsFindingNearest] = useState(false);
+  const [nearestToilet, setNearestToilet] = useState<ToiletSummary | null>(null);
   const markersRef = useRef<AMap.Marker[]>([]);
   const userMarkerRef = useRef<AMap.Marker | null>(null);
+  const walkRouteRef = useRef<AMap.Walking | null>(null);
 
   // Initialize map — use userLocation if available, fallback to Beijing
   useEffect(() => {
@@ -151,6 +154,95 @@ export function ToiletMap() {
     );
   }, [mapInstance, setCenter]);
 
+  // Find nearest toilet + draw walking route
+  const handleFindNearest = useCallback(async () => {
+    if (!amapInstance || !mapInstance) return;
+
+    // Get user location (from stored or live geolocation)
+    let loc = userLocation;
+    if (!loc) {
+      if (!navigator.geolocation) {
+        setLocationError("您的设备不支持定位功能");
+        return;
+      }
+      setIsLocating(true);
+      try {
+        loc = await new Promise<{ lng: number; lat: number }>((resolve, reject) => {
+          navigator.geolocation.getCurrentPosition(
+            (pos) => resolve({ lng: pos.coords.longitude, lat: pos.coords.latitude }),
+            () => reject(new Error("定位失败")),
+            { enableHighAccuracy: true, timeout: 10000 }
+          );
+        });
+        setIsLocating(false);
+      } catch {
+        setIsLocating(false);
+        setLocationError("定位失败，请先定位到你的位置");
+        return;
+      }
+    }
+
+    setIsFindingNearest(true);
+
+    // Find nearest toilet via API
+    try {
+      const res = await fetch(`/api/toilets/nearby?lat=${loc.lat}&lng=${loc.lng}&radius=5000&pageSize=1&sortBy=distance`);
+      if (!res.ok) throw new Error("搜索失败");
+      const data = await res.json();
+      if (!data.data?.length) {
+        setLocationError("附近没有找到卫生间");
+        setIsFindingNearest(false);
+        return;
+      }
+
+      const toilet = data.data[0] as ToiletSummary;
+      setNearestToilet(toilet);
+      setInfoWindowPos({ lng: toilet.lng, lat: toilet.lat });
+
+      // Draw walking route on map
+      const startGcj = wgs84ToGcj02(loc);
+      const endGcj = wgs84ToGcj02({ lng: toilet.lng, lat: toilet.lat });
+
+      // Center map to fit both points
+      mapInstance.setFitView(null, false, [startGcj.lng, startGcj.lat, endGcj.lng, endGcj.lat]);
+
+      // Use AMap Walking to get route polyline
+      const Walking = amapInstance.Walking;
+      if (Walking) {
+        walkRouteRef.current?.clear();
+        const walker = new Walking({
+          map: mapInstance,
+          panel: undefined,
+          hideMarkers: true,
+        });
+        walkRouteRef.current = walker;
+        walker.search(
+          new amapInstance.LngLat(startGcj.lng, startGcj.lat),
+          new amapInstance.LngLat(endGcj.lng, endGcj.lat),
+          (status: string, result: unknown) => {
+            if (status === "complete") {
+              const r = result as { info?: { distance?: string; duration?: string } };
+              const dist = r?.info?.distance ? `${r.info.distance}米` : "";
+              const dur = r?.info?.duration ? `步行约${Math.round(Number(r.info.duration) / 60)}分钟` : "";
+              console.log(`✅ Route to ${toilet.name}: ${dist} ${dur}`);
+            }
+          }
+        );
+      }
+
+      // Center on the route
+      const midLng = (startGcj.lng + endGcj.lng) / 2;
+      const midLat = (startGcj.lat + endGcj.lat) / 2;
+      setTimeout(() => {
+        mapInstance.setFitView(null, false, [startGcj.lng, startGcj.lat, endGcj.lng, endGcj.lat]);
+      }, 500);
+    } catch {
+      setLocationError("搜索附近厕所时出错");
+    } finally {
+      setIsFindingNearest(false);
+    }
+  }, [amapInstance, mapInstance, userLocation]);
+
   const jumpToCity = (city: typeof CITIES[number]) => {
     if (!mapInstance || !amapInstance) return;
     const gcj = wgs84ToGcj02({ lng: city.center[0], lat: city.center[1] });
@@ -237,8 +329,24 @@ export function ToiletMap() {
         </button>
       </div>
 
+      {/* Nearest toilet FAB */}
+      <div className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2">
+        <button
+          onClick={handleFindNearest}
+          disabled={isFindingNearest || isLoading}
+          className="flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-xl transition-all hover:bg-primary/90 active:scale-95 disabled:opacity-60"
+        >
+          {isFindingNearest ? (
+            <Loader2 className="h-4 w-4 animate-spin" />
+          ) : (
+            <Target className="h-4 w-4" />
+          )}
+          {isFindingNearest ? "搜索中..." : nearestToilet ? `最近：${nearestToilet.name}（${Math.round(nearestToilet.distance)}m）` : "一键找厕所"}
+        </button>
+      </div>
+
       {/* Bottom status bar */}
-      <div className="absolute bottom-4 left-3 right-3">
+      <div className="absolute bottom-20 left-3 right-3">
         <div className="flex items-center justify-between">
           {toilets.length > 0 && (
             <div className="rounded-full bg-card/90 px-3 py-1.5 text-xs font-medium shadow-lg backdrop-blur">

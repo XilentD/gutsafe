@@ -64,7 +64,7 @@ declare namespace AMap {
     destroy(): void;
     on(event: string, handler: (...args: unknown[]) => void): void;
     off(event: string, handler: (...args: unknown[]) => void): void;
-    setFitView(overlays?: Marker[]): void;
+    setFitView(overlays?: Marker[] | null, immediately?: boolean, bounds?: [number, number, number, number]): void;
     add(overlay: Marker | Marker[]): void;
     remove(overlay: Marker | Marker[]): void;
     panTo(position: LngLat): void;
@@ -103,6 +103,16 @@ declare namespace AMap {
         }>;
       }) => void
     ): void;
+  }
+
+  class Walking {
+    constructor(opts?: { map?: Map; panel?: unknown; hideMarkers?: boolean });
+    search(
+      origin: LngLat,
+      destination: LngLat,
+      callback: (status: string, result: unknown) => void
+    ): void;
+    clear(): void;
   }
 }
 

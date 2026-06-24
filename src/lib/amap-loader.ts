@@ -8,7 +8,7 @@ const GAODE_KEY =
   "";
 
 const LOAD_TIMEOUT = 15000;
-const REQUIRED_PLUGINS = ["AMap.Geolocation"];
+const REQUIRED_PLUGINS = ["AMap.Geolocation", "AMap.Walking"];
 
 let loadPromise: Promise<typeof AMap> | null = null;
 

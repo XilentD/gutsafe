@@ -177,31 +177,48 @@ export function ToiletMap() {
     const start = wgs84ToGcj02(loc);
     const end = wgs84ToGcj02({ lng: toilet.lng, lat: toilet.lat });
 
+    const pluginName = mode === "riding" ? "AMap.Riding"
+      : mode === "driving" ? "AMap.Driving"
+      : "AMap.Walking";
+
     const RouteClass = mode === "riding" ? amapInstance.Riding
       : mode === "driving" ? amapInstance.Driving
       : amapInstance.Walking;
-    if (!RouteClass) return;
 
-    const router = new RouteClass({ map: mapInstance, hideMarkers: true }) as { search: Function; clear: () => void };
-    routeRef.current = router;
+    // Fit map view first
+    mapInstance.setFitView(null, false, [start.lng, start.lat, end.lng, end.lat]);
 
-    router.search(
-      new amapInstance.LngLat(start.lng, start.lat),
-      new amapInstance.LngLat(end.lng, end.lat),
-      (status: string, result: { info?: { distance?: string; duration?: string } }) => {
-        if (status === "complete") {
-          const d = result?.info?.distance ? Number(result.info.distance) : 0;
-          const t = result?.info?.duration ? Math.round(Number(result.info.duration) / 60) : 0;
-          const labels = { walking: "步行", riding: "骑行", driving: "驾车" };
-          console.log(`✅ ${labels[mode]}路线：${d}米，${t}分钟 → ${toilet.name}`);
+    const doSearch = () => {
+      const Cls = mode === "riding" ? (amapInstance as unknown as { Riding: new (o: object) => { search: Function; clear: () => void } }).Riding
+        : mode === "driving" ? (amapInstance as unknown as { Driving: new (o: object) => { search: Function; clear: () => void } }).Driving
+        : (amapInstance as unknown as { Walking: new (o: object) => { search: Function; clear: () => void } }).Walking;
+      if (!Cls) return;
+
+      const router = new Cls({ map: mapInstance, hideMarkers: true });
+      routeRef.current = router;
+
+      router.search(
+        new amapInstance.LngLat(start.lng, start.lat),
+        new amapInstance.LngLat(end.lng, end.lat),
+        (status: string, result: { info?: { distance?: string; duration?: string } }) => {
+          if (status === "complete") {
+            const d = result?.info?.distance ? Number(result.info.distance) : 0;
+            const t = result?.info?.duration ? Math.round(Number(result.info.duration) / 60) : 0;
+            const labels = { walking: "步行", riding: "骑行", driving: "驾车" };
+            console.log(`✅ ${labels[mode]}路线：${d}米，${t}分钟 → ${toilet.name}`);
+          }
         }
-      }
-    );
+      );
+    };
 
-    // Fit view to show both points
-    setTimeout(() => {
-      mapInstance.setFitView(null, false, [start.lng, start.lat, end.lng, end.lat]);
-    }, 300);
+    // Use AMap.plugin() to ensure plugin is loaded before instantiation
+    if (RouteClass) {
+      doSearch();
+    } else {
+      (amapInstance as unknown as { plugin: (names: string[], cb: () => void) => void }).plugin([pluginName], () => {
+        doSearch();
+      });
+    }
   }, [amapInstance, mapInstance]);
 
   // Find nearest toilet + draw route

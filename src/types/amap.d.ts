@@ -3,6 +3,7 @@
  * These cover the subset of AMap JS API v2.0 used in this project.
  */
 declare namespace AMap {
+  function plugin(plugins: string[], callback: () => void): void;
   class LngLat {
     constructor(lng: number, lat: number);
     getLng(): number;

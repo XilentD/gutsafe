@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import {
-  Search,
   MapPin,
   SlidersHorizontal,
-  Navigation,
   Save,
   Shield,
   AlertTriangle,
+  LocateFixed,
+  Loader2,
 } from "lucide-react";
 import { useUserPrefsStore } from "@/lib/stores";
 import { toast } from "sonner";
@@ -34,8 +34,31 @@ export function RoutePlannerForm() {
   const [isPlanning, setIsPlanning] = useState(false);
   const [result, setResult] = useState<RoutePlanResult | null>(null);
   const [isSaving, setIsSaving] = useState(false);
+  const [isLocatingStart, setIsLocatingStart] = useState(false);
 
   const canPlan = start.trim() && end.trim() && startCoord && endCoord;
+
+  const useCurrentLocation = async () => {
+    if (!navigator.geolocation) {
+      toast.error("您的设备不支持定位功能");
+      return;
+    }
+    setIsLocatingStart(true);
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const loc = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+        setStartCoord(loc);
+        setStart("我的位置");
+        setIsLocatingStart(false);
+        toast.success("已获取当前位置");
+      },
+      () => {
+        setIsLocatingStart(false);
+        toast.error("定位失败，请检查定位权限");
+      },
+      { enableHighAccuracy: true, timeout: 10000 }
+    );
+  };
 
   const convertToCoord = async (address: string): Promise<{ lat: number; lng: number } | null> => {
     // Use Gaode Geocoder API via the server to avoid exposing key
@@ -136,6 +159,8 @@ export function RoutePlannerForm() {
   const handleBlur = async (field: "start" | "end") => {
     const val = field === "start" ? start : end;
     if (!val.trim()) return;
+    // Skip geocoding if user used current location
+    if (field === "start" && val === "我的位置" && startCoord) return;
     const coord = await convertToCoord(val);
     if (coord) {
       if (field === "start") setStartCoord(coord);
@@ -152,7 +177,7 @@ export function RoutePlannerForm() {
 
   return (
     <div className="space-y-4">
-      {/* Start input */}
+      {/* Start input with location button */}
       <div className="flex items-center gap-3 rounded-xl border bg-card px-4 py-3">
         <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">
           <MapPin className="h-4 w-4" />
@@ -160,11 +185,28 @@ export function RoutePlannerForm() {
         <input
           type="text"
           value={start}
-          onChange={(e) => setStart(e.target.value)}
+          onChange={(e) => {
+            setStart(e.target.value);
+            if (e.target.value !== "我的位置") setStartCoord(null);
+          }}
           onBlur={() => handleBlur("start")}
           placeholder="起点（如：天安门广场）"
           className="flex-1 bg-transparent text-sm outline-none"
         />
+        <button
+          type="button"
+          onClick={useCurrentLocation}
+          disabled={isLocatingStart}
+          className="flex shrink-0 items-center gap-1 rounded-lg bg-primary/10 px-2.5 py-1.5 text-xs font-medium text-primary transition-all hover:bg-primary/20 disabled:opacity-50"
+          title="使用当前位置"
+        >
+          {isLocatingStart ? (
+            <Loader2 className="h-3.5 w-3.5 animate-spin" />
+          ) : (
+            <LocateFixed className="h-3.5 w-3.5" />
+          )}
+          <span className="hidden sm:inline">当前位置</span>
+        </button>
       </div>
 
       {/* End input */}

@@ -1,0 +1,1761 @@
+[
+  {
+    "name": "公共厕所",
+    "lat": 21.1798247,
+    "lng": 110.3480526,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-5383089331",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.6127529,
+    "lng": 110.2758721,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-5472011559",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.1780241,
+    "lng": 110.3398444,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-6344358677",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "toilets:disposal": "flush"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.1690253,
+    "lng": 110.3262012,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-6344358986",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.1627411,
+    "lng": 110.3396508,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-6344358987",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.1735482,
+    "lng": 110.337789,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-6379948816",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.1728779,
+    "lng": 110.349301,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-6379948817",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.175449,
+    "lng": 110.3581845,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-6379948818",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.1678461,
+    "lng": 110.3380825,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-6392578367",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.7205802,
+    "lng": 110.8710521,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-8585102162",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2234495,
+    "lng": 110.4508351,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-8606926125",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.682877,
+    "lng": 110.8096148,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-8642924076",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2298568,
+    "lng": 110.3912781,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-9854624417",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2298966,
+    "lng": 110.3863898,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-9854636017",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2232947,
+    "lng": 110.3991586,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-9854810217",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2184027,
+    "lng": 110.4058277,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-9854837217",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2766304,
+    "lng": 110.3727858,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10728426729",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2774053,
+    "lng": 110.369377,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10731489631",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2699074,
+    "lng": 110.3689968,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10732881533",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2930136,
+    "lng": 110.3701743,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10733695998",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2809249,
+    "lng": 110.365154,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10749295706",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2785033,
+    "lng": 110.3509301,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10749300735",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2741668,
+    "lng": 110.3513896,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10749308148",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2803869,
+    "lng": 110.3670488,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10749312902",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2753691,
+    "lng": 110.3502113,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10749318751",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2746969,
+    "lng": 110.3532297,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10749328490",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2773651,
+    "lng": 110.3528415,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10751224238",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2776576,
+    "lng": 110.3497237,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10754018528",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.1524184,
+    "lng": 110.2758898,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-11961440848",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "survey:date": "2024-02-02"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.1510512,
+    "lng": 110.2866376,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-11961440853",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "survey:date": "2024-02-02"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.1477003,
+    "lng": 110.2716164,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-11961440857",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "survey:date": "2024-02-02"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.1508246,
+    "lng": 110.2869631,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-11961440862",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "survey:date": "2024-02-02"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.7148006,
+    "lng": 110.8775575,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-12218788820",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.713024,
+    "lng": 110.8846295,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-12218808405",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.1576158,
+    "lng": 110.4369207,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-12875008198",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.1558785,
+    "lng": 110.4286003,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-12875008199",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2160134,
+    "lng": 110.418647,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-12875008309",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.3697529,
+    "lng": 110.2498754,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-13672000151",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.3962586,
+    "lng": 110.8946521,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-13929181692",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.6342089,
+    "lng": 110.2736946,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-13929535413",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.1738338,
+    "lng": 110.3377512,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-555592987",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes",
+        "unisex": "yes"
+      }
+    }
+  },
+  {
+    "name": "toilet 公廁",
+    "lat": 21.6434797,
+    "lng": 110.6359153,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-963150414",
+    "rawAttributes": {
+      "originalName": "toilet 公廁",
+      "rawTags": {
+        "access": "yes",
+        "amenity": "toilets",
+        "building": "yes",
+        "fee": "no",
+        "name": "toilet 公廁",
+        "name:en": "toilet",
+        "name:zh": "瑶岭公廁"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.5984606,
+    "lng": 110.5897217,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-964878078",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.6507235,
+    "lng": 110.5753663,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-965129107",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "toilet 公廁",
+    "lat": 21.6493339,
+    "lng": 110.6281626,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-983617884",
+    "rawAttributes": {
+      "originalName": "toilet 公廁",
+      "rawTags": {
+        "access": "yes",
+        "amenity": "toilets",
+        "building": "yes",
+        "fee": "no",
+        "name": "toilet 公廁",
+        "name:en": "toilet",
+        "name:zh": "公廁"
+      }
+    }
+  },
+  {
+    "name": "toilet 水果行公廁",
+    "lat": 21.6445595,
+    "lng": 110.6248032,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-983619031",
+    "rawAttributes": {
+      "originalName": "toilet 水果行公廁",
+      "rawTags": {
+        "access": "yes",
+        "amenity": "toilets",
+        "building": "yes",
+        "fee": "no",
+        "name": "toilet 水果行公廁",
+        "name:en": "toilet",
+        "name:zh": "水果行公廁"
+      }
+    }
+  },
+  {
+    "name": "toilet 寶山路公廁",
+    "lat": 21.6532926,
+    "lng": 110.625822,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-986173526",
+    "rawAttributes": {
+      "originalName": "toilet 寶山路公廁",
+      "rawTags": {
+        "access": "yes",
+        "amenity": "toilets",
+        "building": "yes",
+        "fee": "no",
+        "name": "toilet 寶山路公廁",
+        "name:en": "toilet",
+        "name:zh": "寶山路公廁"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2596536,
+    "lng": 110.3812394,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1122569553",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "渔港公园公厕",
+    "lat": 21.2221966,
+    "lng": 110.4203797,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1159406878",
+    "rawAttributes": {
+      "originalName": "渔港公园公厕",
+      "rawTags": {
+        "access": "yes",
+        "amenity": "toilets",
+        "building": "toilets",
+        "building:levels": "1",
+        "fee": "no",
+        "female": "yes",
+        "male": "yes",
+        "name": "渔港公园公厕"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.5305481,
+    "lng": 110.4921935,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1284402241",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.7189484,
+    "lng": 110.8745563,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1320344368",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.7108818,
+    "lng": 110.89504,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1466393844",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.3617188,
+    "lng": 110.2342586,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1475252331",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.3665215,
+    "lng": 110.2309423,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1476517085",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.3644852,
+    "lng": 110.231276,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1476517144",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.364573,
+    "lng": 110.2358243,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1484053793",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.3684328,
+    "lng": 110.230762,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1484263786",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.3694313,
+    "lng": 110.2323688,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1484263835",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.3660703,
+    "lng": 110.2295822,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1484263879",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.3651099,
+    "lng": 110.2339835,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1484263885",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.3677232,
+    "lng": 110.2371799,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1484263891",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.2722906,
+    "lng": 110.4277425,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1510422392",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 21.5538239,
+    "lng": 110.6087349,
+    "address": null,
+    "city": "湛江",
+    "district": null,
+    "hasSquat": true,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1527880243",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "fee": "no",
+        "handwashing:soap": "no",
+        "toilets:paper_supplied": "no",
+        "toilets:position": "squat"
+      }
+    }
+  }
+]

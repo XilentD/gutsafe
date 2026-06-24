@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { X, MapPin, Loader2, Check } from "lucide-react";
+import { X, MapPin, Loader2, Check, LocateFixed } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import { wgs84ToGcj02 } from "@/lib/coord-convert";
 
 const AMENITIES = [
   { key: "hasSquat", label: "蹲便器", icon: "🚽" },
@@ -29,9 +30,30 @@ export function NewToiletForm({ mapCenter, onClose, onSubmitted }: NewToiletForm
   const [amenities, setAmenities] = useState<Record<string, boolean>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [step, setStep] = useState<"info" | "amenities" | "confirm">("info");
+  const [userLocation, setUserLocation] = useState<{ lng: number; lat: number } | null>(null);
+  const [isLocating, setIsLocating] = useState(false);
 
   const toggleAmenity = (key: string) => {
     setAmenities((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
+
+  const handleLocate = () => {
+    if (!navigator.geolocation) {
+      toast.error("您的设备不支持定位");
+      return;
+    }
+    setIsLocating(true);
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setUserLocation({ lng: pos.coords.longitude, lat: pos.coords.latitude });
+        setIsLocating(false);
+        toast.success("已定位到当前位置");
+      },
+      () => {
+        setIsLocating(false);
+        toast.error("定位失败，请检查位置权限");
+      }
+    );
   };
 
   const handleSubmit = async () => {
@@ -40,7 +62,7 @@ export function NewToiletForm({ mapCenter, onClose, onSubmitted }: NewToiletForm
       return;
     }
     setIsSubmitting(true);
-    const location = mapCenter || { lng: 116.397428, lat: 39.90923 };
+    const location = userLocation || mapCenter || { lng: 116.397428, lat: 39.90923 };
 
     try {
       const res = await fetch("/api/toilets", {
@@ -129,11 +151,49 @@ export function NewToiletForm({ mapCenter, onClose, onSubmitted }: NewToiletForm
               </div>
             </div>
 
-            {mapCenter && (
-              <div className="rounded-lg bg-muted/50 p-2 text-xs text-muted-foreground">
-                📍 位置：{mapCenter.lat.toFixed(5)}, {mapCenter.lng.toFixed(5)}（地图中心）
-              </div>
-            )}
+            <div className="space-y-2">
+              <label className="block text-sm font-medium">厕所位置</label>
+              {userLocation ? (
+                <div className="rounded-lg bg-blue-50 dark:bg-blue-950 p-3 flex items-center justify-between">
+                  <div>
+                    <p className="text-xs font-medium text-blue-700 dark:text-blue-300">📍 我的位置</p>
+                    <p className="text-xs text-blue-600 dark:text-blue-400">
+                      {userLocation.lat.toFixed(5)}, {userLocation.lng.toFixed(5)}
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => setUserLocation(null)}
+                    className="text-xs text-blue-500 hover:underline"
+                  >
+                    清除
+                  </button>
+                </div>
+              ) : (
+                <div className="rounded-lg bg-muted/50 p-3">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-xs text-muted-foreground">
+                        {mapCenter
+                          ? `📍 ${mapCenter.lat.toFixed(5)}, ${mapCenter.lng.toFixed(5)}（地图中心）`
+                          : "📍 尚未设置位置"}
+                      </p>
+                    </div>
+                    <button
+                      onClick={handleLocate}
+                      disabled={isLocating}
+                      className="flex items-center gap-1 rounded-lg bg-blue-500 px-3 py-1.5 text-xs font-medium text-white hover:bg-blue-600 disabled:opacity-50 transition-colors"
+                    >
+                      {isLocating ? (
+                        <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                      ) : (
+                        <LocateFixed className="h-3.5 w-3.5" />
+                      )}
+                      {isLocating ? "定位中..." : "定位"}
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
 
             <button onClick={() => setStep("amenities")}
               disabled={!name.trim() || !city.trim()}

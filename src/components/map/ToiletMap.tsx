@@ -12,7 +12,7 @@ import { SlidersHorizontal, MapPin, Loader2, LocateFixed } from "lucide-react";
 
 export function ToiletMap() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { amapInstance, mapInstance, isLoading, error, initMap, destroyMap } =
+  const { amapInstance, mapInstance, isLoading, error, initMap, destroyMap, retry } =
     useMapContext();
   const setCenter = useMapStore((s) => s.setCenter);
   const filters = useMapStore((s) => s.filters);
@@ -171,10 +171,16 @@ export function ToiletMap() {
   if (error) {
     return (
       <div className="flex h-full w-full items-center justify-center bg-muted/30 p-4">
-        <div className="max-w-sm text-center">
+        <div className="max-w-sm text-center space-y-3">
           <p className="text-sm font-medium text-destructive">地图加载失败</p>
-          <p className="mt-1 text-xs text-muted-foreground">{error}</p>
-          <p className="mt-2 text-xs text-muted-foreground">请确认 GAODE_JS_API_KEY 已正确配置</p>
+          <p className="text-xs text-muted-foreground">{error}</p>
+          <button
+            onClick={retry}
+            className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-all hover:bg-primary/90 active:scale-95"
+          >
+            <Loader2 className="h-3.5 w-3.5" />
+            重试加载
+          </button>
         </div>
       </div>
     );

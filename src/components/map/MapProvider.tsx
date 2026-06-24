@@ -9,7 +9,7 @@ import {
   useCallback,
   type ReactNode,
 } from "react";
-import { loadAMap } from "@/lib/amap-loader";
+import { loadAMap, resetLoader } from "@/lib/amap-loader";
 
 interface MapContextValue {
   amapInstance: typeof AMap | null;
@@ -18,6 +18,7 @@ interface MapContextValue {
   error: string | null;
   initMap: (container: HTMLDivElement, options?: AMap.MapOptions) => void;
   destroyMap: () => void;
+  retry: () => void;
 }
 
 const MapContext = createContext<MapContextValue>({
@@ -27,6 +28,7 @@ const MapContext = createContext<MapContextValue>({
   error: null,
   initMap: () => {},
   destroyMap: () => {},
+  retry: () => {},
 });
 
 export function useMapContext() {
@@ -37,11 +39,14 @@ export function MapProvider({ children }: { children: ReactNode }) {
   const [amapInstance, setAmapInstance] = useState<typeof AMap | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [retryCount, setRetryCount] = useState(0);
   const mapRef = useRef<AMap.Map | null>(null);
 
-  // Load AMap SDK once
-  useEffect(() => {
+  // Load AMap SDK
+  const doLoad = useCallback(() => {
     let cancelled = false;
+    setIsLoading(true);
+    setError(null);
 
     loadAMap()
       .then((amap) => {
@@ -52,7 +57,7 @@ export function MapProvider({ children }: { children: ReactNode }) {
       })
       .catch((err) => {
         if (!cancelled) {
-          setError(err.message || "Failed to load map SDK");
+          setError(err.message || "高德地图加载失败");
           setIsLoading(false);
         }
       });
@@ -62,18 +67,27 @@ export function MapProvider({ children }: { children: ReactNode }) {
     };
   }, []);
 
+  useEffect(() => {
+    const cancel = doLoad();
+    return cancel;
+  }, [doLoad, retryCount]);
+
+  const retry = useCallback(() => {
+    resetLoader();
+    setRetryCount((c) => c + 1);
+  }, []);
+
   const initMap = useCallback(
     (container: HTMLDivElement, options?: AMap.MapOptions) => {
       if (!amapInstance) return;
 
-      // Destroy existing map
       if (mapRef.current) {
         mapRef.current.destroy();
       }
 
       const defaultOptions: AMap.MapOptions = {
         zoom: 14,
-        center: [116.397428, 39.90923], // Beijing center
+        center: [116.397428, 39.90923],
         viewMode: "2D",
         resizeEnable: true,
         ...options,
@@ -100,6 +114,7 @@ export function MapProvider({ children }: { children: ReactNode }) {
         error,
         initMap,
         destroyMap,
+        retry,
       }}
     >
       {children}

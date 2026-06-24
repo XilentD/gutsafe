@@ -153,7 +153,7 @@ export function ToiletMap() {
     );
   };
 
-  const handleGeolocate = () => getUserLocation(false);
+  const handleGeolocate = () => getUserLocation(true);
 
   // Loading state
   if (isLoading) {

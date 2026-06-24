@@ -37,6 +37,7 @@ export function useMapContext() {
 
 export function MapProvider({ children }: { children: ReactNode }) {
   const [amapInstance, setAmapInstance] = useState<typeof AMap | null>(null);
+  const [mapInstance, setMapInstance] = useState<AMap.Map | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [retryCount, setRetryCount] = useState(0);
@@ -93,7 +94,9 @@ export function MapProvider({ children }: { children: ReactNode }) {
         ...options,
       };
 
-      mapRef.current = new amapInstance.Map(container, defaultOptions);
+      const map = new amapInstance.Map(container, defaultOptions);
+      mapRef.current = map;
+      setMapInstance(map);
     },
     [amapInstance]
   );
@@ -103,13 +106,14 @@ export function MapProvider({ children }: { children: ReactNode }) {
       mapRef.current.destroy();
       mapRef.current = null;
     }
+    setMapInstance(null);
   }, []);
 
   return (
     <MapContext.Provider
       value={{
         amapInstance,
-        mapInstance: mapRef.current,
+        mapInstance,
         isLoading,
         error,
         initMap,

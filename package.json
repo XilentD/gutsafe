@@ -41,6 +41,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "coordtransform": "^2.1.2",
+    "dotenv": "^17.4.2",
     "embedded-postgres": "18.4.0-beta.17",
     "idb": "^8.0.1",
     "lucide-react": "^0.468.0",

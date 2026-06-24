@@ -1,0 +1,1642 @@
+[
+  {
+    "name": "公共厕所",
+    "lat": 23.0520185,
+    "lng": 113.5479485,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-3650245184",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 23.0522358,
+    "lng": 113.5459145,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-3650245223",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8674848,
+    "lng": 113.8167341,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-3665771444",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8655527,
+    "lng": 113.8167201,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-3665771445",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.9450866,
+    "lng": 113.6931696,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-3686916140",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.9546888,
+    "lng": 113.6936876,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-3686939043",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.9881344,
+    "lng": 114.2096199,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-5618091312",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "蕉门河绿道公厕",
+    "lat": 22.8022929,
+    "lng": 113.5278052,
+    "address": "南沙区海滨路206号灯柱蕉门河绿道",
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-6403513109",
+    "rawAttributes": {
+      "originalName": "蕉门河绿道公厕",
+      "rawTags": {
+        "addr:street": "南沙区海滨路206号灯柱蕉门河绿道",
+        "amenity": "toilets",
+        "description": "公共厕所",
+        "name": "蕉门河绿道公厕"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.9834234,
+    "lng": 113.5178074,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-6755593943",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.873213,
+    "lng": 113.7464697,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-7816519185",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8666146,
+    "lng": 113.7631992,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-7816645985",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8725459,
+    "lng": 113.54964,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-8508596289",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.9568376,
+    "lng": 113.7433621,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10760981176",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.9599154,
+    "lng": 113.7465611,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10760981189",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.9588004,
+    "lng": 113.7441943,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10760981390",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.9736596,
+    "lng": 113.7746587,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10828748828",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 23.1032503,
+    "lng": 113.8105214,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10962961010",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.9365215,
+    "lng": 113.9259283,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10983985605",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.9767935,
+    "lng": 113.9888505,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-10983985805",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 23.0759375,
+    "lng": 113.7040373,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-11186338448",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "access": "yes",
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8420891,
+    "lng": 113.528842,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-11292719851",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "access": "yes",
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.900626,
+    "lng": 113.8628912,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-11393319123",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8247735,
+    "lng": 113.9952457,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-11911774162",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8061126,
+    "lng": 113.9884391,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-12055412855",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 23.129852,
+    "lng": 113.5699752,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-12057673926",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "ele": "31.770",
+        "ele:ellipsoid": "25.909",
+        "ele:geoid": "31.770",
+        "note:ele": "geoid correction -5.861",
+        "source": "gnss"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 23.1213407,
+    "lng": 113.6132253,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": "06:30-22:00",
+    "openingHoursType": "scheduled",
+    "dataSource": "osm",
+    "sourceId": "osm-node-12057673928",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "ele": "38.818",
+        "ele:ellipsoid": "33.132",
+        "ele:geoid": "38.818",
+        "note:ele": "geoid correction -5.686",
+        "opening_hours": "06:30-22:00",
+        "source": "gnss"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 23.1197957,
+    "lng": 113.6136733,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": "06:30-22:00",
+    "openingHoursType": "scheduled",
+    "dataSource": "osm",
+    "sourceId": "osm-node-12057673930",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "ele": "46.333",
+        "ele:ellipsoid": "40.651",
+        "ele:geoid": "46.333",
+        "note:ele": "geoid correction -5.682",
+        "opening_hours": "06:30-22:00",
+        "source": "gnss"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 23.0132752,
+    "lng": 113.7423464,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-12076397968",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8312235,
+    "lng": 114.0920004,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-12078653212",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8073986,
+    "lng": 114.0166016,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-12108573876",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8156895,
+    "lng": 113.9885683,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-12125932417",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "access": "yes",
+        "amenity": "toilets",
+        "toilets:disposal": "flush"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.9043455,
+    "lng": 114.1176309,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-12406691782",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.9072485,
+    "lng": 114.1121702,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-12407320229",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8021209,
+    "lng": 113.8434394,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-13267156135",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8149668,
+    "lng": 113.8685506,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-13269541316",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8134645,
+    "lng": 113.8690278,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-13269541492",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8060368,
+    "lng": 113.8615936,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-13277167119",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.9989433,
+    "lng": 113.8949761,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-13428416363",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 23.1871383,
+    "lng": 113.5225326,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-13465430651",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 23.1851592,
+    "lng": 113.5220598,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-13465430655",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.910489,
+    "lng": 114.0915893,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-node-13708786897",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "female": "yes",
+        "male": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8763117,
+    "lng": 113.8729185,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-775671322",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8768804,
+    "lng": 113.8737741,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-785289343",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 23.062999,
+    "lng": 113.5057592,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-968077688",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 23.1179096,
+    "lng": 113.5408898,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-972216519",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8153748,
+    "lng": 113.6771447,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1041242404",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 23.1896328,
+    "lng": 113.5562571,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1135696083",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "谢岗镇银屏山公厕",
+    "lat": 22.8870147,
+    "lng": 114.2443138,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1297639514",
+    "rawAttributes": {
+      "originalName": "谢岗镇银屏山公厕",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes",
+        "name": "谢岗镇银屏山公厕",
+        "ref": "31",
+        "source": "survey"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8821654,
+    "lng": 114.0281654,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1351215883",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8251902,
+    "lng": 113.8845939,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1351577529",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.827833,
+    "lng": 113.8811421,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1351577540",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8828418,
+    "lng": 114.1342227,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1366598659",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8898356,
+    "lng": 114.1349675,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1366598662",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8346664,
+    "lng": 113.8940684,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1429747033",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8335945,
+    "lng": 113.8870469,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1433733873",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8367192,
+    "lng": 113.8968768,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1433733874",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.8220211,
+    "lng": 113.93453,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1451292997",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.9322757,
+    "lng": 114.1568586,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1516992435",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 22.9307753,
+    "lng": 114.1437952,
+    "address": null,
+    "city": "东莞",
+    "district": null,
+    "hasSquat": false,
+    "hasSeated": true,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "osm",
+    "sourceId": "osm-way-1516992451",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    }
+  }
+]

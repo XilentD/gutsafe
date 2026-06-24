@@ -19,6 +19,12 @@ const CITY_BBOXES: Record<string, { south: number; west: number; north: number; 
   "杭州": { south: 29.93, west: 119.72, north: 30.58, east: 120.67 },
   "武汉": { south: 30.10, west: 113.68, north: 30.98, east: 114.77 },
   "南京": { south: 31.62, west: 118.35, north: 32.37, east: 119.25 },
+  "珠海": { south: 22.00, west: 113.25, north: 22.44, east: 114.15 },
+  "佛山": { south: 22.88, west: 112.80, north: 23.40, east: 113.30 },
+  "东莞": { south: 22.80, west: 113.50, north: 23.20, east: 114.25 },
+  "惠州": { south: 22.65, west: 114.05, north: 23.45, east: 114.85 },
+  "中山": { south: 22.30, west: 113.25, north: 22.80, east: 113.55 },
+  "汕头": { south: 23.20, west: 116.50, north: 23.60, east: 116.90 },
 };
 
 interface RawOsmElement {

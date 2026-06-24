@@ -166,11 +166,11 @@ export function ToiletMap() {
     );
   }, [mapInstance, setCenter]);
 
-  // Draw actual road-following route using AMap Walking/Riding/Driving plugins
+  // Draw route — polyline fallback + attempt AMap.Directions plugin for real road path
   const drawRoute = useCallback((loc: { lng: number; lat: number }, toilet: ToiletSummary, mode: "walking" | "riding" | "driving") => {
     if (!amapInstance || !mapInstance) return;
 
-    // Clear previous polyline
+    // Clear previous
     if (polylineRef.current) {
       mapInstance.remove(polylineRef.current);
       polylineRef.current = null;
@@ -179,38 +179,64 @@ export function ToiletMap() {
     const start = wgs84ToGcj02(loc);
     const end = wgs84ToGcj02({ lng: toilet.lng, lat: toilet.lat });
 
-    // Fit both points on screen first
+    const colors: Record<string, string> = { walking: "#22c55e", riding: "#3b82f6", driving: "#f97316" };
+
+    // ── Fallback: always draw a straight polyline immediately (always works) ──
+    const fallbackLine = new amapInstance.Polyline({
+      path: [[start.lng, start.lat], [end.lng, end.lat]],
+      strokeColor: colors[mode],
+      strokeWeight: 5,
+      strokeOpacity: 0.5,
+      strokeStyle: "dashed",
+      showDir: true,
+      zIndex: 50,
+    });
+    fallbackLine.setMap(mapInstance);
+    polylineRef.current = fallbackLine;
+
+    // Fit view
     mapInstance.setFitView(null, false, [start.lng, start.lat, end.lng, end.lat]);
 
-    // Use AMap.plugin() — the official async plugin loader
-    const pluginNames: Record<string, string> = {
-      walking: "AMap.Walking",
-      riding: "AMap.Riding",
-      driving: "AMap.Driving",
-    };
+    // ── Try AMap Directions API (REST) for real road path ──
+    const key = process.env.NEXT_PUBLIC_GAODE_JS_API_KEY || process.env.GAODE_JS_API_KEY || "";
+    if (!key) return;
 
-    type RouteType = { new (o: object): { search: (a: AMap.LngLat, b: AMap.LngLat, cb: (s: string, r: unknown) => void) => void } };
+    const typeMap: Record<string, string> = { walking: "walking", riding: "riding", driving: "driving" };
+    const apiUrl = `https://restapi.amap.com/v3/direction/${typeMap[mode]}?key=${key}&origin=${start.lng},${start.lat}&destination=${end.lng},${end.lat}&output=JSON`;
 
-    // Get AMap global (which has .plugin() and the route classes)
-    const AMapGlobal = (window as unknown as Record<string, unknown>).AMap as
-      Record<string, unknown> & { plugin: (names: string[], cb: () => void) => void } | undefined;
+    fetch(apiUrl)
+      .then(r => r.json())
+      .then(data => {
+        if (data.status !== "1" || !data.route?.paths?.[0]?.steps) return;
+        const steps = data.route.paths[0].steps;
+        const pathPoints: [number, number][] = [];
+        for (const step of steps) {
+          const poly = step.polyline;
+          if (!poly) continue;
+          for (const coord of poly.split(";")) {
+            const [lng, lat] = coord.split(",").map(Number);
+            if (!isNaN(lng) && !isNaN(lat)) pathPoints.push([lng, lat]);
+          }
+        }
+        if (pathPoints.length < 2) return;
 
-    if (!AMapGlobal) return;
+        // Replace fallback dashed line with solid road path
+        if (polylineRef.current) mapInstance.remove(polylineRef.current);
 
-    AMapGlobal.plugin([pluginNames[mode]], () => {
-      if (!mapInstance) return;
-
-      const Cls = AMapGlobal[pluginNames[mode]] as RouteType | undefined;
-      if (!Cls) return;
-
-      const router = new Cls({ map: mapInstance });
-
-      router.search(
-        new amapInstance.LngLat(start.lng, start.lat) as AMap.LngLat,
-        new amapInstance.LngLat(end.lng, end.lat) as AMap.LngLat,
-        () => {} // route is drawn on the map automatically
-      );
-    });
+        const realLine = new amapInstance.Polyline({
+          path: pathPoints,
+          strokeColor: colors[mode],
+          strokeWeight: 6,
+          strokeOpacity: 0.8,
+          strokeStyle: "solid",
+          lineJoin: "round",
+          showDir: true,
+          zIndex: 51,
+        });
+        realLine.setMap(mapInstance);
+        polylineRef.current = realLine;
+      })
+      .catch(() => { /* keep fallback */ });
   }, [amapInstance, mapInstance]);
 
   // Find nearest toilet + draw route

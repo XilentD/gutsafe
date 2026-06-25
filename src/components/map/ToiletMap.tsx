@@ -184,7 +184,7 @@ export function ToiletMap() {
     );
   }, [mapInstance, setCenter]);
 
-  // Draw route — use our backend proxy for real road path
+  // Draw route — dashed fallback + REST API solid road path
   const drawRoute = useCallback((loc: { lng: number; lat: number }, toilet: ToiletSummary, mode: "walking" | "riding" | "driving") => {
     if (!amapInstance || !mapInstance || !mapRef.current) return;
     if (!Number.isFinite(loc.lng) || !Number.isFinite(loc.lat)) return;
@@ -198,45 +198,58 @@ export function ToiletMap() {
     if (!Number.isFinite(start.lng) || !Number.isFinite(start.lat)) return;
     if (!Number.isFinite(end.lng) || !Number.isFinite(end.lat)) return;
 
-    // ── Test: hardcoded visible polyline 200m east of user ──
-    const testLine = new amapInstance.Polyline({
-      path: [
-        [start.lng, start.lat],
-        [start.lng + 0.002, start.lat + 0.001],
-      ],
-      strokeColor: "#ff0000",
-      strokeWeight: 10,
-      strokeOpacity: 1,
+    const colors: Record<string, string> = { walking: "#22c55e", riding: "#3b82f6", driving: "#f97316" };
+
+    // Clear previous
+    if (polylineRef.current) { mapRef.current.remove(polylineRef.current); polylineRef.current = null; }
+
+    // ── Dashed fallback ──
+    const dashed = new amapInstance.Polyline({
+      path: [[start.lng, start.lat], [end.lng, end.lat]],
+      strokeColor: colors[mode],
+      strokeWeight: 4,
+      strokeOpacity: 0.4,
+      strokeStyle: "dashed",
+      zIndex: 50,
     });
-    testLine.setMap(mapRef.current);
-    console.log("[drawRoute] test line drawn at:", start.lng, start.lat);
+    dashed.setMap(mapRef.current);
+    polylineRef.current = dashed;
 
-    // ── Real route via backend API ──
-    const apiUrl = `/api/directions?mode=${mode}&origin=${start.lng},${start.lat}&destination=${end.lng},${end.lat}`;
-    fetch(apiUrl).then(r => r.json()).then(data => {
-      if (seq !== routeSeqRef.current) return;
-      if (String(data.status) !== "1" || !data.route?.paths?.[0]?.steps) return;
+    // ── Real road path from backend API ──
+    fetch(`/api/directions?mode=${mode}&origin=${start.lng},${start.lat}&destination=${end.lng},${end.lat}`)
+      .then(r => r.json())
+      .then(data => {
+        if (seq !== routeSeqRef.current) return;
+        if (String(data.status) !== "1" || !data.route?.paths?.[0]?.steps) return;
 
-      const pts: [number, number][] = [];
-      for (const s of data.route.paths[0].steps) {
-        if (!s.polyline) continue;
-        for (const c of s.polyline.split(";")) {
-          const [lng, lat] = c.split(",").map(Number);
-          if (!isNaN(lng) && !isNaN(lat)) pts.push([lng, lat]);
+        const pts: [number, number][] = [];
+        for (const s of data.route.paths[0].steps) {
+          if (!s.polyline) continue;
+          for (const c of s.polyline.split(";")) {
+            const [lng, lat] = c.split(",").map(Number);
+            if (!isNaN(lng) && !isNaN(lat)) pts.push([lng, lat]);
+          }
         }
-      }
-      if (pts.length < 2) return;
+        if (pts.length < 2) return;
 
-      const line = new amapInstance.Polyline({
-        path: pts,
-        strokeColor: "#00ff00",
-        strokeWeight: 8,
-        strokeOpacity: 1,
-        zIndex: 999,
-      });
-      line.setMap(mapRef.current!);
-      console.log("[drawRoute] real route drawn:", pts.length, "points");
-    }).catch(() => {});
+        // Replace dashed with solid
+        if (polylineRef.current) { mapRef.current!.remove(polylineRef.current); polylineRef.current = null; }
+        const solid = new amapInstance.Polyline({
+          path: pts,
+          strokeColor: colors[mode],
+          strokeWeight: 6,
+          strokeOpacity: 0.8,
+          zIndex: 51,
+        });
+        solid.setMap(mapRef.current!);
+        polylineRef.current = solid;
+
+        // Fit view
+        const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]);
+        mapRef.current!.setFitView(null, false,
+          new amapInstance.Bounds(Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)));
+      })
+      .catch(() => {});
   }, [amapInstance, mapInstance]);
 
   const handleFindNearest = useCallback(async (mode: "walking" | "riding" | "driving" = "walking") => {

@@ -184,13 +184,12 @@ export function ToiletMap() {
     );
   }, [mapInstance, setCenter]);
 
-  // Draw route — AMap.Walking/Riding/Driving plugin
+  // Draw route — use our backend proxy for real road path
   const drawRoute = useCallback((loc: { lng: number; lat: number }, toilet: ToiletSummary, mode: "walking" | "riding" | "driving") => {
     if (!amapInstance || !mapInstance || !mapRef.current) return;
     if (!Number.isFinite(loc.lng) || !Number.isFinite(loc.lat)) return;
     if (!Number.isFinite(toilet.lng) || !Number.isFinite(toilet.lat)) return;
 
-    // Prevent overlapping calls
     routeSeqRef.current++;
     const seq = routeSeqRef.current;
 
@@ -199,24 +198,45 @@ export function ToiletMap() {
     if (!Number.isFinite(start.lng) || !Number.isFinite(start.lat)) return;
     if (!Number.isFinite(end.lng) || !Number.isFinite(end.lat)) return;
 
-    const AMapGlobal = (window as any).AMap;
-    if (!AMapGlobal) return;
+    // ── Test: hardcoded visible polyline 200m east of user ──
+    const testLine = new amapInstance.Polyline({
+      path: [
+        [start.lng, start.lat],
+        [start.lng + 0.002, start.lat + 0.001],
+      ],
+      strokeColor: "#ff0000",
+      strokeWeight: 10,
+      strokeOpacity: 1,
+    });
+    testLine.setMap(mapRef.current);
+    console.log("[drawRoute] test line drawn at:", start.lng, start.lat);
 
-    const Cls = AMapGlobal[mode === "walking" ? "Walking" : mode === "riding" ? "Riding" : "Driving"];
-    if (!Cls) return;
+    // ── Real route via backend API ──
+    const apiUrl = `/api/directions?mode=${mode}&origin=${start.lng},${start.lat}&destination=${end.lng},${end.lat}`;
+    fetch(apiUrl).then(r => r.json()).then(data => {
+      if (seq !== routeSeqRef.current) return;
+      if (String(data.status) !== "1" || !data.route?.paths?.[0]?.steps) return;
 
-    // Create the route planner — it auto-draws on the map
-    const router = new Cls({ map: mapRef.current });
-
-    router.search(
-      new amapInstance.LngLat(start.lng, start.lat),
-      new amapInstance.LngLat(end.lng, end.lat),
-      (status: string, result: { info?: { distance?: string; duration?: string } }) => {
-        if (status === "complete" && seq === routeSeqRef.current) {
-          console.log(`✅ ${mode} 路线: ${result?.info?.distance || "?"}m`);
+      const pts: [number, number][] = [];
+      for (const s of data.route.paths[0].steps) {
+        if (!s.polyline) continue;
+        for (const c of s.polyline.split(";")) {
+          const [lng, lat] = c.split(",").map(Number);
+          if (!isNaN(lng) && !isNaN(lat)) pts.push([lng, lat]);
         }
       }
-    );
+      if (pts.length < 2) return;
+
+      const line = new amapInstance.Polyline({
+        path: pts,
+        strokeColor: "#00ff00",
+        strokeWeight: 8,
+        strokeOpacity: 1,
+        zIndex: 999,
+      });
+      line.setMap(mapRef.current!);
+      console.log("[drawRoute] real route drawn:", pts.length, "points");
+    }).catch(() => {});
   }, [amapInstance, mapInstance]);
 
   const handleFindNearest = useCallback(async (mode: "walking" | "riding" | "driving" = "walking") => {

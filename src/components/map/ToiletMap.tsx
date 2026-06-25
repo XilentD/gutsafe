@@ -300,6 +300,7 @@ export function ToiletMap() {
     console.log("[handleFindNearest] using location:", loc);
 
     setIsFindingNearest(true);
+    try {
     // Try progressively larger radii until we find a toilet
     let toilet: ToiletSummary | undefined;
     for (const radius of [5000, 20000, 100000]) {

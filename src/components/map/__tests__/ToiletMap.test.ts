@@ -9,10 +9,10 @@ import { describe, it, expect } from "vitest";
 // ── Position fallback logic ──
 
 function shouldFallbackToCityPicker(location: { lng: number; lat: number }): boolean {
-  // If location is within ~3km of Beijing Tiananmen default center
+  // If location is within ~5km of Beijing Tiananmen default center
   return (
-    Math.abs(location.lat - 39.9) < 0.03 &&
-    Math.abs(location.lng - 116.4) < 0.03
+    Math.abs(location.lat - 39.909) < 0.05 &&
+    Math.abs(location.lng - 116.397) < 0.05
   );
 }
 
@@ -63,10 +63,10 @@ describe("position fallback logic", () => {
   });
 
   it("should detect edge of tolerance", () => {
-    // Just outside tolerance (>0.03 degrees ≈ 3km)
-    expect(shouldFallbackToCityPicker({ lng: 116.431, lat: 39.94 })).toBe(false);
+    // Just outside tolerance (>0.05 degrees ≈ 5km)
+    expect(shouldFallbackToCityPicker({ lng: 116.45, lat: 39.97 })).toBe(false);
     // Just inside
-    expect(shouldFallbackToCityPicker({ lng: 116.428, lat: 39.928 })).toBe(true);
+    expect(shouldFallbackToCityPicker({ lng: 116.44, lat: 39.95 })).toBe(true);
   });
 });
 

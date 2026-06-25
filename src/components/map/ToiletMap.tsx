@@ -48,6 +48,7 @@ export function ToiletMap() {
   const [isLocating, setIsLocating] = useState(false);
   const [locationError, setLocationError] = useState<string | null>(null);
   const [showCityPicker, setShowCityPicker] = useState(false);
+  const [initialCitySet, setInitialCitySet] = useState(false);
   const [showNewToilet, setShowNewToilet] = useState(false);
   const [isFindingNearest, setIsFindingNearest] = useState(false);
   const [nearestToilet, setNearestToilet] = useState<ToiletSummary | null>(null);
@@ -61,13 +62,28 @@ export function ToiletMap() {
   const routeSeqRef = useRef(0);
   const mapRef = useRef<AMap.Map | null>(null);
 
-  // Initialize map — use userLocation if available, fallback to Beijing
+  // Initialize map — try saved city → userLocation → Beijing
   useEffect(() => {
     if (!containerRef.current || !amapInstance) return;
-    const center = userLocation
-      ? [userLocation.lng, userLocation.lat] as [number, number]
-      : [116.397428, 39.90923] as [number, number];
-    initMap(containerRef.current, { center, zoom: userLocation ? 15 : 14 });
+    let center: [number, number] = [116.397428, 39.90923];
+    let zoom = 14;
+    if (userLocation && Number.isFinite(userLocation.lng)) {
+      center = [userLocation.lng, userLocation.lat];
+      zoom = 15;
+    } else {
+      try {
+        const saved = localStorage.getItem("gutsafe-last-city");
+        if (saved) {
+          const c = JSON.parse(saved) as { name: string; center: [number, number] };
+          if (c.center?.[0] && c.center?.[1]) {
+            center = c.center;
+            zoom = 13;
+            setInitialCitySet(true);
+          }
+        }
+      } catch {}
+    }
+    initMap(containerRef.current, { center, zoom });
     return () => destroyMap();
   }, [amapInstance, userLocation]);
 
@@ -347,8 +363,8 @@ export function ToiletMap() {
       if (c) loc = { lng: c.getLng(), lat: c.getLat() };
     }
     // If still at Beijing default, show city picker instead of failing
-    if (loc && Math.abs(loc.lat - 39.9) < 0.03 && Math.abs(loc.lng - 116.4) < 0.03) {
-      setLocationError("请先选择你所在的城市");
+    if (loc && Math.abs(loc.lat - 39.909) < 0.05 && Math.abs(loc.lng - 116.397) < 0.05) {
+      setLocationError("请从左上角选择你的城市");
       setShowCityPicker(true);
       setIsFindingNearest(false);
       return;
@@ -382,10 +398,12 @@ export function ToiletMap() {
 
   const jumpToCity = (city: typeof CITIES[number]) => {
     if (!mapInstance || !amapInstance) return;
-    // CITIES already holds GCJ-02 coords — no conversion needed
     mapInstance.setCenter(new amapInstance.LngLat(city.center[0], city.center[1]));
     mapInstance.setZoom(13);
     setShowCityPicker(false);
+    setInitialCitySet(true);
+    setLocationError(null);
+    try { localStorage.setItem("gutsafe-last-city", JSON.stringify(city)); } catch {}
   };
 
   // Loading state — shows while AMap loads AND while getting user location

@@ -451,11 +451,11 @@ export function ToiletMap() {
           <MapPin className="h-4 w-4 text-primary" /> 切换城市 <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
         </button>
         {showCityPicker && (
-          <div className="mt-1 overflow-hidden rounded-xl bg-card shadow-xl ring-1 ring-border animate-fade-in">
+          <div className="mt-1 max-h-80 overflow-y-auto rounded-xl bg-card shadow-xl ring-1 ring-border animate-fade-in">
             {CITIES.map((city) => (
               <button key={city.name} onClick={() => jumpToCity(city)}
-                className="flex w-full items-center gap-2 px-4 py-2.5 text-sm transition-colors hover:bg-muted">
-                <MapPin className="h-3.5 w-3.5 text-muted-foreground" /> {city.name}
+                className="flex w-full items-center gap-2 px-3 py-2 text-sm transition-colors hover:bg-muted">
+                <MapPin className="h-3 w-3 text-muted-foreground shrink-0" /> {city.name}
               </button>
             ))}
           </div>

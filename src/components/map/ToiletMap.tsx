@@ -222,41 +222,34 @@ export function ToiletMap() {
     fallbackLine.setMap(mapRef.current!);
     polylineRef.current = fallbackLine;
 
-    // ── Real road path via AMap.Walking/Riding/Driving plugin ──
-    const pluginMap: Record<string, string> = {
-      walking: "AMap.Walking",
-      riding: "AMap.Riding",
-      driving: "AMap.Driving",
-    };
+    // ── Real road path via AMap.Walking/Riding/Driving ──
+    // Plugins are pre-loaded by the AMap SDK loader, so they're available on window.AMap
+    const AMapGlobal = (window as any).AMap;
+    if (!AMapGlobal) { console.log("[drawRoute] window.AMap not found"); return; }
 
-    if (!(window as any).AMap?.plugin) return;
-    (window as any).AMap.plugin([pluginMap[mode]], () => {
-      const Cls = (window as any).AMap[pluginMap[mode]];
-      if (!Cls || !mapRef.current) return;
+    const pluginKey = mode === "walking" ? "Walking" : mode === "riding" ? "Riding" : "Driving";
+    const Cls = AMapGlobal[pluginKey];
+    console.log("[drawRoute] AMap plugin check:", { pluginKey, hasClass: !!Cls, availableKeys: Object.keys(AMapGlobal).filter(k => k.match(/Walk|Rid|Driv/i)) });
+    if (!Cls) { console.log("[drawRoute] plugin class not available for", mode); return; }
 
-      // Remove fallback
-      if (polylineRef.current) {
-        mapRef.current.remove(polylineRef.current);
-        polylineRef.current = null;
-      }
+    // Remove fallback
+    if (polylineRef.current && mapRef.current) {
+      mapRef.current.remove(polylineRef.current);
+      polylineRef.current = null;
+    }
 
-      const router = new Cls({ map: mapRef.current, hideMarkers: true });
-      router.search(
-        new amapInstance.LngLat(start.lng, start.lat),
-        new amapInstance.LngLat(end.lng, end.lat),
-        (status: string, result: any) => {
-          if (status === "complete" && result.info) {
-            const d = result.info.distance ? `${result.info.distance}米` : "";
-            const t = result.info.duration ? `${Math.round(Number(result.info.duration) / 60)}分钟` : "";
-            console.log(`✅ ${mode} 路线: ${d} ${t}`);
-            // Fit view
-            mapRef.current?.setFitView(null, false, [
-              start.lng, start.lat, end.lng, end.lat,
-            ] as any);
-          }
+    const router = new Cls({ map: mapRef.current, hideMarkers: true });
+    router.search(
+      new amapInstance.LngLat(start.lng, start.lat),
+      new amapInstance.LngLat(end.lng, end.lat),
+      (status: string, result: { info?: { distance?: string; duration?: string } }) => {
+        if (status === "complete") {
+          const d = result?.info?.distance ? `${result.info.distance}米` : "";
+          const t = result?.info?.duration ? `${Math.round(Number(result.info.duration) / 60)}分钟` : "";
+          console.log(`✅ ${mode} 路线: ${d} ${t}`);
         }
-      );
-    });
+      }
+    );
   }, [amapInstance, mapInstance]);
 
   // Find nearest toilet + draw route

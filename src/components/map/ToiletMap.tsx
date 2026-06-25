@@ -216,13 +216,11 @@ export function ToiletMap() {
     polylineRef.current = dashed;
 
     // ── Real road path from backend API ──
-    const dirUrl = `/api/directions?mode=${mode}&origin=${start.lng},${start.lat}&destination=${end.lng},${end.lat}`;
-    console.log("[drawRoute] fetching directions:", dirUrl);
-    fetch(dirUrl)
+    fetch(`/api/directions?mode=${mode}&origin=${start.lng},${start.lat}&destination=${end.lng},${end.lat}`)
       .then(r => r.json())
       .then(data => {
-        if (seq !== routeSeqRef.current) { console.log("[drawRoute] stale seq", seq, "vs", routeSeqRef.current); return; }
-        if (String(data.status) !== "1" || !data.route?.paths?.[0]?.steps) { console.log("[drawRoute] bad response", {s:data.status, st:!!data.route?.paths?.[0]?.steps}); return; }
+        if (seq !== routeSeqRef.current) return;
+        if (String(data.status) !== "1" || !data.route?.paths?.[0]?.steps) return;
 
         const pts: [number, number][] = [];
         for (const s of data.route.paths[0].steps) {
@@ -246,12 +244,17 @@ export function ToiletMap() {
         solid.setMap(mapRef.current!);
         polylineRef.current = solid;
 
-        // Fit view
-        const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]);
-        mapRef.current!.setFitView(null, false,
-          new amapInstance.Bounds(Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)));
+        // Fit view (safe min/max to avoid Infinity when array is empty)
+        let minX = pts[0][0], minY = pts[0][1], maxX = pts[0][0], maxY = pts[0][1];
+        for (const p of pts) {
+          if (p[0] < minX) minX = p[0]; if (p[0] > maxX) maxX = p[0];
+          if (p[1] < minY) minY = p[1]; if (p[1] > maxY) maxY = p[1];
+        }
+        if (Number.isFinite(minX) && Number.isFinite(maxX)) {
+          mapRef.current!.setFitView(null, false, [minX, minY, maxX, maxY] as any);
+        }
       })
-      .catch(err => { console.log("[drawRoute] fetch error:", err); });
+      .catch(() => {});
   }, [amapInstance, mapInstance]);
 
   const handleFindNearest = useCallback(async (mode: "walking" | "riding" | "driving" = "walking") => {

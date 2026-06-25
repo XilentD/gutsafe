@@ -5,9 +5,11 @@ const config: CapacitorConfig = {
   appName: "肠安地图",
   webDir: "public",
   server: {
-    // Connect to Next.js dev server (or production server when deployed)
-    url: "http://192.168.110.6:3000",
-    cleartext: true,
+    // Dev: use local Next.js server. Prod: omit or set CAP_SERVER_URL env var.
+    url: process.env.CAP_SERVER_URL || (
+      process.env.NODE_ENV === "production" ? undefined : "http://192.168.110.6:3000"
+    ),
+    cleartext: process.env.NODE_ENV !== "production",
   },
   android: {
     allowMixedContent: true,

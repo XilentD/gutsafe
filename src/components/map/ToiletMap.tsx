@@ -153,11 +153,17 @@ export function ToiletMap() {
     });
   }, [toilets, amapInstance, mapInstance, nearestToilet?.id]);
 
-  // Track device heading (orientation)
+  // Track device heading (orientation) — throttled to reduce re-renders
   useEffect(() => {
     if (!navigator.geolocation) return;
+    let lastUpdate = 0;
     const watchId = navigator.geolocation.watchPosition(
-      (pos) => { if (pos.coords.heading != null) setHeading(pos.coords.heading); },
+      (pos) => {
+        if (pos.coords.heading != null) {
+          const now = Date.now();
+          if (now - lastUpdate > 500) { lastUpdate = now; setHeading(pos.coords.heading); }
+        }
+      },
       () => {},
       { enableHighAccuracy: true }
     );

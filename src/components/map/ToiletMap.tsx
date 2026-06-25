@@ -227,7 +227,7 @@ export function ToiletMap() {
           if (!s.polyline) continue;
           for (const c of s.polyline.split(";")) {
             const [lng, lat] = c.split(",").map(Number);
-            if (!isNaN(lng) && !isNaN(lat)) pts.push([lng, lat]);
+            if (Number.isFinite(lng) && Number.isFinite(lat)) pts.push([lng, lat]);
           }
         }
         if (pts.length < 2) return;
@@ -263,6 +263,8 @@ export function ToiletMap() {
     setLocationError(null);
 
     let loc = userLocation;
+    // Check for NaN (e.g. from corrupt geolocation)
+    if (loc && (!Number.isFinite(loc.lng) || !Number.isFinite(loc.lat))) loc = null;
     if (!loc && navigator.geolocation) {
       try {
         loc = await new Promise<{ lng: number; lat: number }>((res, rej) => {

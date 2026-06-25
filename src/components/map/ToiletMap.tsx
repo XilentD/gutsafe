@@ -178,26 +178,44 @@ export function ToiletMap() {
     }
   }, [userLocation, amapInstance, mapInstance]);
 
+  // Get position (tries Capacitor Geolocation first, falls back to browser API)
+  const getPosition = useCallback(async (): Promise<{ lng: number; lat: number } | null> => {
+    // Try Capacitor native geolocation (works on Android APK)
+    try {
+      const { Geolocation } = await import("@capacitor/geolocation");
+      const pos = await Geolocation.getCurrentPosition({ enableHighAccuracy: true, timeout: 10000 });
+      if (pos.coords) return { lng: pos.coords.longitude, lat: pos.coords.latitude };
+    } catch {}
+    // Fall back to browser geolocation
+    if (navigator.geolocation) {
+      return new Promise((resolve) => {
+        navigator.geolocation.getCurrentPosition(
+          (pos) => resolve({ lng: pos.coords.longitude, lat: pos.coords.latitude }),
+          () => resolve(null),
+          { enableHighAccuracy: true, timeout: 8000 }
+        );
+      });
+    }
+    return null;
+  }, []);
+
   // Manual geolocate
-  const handleGeolocate = useCallback(() => {
-    if (!navigator.geolocation) { setLocationError("您的设备不支持定位功能"); return; }
+  const handleGeolocate = useCallback(async () => {
     setIsLocating(true);
     setLocationError(null);
-    navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        const loc = { lng: pos.coords.longitude, lat: pos.coords.latitude };
-        setIsLocating(false);
-        setCenter([loc.lng, loc.lat]);
-        if (mapInstance) {
-          const gcj = wgs84ToGcj02(loc);
-          mapInstance.setCenter(new AMap.LngLat(gcj.lng, gcj.lat));
-          mapInstance.setZoom(16);
-        }
-      },
-      () => { setIsLocating(false); setLocationError(location.protocol === "http:" ? "定位需HTTPS（当前HTTP）" : "定位失败"); },
-      { enableHighAccuracy: true, timeout: 10000 }
-    );
-  }, [mapInstance, setCenter]);
+    const loc = await getPosition();
+    setIsLocating(false);
+    if (loc) {
+      setCenter([loc.lng, loc.lat]);
+      if (mapInstance) {
+        const gcj = wgs84ToGcj02(loc);
+        mapInstance.setCenter(new AMap.LngLat(gcj.lng, gcj.lat));
+        mapInstance.setZoom(16);
+      }
+    } else {
+      setLocationError(location.protocol === "http:" ? "定位需HTTPS或App" : "定位失败");
+    }
+  }, [mapInstance, setCenter, getPosition]);
 
   // Draw route — dashed fallback + REST API solid road path
   const drawRoute = useCallback((loc: { lng: number; lat: number }, toilet: ToiletSummary, mode: "walking" | "riding" | "driving") => {
@@ -278,19 +296,9 @@ export function ToiletMap() {
     setLocationError(null);
 
     let loc = userLocation;
-    // Check for NaN (e.g. from corrupt geolocation)
     if (loc && (!Number.isFinite(loc.lng) || !Number.isFinite(loc.lat))) loc = null;
-    if (!loc && navigator.geolocation) {
-      try {
-        loc = await new Promise<{ lng: number; lat: number }>((res, rej) => {
-          navigator.geolocation.getCurrentPosition(
-            (p) => res({ lng: p.coords.longitude, lat: p.coords.latitude }),
-            () => rej(new Error()),
-            { enableHighAccuracy: true, timeout: 6000 }
-          );
-        });
-      } catch {}
-    }
+    // Try Capacitor geolocation, then browser API
+    if (!loc) loc = await getPosition();
     // Fallback to map center
     if (!loc && mapInstance) {
       const c = mapInstance.getCenter();

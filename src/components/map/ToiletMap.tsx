@@ -216,11 +216,13 @@ export function ToiletMap() {
     polylineRef.current = dashed;
 
     // ── Real road path from backend API ──
-    fetch(`/api/directions?mode=${mode}&origin=${start.lng},${start.lat}&destination=${end.lng},${end.lat}`)
+    const dirUrl = `/api/directions?mode=${mode}&origin=${start.lng},${start.lat}&destination=${end.lng},${end.lat}`;
+    console.log("[drawRoute] fetching directions:", dirUrl);
+    fetch(dirUrl)
       .then(r => r.json())
       .then(data => {
-        if (seq !== routeSeqRef.current) return;
-        if (String(data.status) !== "1" || !data.route?.paths?.[0]?.steps) return;
+        if (seq !== routeSeqRef.current) { console.log("[drawRoute] stale seq", seq, "vs", routeSeqRef.current); return; }
+        if (String(data.status) !== "1" || !data.route?.paths?.[0]?.steps) { console.log("[drawRoute] bad response", {s:data.status, st:!!data.route?.paths?.[0]?.steps}); return; }
 
         const pts: [number, number][] = [];
         for (const s of data.route.paths[0].steps) {
@@ -249,7 +251,7 @@ export function ToiletMap() {
         mapRef.current!.setFitView(null, false,
           new amapInstance.Bounds(Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)));
       })
-      .catch(() => {});
+      .catch(err => { console.log("[drawRoute] fetch error:", err); });
   }, [amapInstance, mapInstance]);
 
   const handleFindNearest = useCallback(async (mode: "walking" | "riding" | "driving" = "walking") => {

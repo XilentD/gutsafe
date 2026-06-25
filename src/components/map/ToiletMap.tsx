@@ -289,10 +289,8 @@ export function ToiletMap() {
 
     const colors: Record<string, string> = { walking: "#22c55e", riding: "#3b82f6", driving: "#f97316" };
 
-    // Clear previous
-    if (polylineRef.current) { mapRef.current.remove(polylineRef.current); polylineRef.current = null; }
-
-    // ── Dashed fallback ──
+    // ── Dashed fallback (replaces previous line) ──
+    if (polylineRef.current) { mapRef.current.remove(polylineRef.current); }
     const dashed = new amapInstance.Polyline({
       path: [[start.lng, start.lat], [end.lng, end.lat]],
       strokeColor: colors[mode],
@@ -350,6 +348,7 @@ export function ToiletMap() {
 
   const handleFindNearest = useCallback(async (mode: "walking" | "riding" | "driving" = "walking") => {
     if (!amapInstance || !mapInstance) return;
+    if (isFindingNearest) return; // prevent double-clicks
     setRouteMode(mode);
     setLocationError(null);
 

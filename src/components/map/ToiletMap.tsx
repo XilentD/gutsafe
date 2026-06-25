@@ -264,6 +264,7 @@ export function ToiletMap() {
     console.log("[handleFindNearest] called, amap:", !!amapInstance, "map:", !!mapInstance);
     if (!amapInstance || !mapInstance) { console.log("[handleFindNearest] no amap/map, abort"); return; }
     setRouteMode(mode);
+    setLocationError(null); // clear stale errors from page load
 
     // Get user location — fall back to map center if geolocation unavailable
     let loc = userLocation;
@@ -296,12 +297,17 @@ export function ToiletMap() {
         return;
       }
     }
+    console.log("[handleFindNearest] using location:", loc);
 
     setIsFindingNearest(true);
+    const apiUrl = `/api/toilets/nearby?lat=${loc.lat}&lng=${loc.lng}&radius=5000&pageSize=1&sortBy=distance`;
+    console.log("[handleFindNearest] fetching:", apiUrl);
     try {
-      const res = await fetch(`/api/toilets/nearby?lat=${loc.lat}&lng=${loc.lng}&radius=5000&pageSize=1&sortBy=distance`);
+      const res = await fetch(apiUrl);
+      console.log("[handleFindNearest] API status:", res.status);
       if (!res.ok) throw new Error("搜索失败");
       const data = await res.json();
+      console.log("[handleFindNearest] API result:", data.pagination?.total, "toilets");
       if (!data.data?.length) { setLocationError("附近未找到卫生间"); setIsFindingNearest(false); return; }
 
       const toilet = data.data[0] as ToiletSummary;

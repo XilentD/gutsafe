@@ -178,23 +178,35 @@ export function ToiletMap() {
     }
   }, [userLocation, amapInstance, mapInstance]);
 
-  // Get position (tries Capacitor Geolocation first, falls back to browser API)
+  // Get position (Capacitor native → browser API → IP geolocation)
   const getPosition = useCallback(async (): Promise<{ lng: number; lat: number } | null> => {
-    // Try Capacitor native geolocation (works on Android APK)
+    // 1. Try Capacitor native geolocation (Android APK)
     try {
       const { Geolocation } = await import("@capacitor/geolocation");
+      // Check/request permission first
+      try {
+        const perm = await Geolocation.checkPermissions();
+        if (perm.location !== "granted") {
+          const req = await Geolocation.requestPermissions();
+          if (req.location !== "granted") throw new Error("Permission denied");
+        }
+      } catch {}
       const pos = await Geolocation.getCurrentPosition({ enableHighAccuracy: true, timeout: 10000 });
-      if (pos.coords) return { lng: pos.coords.longitude, lat: pos.coords.latitude };
-    } catch {}
-    // Fall back to browser geolocation
+      if (pos.coords) {
+        console.log("[getPosition] Capacitor GPS:", pos.coords.latitude, pos.coords.longitude);
+        return { lng: pos.coords.longitude, lat: pos.coords.latitude };
+      }
+    } catch (e) { console.log("[getPosition] Capacitor failed:", e); }
+
+    // 2. Fall back to browser geolocation
     if (navigator.geolocation) {
-      return new Promise((resolve) => {
-        navigator.geolocation.getCurrentPosition(
-          (pos) => resolve({ lng: pos.coords.longitude, lat: pos.coords.latitude }),
-          () => resolve(null),
-          { enableHighAccuracy: true, timeout: 8000 }
-        );
-      });
+      try {
+        const loc = await new Promise<GeolocationPosition>((resolve, reject) => {
+          navigator.geolocation.getCurrentPosition(resolve, reject, { enableHighAccuracy: true, timeout: 8000 });
+        });
+        console.log("[getPosition] Browser GPS:", loc.coords.latitude, loc.coords.longitude);
+        return { lng: loc.coords.longitude, lat: loc.coords.latitude };
+      } catch {}
     }
     return null;
   }, []);
@@ -308,16 +320,27 @@ export function ToiletMap() {
       // If the user hasn't moved the map (still at default Beijing), try IP geolocation
       if (loc && Math.abs(loc.lat - 39.9) < 0.01 && Math.abs(loc.lng - 116.4) < 0.01) {
         try {
-          const ipRes = await fetch("https://ipapi.co/json/");
-          if (ipRes.ok) {
-            const ip = await ipRes.json();
-            if (ip.latitude && ip.longitude) {
-              loc = { lng: ip.longitude, lat: ip.latitude };
-              // Also move the map to the IP location
-              const gcj = wgs84ToGcj02(loc);
-              mapInstance.setCenter(new AMap.LngLat(gcj.lng, gcj.lat));
-              mapInstance.setZoom(13);
-            }
+          // Try multiple IP geolocation services (some blocked in China)
+          const services = [
+            "https://ipapi.co/json/",
+            "https://api.ip.sb/geoip",
+            "https://ip.useragentinfo.com/json",
+          ];
+          for (const svc of services) {
+            try {
+              const ipRes = await fetch(svc);
+              if (!ipRes.ok) continue;
+              const ip = await ipRes.json();
+              const lat = ip.latitude || ip.lat;
+              const lng = ip.longitude || ip.lon || ip.lng;
+              if (lat && lng) {
+                loc = { lng: Number(lng), lat: Number(lat) };
+                const gcj = wgs84ToGcj02(loc);
+                mapInstance.setCenter(new AMap.LngLat(gcj.lng, gcj.lat));
+                mapInstance.setZoom(13);
+                break;
+              }
+            } catch {}
           }
         } catch {}
       }

@@ -68,6 +68,82 @@ const CITY_BBOXES: Record<string, { south: number; west: number; north: number; 
   "桂林": { south: 25.20, west: 110.10, north: 25.45, east: 110.50 },
   "海口": { south: 19.90, west: 110.15, north: 20.10, east: 110.50 },
   "三亚": { south: 18.15, west: 109.35, north: 18.35, east: 109.65 },
+  // 江苏
+  "无锡": { south: 31.40, west: 120.10, north: 31.70, east: 120.45 },
+  "常州": { south: 31.60, west: 119.85, north: 31.95, east: 120.20 },
+  "徐州": { south: 34.10, west: 117.00, north: 34.40, east: 117.50 },
+  "南通": { south: 31.85, west: 120.70, north: 32.15, east: 121.10 },
+  "扬州": { south: 32.25, west: 119.25, north: 32.55, east: 119.60 },
+  // 浙江
+  "温州": { south: 27.85, west: 120.45, north: 28.15, east: 120.85 },
+  "嘉兴": { south: 30.60, west: 120.60, north: 30.90, east: 120.95 },
+  "绍兴": { south: 29.85, west: 120.35, north: 30.15, east: 120.75 },
+  "金华": { south: 28.95, west: 119.50, north: 29.25, east: 119.85 },
+  "台州": { south: 28.55, west: 121.25, north: 28.80, east: 121.60 },
+  // 河北
+  "唐山": { south: 39.50, west: 118.00, north: 39.80, east: 118.35 },
+  "保定": { south: 38.70, west: 115.30, north: 39.00, east: 115.70 },
+  "邯郸": { south: 36.45, west: 114.30, north: 36.75, east: 114.65 },
+  // 山西
+  "大同": { south: 39.95, west: 113.15, north: 40.20, east: 113.45 },
+  "临汾": { south: 35.95, west: 111.35, north: 36.20, east: 111.65 },
+  // 内蒙古
+  "包头": { south: 40.45, west: 109.70, north: 40.75, east: 110.15 },
+  "鄂尔多斯": { south: 39.65, west: 109.65, north: 39.95, east: 110.15 },
+  // 辽宁
+  "鞍山": { south: 40.95, west: 122.85, north: 41.25, east: 123.20 },
+  "抚顺": { south: 41.70, west: 123.70, north: 41.95, east: 124.10 },
+  // 吉林
+  "吉林": { south: 43.65, west: 126.30, north: 43.95, east: 126.75 },
+  // 黑龙江
+  "大庆": { south: 46.40, west: 124.80, north: 46.75, east: 125.25 },
+  "齐齐哈尔": { south: 47.15, west: 123.70, north: 47.50, east: 124.20 },
+  // 安徽
+  "芜湖": { south: 31.15, west: 118.20, north: 31.50, east: 118.55 },
+  "马鞍山": { south: 31.55, west: 118.35, north: 31.75, east: 118.65 },
+  // 福建
+  "泉州": { south: 24.75, west: 118.45, north: 25.05, east: 118.80 },
+  "漳州": { south: 24.40, west: 117.55, north: 24.65, east: 117.85 },
+  // 江西
+  "九江": { south: 29.55, west: 115.85, north: 29.85, east: 116.15 },
+  "赣州": { south: 25.75, west: 114.80, north: 25.95, east: 115.10 },
+  // 山东
+  "烟台": { south: 37.35, west: 121.20, north: 37.65, east: 121.55 },
+  "威海": { south: 37.35, west: 121.95, north: 37.60, east: 122.30 },
+  "潍坊": { south: 36.55, west: 119.00, north: 36.85, east: 119.35 },
+  "临沂": { south: 34.90, west: 118.15, north: 35.20, east: 118.55 },
+  "淄博": { south: 36.65, west: 117.90, north: 36.95, east: 118.25 },
+  // 河南
+  "洛阳": { south: 34.50, west: 112.25, north: 34.80, east: 112.65 },
+  "开封": { south: 34.65, west: 114.15, north: 34.90, east: 114.50 },
+  "南阳": { south: 32.85, west: 112.35, north: 33.15, east: 112.75 },
+  "许昌": { south: 33.90, west: 113.65, north: 34.15, east: 113.95 },
+  // 湖北
+  "宜昌": { south: 30.55, west: 111.15, north: 30.85, east: 111.45 },
+  "襄阳": { south: 31.85, west: 111.95, north: 32.15, east: 112.35 },
+  // 湖南
+  "株洲": { south: 27.70, west: 113.00, north: 28.00, east: 113.30 },
+  "湘潭": { south: 27.70, west: 112.80, north: 27.95, east: 113.10 },
+  "衡阳": { south: 26.75, west: 112.45, north: 27.00, east: 112.75 },
+  "岳阳": { south: 29.25, west: 113.00, north: 29.50, east: 113.35 },
+  // 广西
+  "柳州": { south: 24.20, west: 109.25, north: 24.50, east: 109.65 },
+  "北海": { south: 21.35, west: 109.00, north: 21.60, east: 109.35 },
+  // 四川
+  "绵阳": { south: 31.35, west: 104.55, north: 31.65, east: 104.95 },
+  "德阳": { south: 31.00, west: 104.25, north: 31.25, east: 104.55 },
+  "宜宾": { south: 28.65, west: 104.45, north: 28.90, east: 104.80 },
+  // 贵州
+  "遵义": { south: 27.55, west: 106.75, north: 27.85, east: 107.10 },
+  // 陕西
+  "咸阳": { south: 34.20, west: 108.55, north: 34.50, east: 108.95 },
+  "宝鸡": { south: 34.20, west: 107.05, north: 34.50, east: 107.35 },
+  // 甘肃
+  "天水": { south: 34.45, west: 105.60, north: 34.70, east: 105.95 },
+  // 宁夏
+  "吴忠": { south: 37.85, west: 106.05, north: 38.10, east: 106.35 },
+  // 新疆
+  "克拉玛依": { south: 45.45, west: 84.70, north: 45.75, east: 85.05 },
 };
 
 interface RawOsmElement {

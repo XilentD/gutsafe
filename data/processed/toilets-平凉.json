@@ -1,0 +1,4618 @@
+[
+  {
+    "name": "公共厕所",
+    "lat": 35.53955070576321,
+    "lng": 106.68560216054718,
+    "address": "柳树街与新民路交叉口西北100米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 50,
+    "feeDescription": "1.00",
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFF2QGT0",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54141494303911,
+    "lng": 106.67566029676053,
+    "address": "北后街71号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0H3PD466M",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53767485719217,
+    "lng": 106.68675599353075,
+    "address": "新民路与西寺街交叉口东80米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 50,
+    "feeDescription": "30.00",
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0J2YNI57U",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.33518271971875,
+    "lng": 107.35928993549611,
+    "address": "新建街与泾州街交叉口西北60米",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A5146PF",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54696448209341,
+    "lng": 106.6698583295382,
+    "address": "崆峒大道中路柳湖公园(西北角)",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFF2EDK0",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.541728132018186,
+    "lng": 106.6962135029727,
+    "address": "解放北路81号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A5002BD",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.55926750174428,
+    "lng": 106.63743042368925,
+    "address": "天泰嘉苑北侧140米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KBT6X23R",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53575208954912,
+    "lng": 106.69312330847993,
+    "address": "解放路与过店街交叉口东北220米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0ID7CIY03",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.555106896565526,
+    "lng": 106.66748586655295,
+    "address": "桃园路与临泾路交叉口西南40米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GDOZOYQF",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.538204304491224,
+    "lng": 106.69204807138784,
+    "address": "崆峒大道(东段)西50米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHLTDI0",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.552130724602854,
+    "lng": 106.68227186239436,
+    "address": "浙江街宏达国际花园",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0H067HO95",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.33194467940346,
+    "lng": 107.35454369539286,
+    "address": "泾崇路与安定街交叉口北120米",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A5002BM",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54342096019361,
+    "lng": 106.6671507763582,
+    "address": "文化街平凉宾馆",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFGNEZD5",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.5592465008998,
+    "lng": 106.64646926288783,
+    "address": "泾河大道1号正东方向140米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GD9SLEAU",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53499179347212,
+    "lng": 106.69791453703967,
+    "address": "宝塔路143号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0L17A7OFV",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.541356895024144,
+    "lng": 106.68049093243476,
+    "address": "西寺街285号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A50HXXI",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.5365174639943,
+    "lng": 106.68351244817751,
+    "address": "城南路与新民路交叉口西北160米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 50,
+    "feeDescription": "26.00",
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHEGLQV",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "水上公公共厕所",
+    "lat": 35.19213169162059,
+    "lng": 106.02664314607048,
+    "address": "西大街935号",
+    "city": "平凉",
+    "district": "庄浪县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KUUCQVN0",
+    "rawAttributes": {
+      "originalName": "水上公公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53140227788043,
+    "lng": 106.7038008888364,
+    "address": "宝塔路20号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0J1X6OVK3",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.30839797546061,
+    "lng": 107.02664573150778,
+    "address": "滨河东路与312国道交叉口东120米",
+    "city": "平凉",
+    "district": "崇信县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFG6K5JW",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.554346025427364,
+    "lng": 106.62889042596626,
+    "address": "太统路18号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0LR4MOSLN",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.537056706420664,
+    "lng": 106.73283762297608,
+    "address": "泾河风情大道与和阳路交叉口东480米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JGXD1NFX",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共卫生间",
+    "lat": 35.55193777675967,
+    "lng": 106.67275022590611,
+    "address": "柳湖路(西段)112号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0HGJ4FF3I",
+    "rawAttributes": {
+      "originalName": "公共卫生间",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.535181028909186,
+    "lng": 106.72913598802296,
+    "address": "泾河北路150号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GUNDGV7W",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.20716973040223,
+    "lng": 106.62476244547265,
+    "address": "华煤大道与莲湖路交叉口西240米",
+    "city": "平凉",
+    "district": "华亭市",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JDAH5MD7",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.553802592031204,
+    "lng": 106.68561202696914,
+    "address": "泾河南路南侧",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GR06VJRI",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54357705855372,
+    "lng": 106.66392648385181,
+    "address": "四中巷市场与四中巷交叉口东南60米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFFE15ZS",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "回中广场-公共厕所",
+    "lat": 35.33545271372111,
+    "lng": 107.3537542046897,
+    "address": "泾崇路(回中广场)",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL2WLKO",
+    "rawAttributes": {
+      "originalName": "回中广场-公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.55043946827266,
+    "lng": 106.70209462693212,
+    "address": "北大路与解放路交叉口西北80米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GKJ7Y8FW",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.55395512640112,
+    "lng": 106.66149100074239,
+    "address": "柳湖中路与果园路交叉口西200米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFKRLQPD",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53843298346256,
+    "lng": 106.67193571999533,
+    "address": "上县巷与红旗街交叉口南100米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHE45IJ",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共卫生间",
+    "lat": 35.531405678753174,
+    "lng": 106.70710496481333,
+    "address": "崆峒大道(东段)与保丰路交叉口东220米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0HRVOFX8B",
+    "rawAttributes": {
+      "originalName": "公共卫生间",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.538666759543055,
+    "lng": 106.69961084815652,
+    "address": "宝塔路与柳湖东路交叉口西380米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JK7CQ7F2",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.55838971659735,
+    "lng": 106.65601293973896,
+    "address": "泾河北路941号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0L6FHHD8O",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.56104480617595,
+    "lng": 106.62662895859386,
+    "address": "天门路12号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0L1ZMKUN4",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共卫生间",
+    "lat": 35.21923215739363,
+    "lng": 106.65231244234045,
+    "address": "东大街与北巷街交叉口东360米",
+    "city": "平凉",
+    "district": "华亭市",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHEIGC0",
+    "rawAttributes": {
+      "originalName": "公共卫生间",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.21586186818533,
+    "lng": 106.647153311517,
+    "address": "南新街与西巷街交叉口西南40米",
+    "city": "平凉",
+    "district": "华亭市",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A5002BP",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54817502277354,
+    "lng": 106.66449741243395,
+    "address": "崆峒大道中路平凉市体育馆",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFF2IJII",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53315349181263,
+    "lng": 106.68977977518739,
+    "address": "城南路与解放路交叉口西北40米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFJ6LW2G",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.06523234482814,
+    "lng": 107.62419037045426,
+    "address": "广场街东关小学",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A5144UH",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.52763426807984,
+    "lng": 105.73316181307662,
+    "address": "东综市场37",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHEIG52",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.30411159359781,
+    "lng": 107.0201974775353,
+    "address": "文化路与团结路交叉口北80米",
+    "city": "平凉",
+    "district": "崇信县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHEIH13",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53701427325293,
+    "lng": 106.67911733136711,
+    "address": "九天庙巷与隍庙巷交叉口东40米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A514D5L",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54231720017612,
+    "lng": 106.66947384776176,
+    "address": "分区巷与政和巷交叉口南80米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHLSRCN",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "平凉服务区公共厕所",
+    "lat": 35.495959842495544,
+    "lng": 106.8290055033213,
+    "address": "青兰高速平凉服务区",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFI7VFCB",
+    "rawAttributes": {
+      "originalName": "平凉服务区公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54809694401212,
+    "lng": 106.67975658105874,
+    "address": "农科路与柳湖路(西段)交叉口西南120米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JDHP55A9",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54168636988236,
+    "lng": 106.66907709408297,
+    "address": "西大街与分区巷交叉口西北60米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A50HY46",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.333339844479575,
+    "lng": 107.36186074176558,
+    "address": "农林路与安定街交叉口西北80米",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHLSRJ8",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54687316446817,
+    "lng": 106.71568390719275,
+    "address": "保丰北路与泾河北路交叉口东北380米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GKJ7YGM2",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.539404564752395,
+    "lng": 106.70344413988637,
+    "address": "柳湖东路与宝塔路交叉口西北40米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0H3D5QP8J",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.218419896004214,
+    "lng": 106.64389208317438,
+    "address": "北大街19附近",
+    "city": "平凉",
+    "district": "华亭市",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFFW9CHI",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共卫生间",
+    "lat": 35.51324306729225,
+    "lng": 105.7157275037569,
+    "address": "武穆路8号",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0K0ZMSE0S",
+    "rawAttributes": {
+      "originalName": "公共卫生间",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.5445990810833,
+    "lng": 106.68034511205961,
+    "address": "广成路与崆峒大道(中段)交叉口北60米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFLKLY4D",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53778308167259,
+    "lng": 106.68002259188331,
+    "address": "东大街33号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHECH5Y",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53316978860934,
+    "lng": 105.72517005784638,
+    "address": "东滨河路附近",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFKZNV63",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.34020003242892,
+    "lng": 107.36462566032226,
+    "address": "312国道与泾灵路交叉口东60米",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHE457Q",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.52914211524757,
+    "lng": 105.7243275347988,
+    "address": "北二环中路与西环路交叉口西北60米",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL19AX9",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.2042155853161,
+    "lng": 106.62491933464051,
+    "address": "华煤大道与莲湖路交叉口西南340米",
+    "city": "平凉",
+    "district": "华亭市",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL1JQI4",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "人民广场-公共厕所",
+    "lat": 35.21405023270216,
+    "lng": 106.64455560639993,
+    "address": "广场东路人民广场(东侧)",
+    "city": "平凉",
+    "district": "华亭市",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A5002BN",
+    "rawAttributes": {
+      "originalName": "人民广场-公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54339960200617,
+    "lng": 106.71833689951987,
+    "address": "泾河北路24号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0I0HARCXS",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.33974747763567,
+    "lng": 107.3735461086122,
+    "address": "泾州街与中兴路交叉口西南120米",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A5147GE",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53902167616201,
+    "lng": 106.6819647772928,
+    "address": "东大街18号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHLTH9A",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.539198012915115,
+    "lng": 106.67690773776768,
+    "address": "东大街89号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A50HXUA",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.55309976096767,
+    "lng": 106.67976516871148,
+    "address": "定北路碧湖家园",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0ID77KNS4",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.20707344124413,
+    "lng": 106.03941100294333,
+    "address": "北滨河路与博爱巷交叉口西南80米",
+    "city": "平凉",
+    "district": "庄浪县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHLSREP",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.5494273203065,
+    "lng": 106.67486905032521,
+    "address": "泾滩路(绿地广场)",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0HGJ6EZ2S",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53992812956231,
+    "lng": 106.71905079800025,
+    "address": "柳湖东路与双桥路交叉口东南200米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KGUZZLKO",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53613127551766,
+    "lng": 106.66110651735845,
+    "address": "红旗街133号崆峒区实验小学附近",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFF2OO14",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.34531565832716,
+    "lng": 107.37784935515619,
+    "address": "柏景小区西北侧150米",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0HR1SD6ZG",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共卫生间",
+    "lat": 35.06664434801775,
+    "lng": 107.60358535810221,
+    "address": "新兴街23号",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JD1ZW0XG",
+    "rawAttributes": {
+      "originalName": "公共卫生间",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53034702388269,
+    "lng": 105.73409467975063,
+    "address": "成纪路与北二环中路交叉口北120米",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHLSRH7",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54481774945764,
+    "lng": 106.71280809311962,
+    "address": "泾河北路503号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JB7KMIW0",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.52693504132386,
+    "lng": 106.71312780951237,
+    "address": "拥军路与双桥路交叉口东南180米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JBGRJMCT",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53034305104743,
+    "lng": 106.70036656142064,
+    "address": "双拥路宝塔公园(西侧)",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFF2E1N6",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.14466401892445,
+    "lng": 107.40917183772999,
+    "address": "202省道与043县道交叉口东北420米",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GU6OAPE9",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53736860517116,
+    "lng": 106.66364879535404,
+    "address": "嘉苑路阳光花园",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0HU26PR4Z",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.552906800688085,
+    "lng": 106.62898731450886,
+    "address": "崆峒大道(西段)与崇文路交叉口东南60米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0H6F41RT0",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53366256168566,
+    "lng": 105.72046203180697,
+    "address": "陇原红路2号",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KBRUQTU9",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.207371153701416,
+    "lng": 106.62666436217022,
+    "address": "莲湖路与华煤大道交叉口西北100米",
+    "city": "平凉",
+    "district": "华亭市",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JUD60GN4",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "泾川服务区公共厕所",
+    "lat": 35.35827864093933,
+    "lng": 107.44335832206887,
+    "address": "G22青兰高速与泾川服务区交叉口北120米",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A50I1SN",
+    "rawAttributes": {
+      "originalName": "泾川服务区公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.30110382879981,
+    "lng": 107.01273555413633,
+    "address": "公刘路49号",
+    "city": "平凉",
+    "district": "崇信县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0J3ZASSUT",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.52289362171384,
+    "lng": 105.73742621358456,
+    "address": "东街与富康路交叉口西南260米",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHE43PS",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.216311717560906,
+    "lng": 106.0469071648038,
+    "address": "北滨河路与文昌街交叉口南80米",
+    "city": "平凉",
+    "district": "庄浪县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A51470F",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.324955284304465,
+    "lng": 107.34241701799306,
+    "address": "泾崇路21号",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KR55WLSH",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.554037201920956,
+    "lng": 106.67392851912713,
+    "address": "临泾路与兴北路交叉口东220米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0HBLCC2ZG",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.521884271706014,
+    "lng": 105.73282258221937,
+    "address": "永福巷1号西北方向60米",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFFWID7M",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.06484516670563,
+    "lng": 107.61056344667129,
+    "address": "溪河大道与财政街交叉口东南60米",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A5145EH",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.090182050459894,
+    "lng": 107.21711592049212,
+    "address": "甘肃灵台农村商业银行对面",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GUDURAA5",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.06868056783936,
+    "lng": 107.59284632689528,
+    "address": "华仁医院东南侧60米",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFLAER4E",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53672971106091,
+    "lng": 106.67109139659598,
+    "address": "南环路88号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JD47KVA3",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "免费公共厕所",
+    "lat": 35.52766853067242,
+    "lng": 105.72769809438282,
+    "address": "城关镇师范巷法检院家属楼",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFF2OOFB",
+    "rawAttributes": {
+      "originalName": "免费公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.55436397778424,
+    "lng": 106.62419965602811,
+    "address": "青年路与崆峒大道(西段)交叉口东北40米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KARRGTIB",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.066168100411694,
+    "lng": 107.6190742092739,
+    "address": "东沟西路与东大街交叉口南80米",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A5002BS",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.365415144182876,
+    "lng": 105.76371234683754,
+    "address": "北街与朝阳路交叉口南80米",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0LGV1Y8S7",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53404544987224,
+    "lng": 106.71390460426082,
+    "address": "柳湖路(中段)与双桥路交叉口西北80米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0G3JU7RLA",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.540258240732925,
+    "lng": 105.71946116437375,
+    "address": "亨通路与工兴路交叉口西南100米",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KB75I5TT",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54661369659089,
+    "lng": 106.6243569105103,
+    "address": "太统路22号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KA97PYZJ",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.433057223079444,
+    "lng": 106.85272063084881,
+    "address": "雨林村卫生所北侧140米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GUA5C0II",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54564351878919,
+    "lng": 106.67708969697361,
+    "address": "崆峒大道(中段)699号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFGHCNMD",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.529800423992576,
+    "lng": 105.73942415601763,
+    "address": "北二环东路静宁华源中学",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFKSR6DU",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.21658777227268,
+    "lng": 106.65126365084255,
+    "address": "南新街与南巷街交叉口东180米",
+    "city": "平凉",
+    "district": "华亭市",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A51457O",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.06578208461174,
+    "lng": 107.61433970361958,
+    "address": "皇甫街13-075号附近",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GUU5ZQK4",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共卫生间",
+    "lat": 35.194019264843064,
+    "lng": 106.04964574471084,
+    "address": "南河南路1号",
+    "city": "平凉",
+    "district": "庄浪县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JUYMITVM",
+    "rawAttributes": {
+      "originalName": "公共卫生间",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.34080234444672,
+    "lng": 107.3528199115283,
+    "address": "G70(青兰高速)",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFMC89D5",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.06890023290387,
+    "lng": 107.60670519546284,
+    "address": "滨河路与西大街交叉口东南120米",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHEGL5A",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.301630254317374,
+    "lng": 107.0197256573543,
+    "address": "怡泉家园东北侧110米",
+    "city": "平凉",
+    "district": "崇信县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL5KHJ3",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.06394258297281,
+    "lng": 107.61707381334602,
+    "address": "政府巷与溪河大道交叉口西北60米",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFGNTH34",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "古灵台荆山森林公园-公共厕所",
+    "lat": 35.06809551852232,
+    "lng": 107.6131837038463,
+    "address": "古灵台荆山森林公园(西南角)",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFIWKBFV",
+    "rawAttributes": {
+      "originalName": "古灵台荆山森林公园-公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.548496439612315,
+    "lng": 106.67093396557601,
+    "address": "暖泉路与泾滩路交叉口南100米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHEIHET",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53659152730049,
+    "lng": 106.69135810525445,
+    "address": "解放路与中山街交叉口北220米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHE1ZK2",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53931311612879,
+    "lng": 106.65425255716312,
+    "address": "甘沟路196号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JDTH8TBT",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.21165412040804,
+    "lng": 106.63158489220704,
+    "address": "皇甫路与南环路交叉口西南60米",
+    "city": "平凉",
+    "district": "华亭市",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFI8S7M5",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共卫生间",
+    "lat": 35.3058132893264,
+    "lng": 107.01621716631011,
+    "address": "滨河西路崇信县第一中学",
+    "city": "平凉",
+    "district": "崇信县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL050PB",
+    "rawAttributes": {
+      "originalName": "公共卫生间",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53210503962827,
+    "lng": 106.66469505030068,
+    "address": "圆通寺路南山生态公园(东南角)",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL6F25Q",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53828570934341,
+    "lng": 106.65320967205827,
+    "address": "南环路251正",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0LA4Y730Q",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.33160298726337,
+    "lng": 107.35928026663544,
+    "address": "安定街与中山街交叉口东100米",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A5146GM",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "龙泉寺-公共厕所",
+    "lat": 35.31401324864633,
+    "lng": 107.03306626467652,
+    "address": "龙泉寺中台",
+    "city": "平凉",
+    "district": "崇信县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFKZNKOE",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "龙泉寺-公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "龙泉寺-公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.127065317877495,
+    "lng": 107.63054537144416,
+    "address": "051县道与128乡道交叉口南160米",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL0FDN0",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.06668876761762,
+    "lng": 107.5929344873171,
+    "address": "城南路与081乡道交叉口西北160米",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GDVD7LNQ",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.49591589341376,
+    "lng": 106.78600774691324,
+    "address": "312国道南50米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A5147DM",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所(暂停营业)",
+    "lat": 35.523044782592535,
+    "lng": 105.7260855436909,
+    "address": "二天门巷与中街交叉口北80米",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHEIGZ2",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所(暂停营业)",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所(暂停营业)",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54597466390083,
+    "lng": 105.70970557300646,
+    "address": "312国道与鼎元路交叉口西北340米",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A5147X6",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.55719355837249,
+    "lng": 106.67166409358013,
+    "address": "兴北路172号",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL65JQ9",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "玄凤山环保移动厕所",
+    "lat": 35.15965060308603,
+    "lng": 106.47373246355642,
+    "address": null,
+    "city": "平凉",
+    "district": "华亭市",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0H04S7A25",
+    "rawAttributes": {
+      "originalName": "玄凤山环保移动厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.37005762590225,
+    "lng": 105.7008873452133,
+    "address": "仙鹤谷无动力游乐园西侧60米",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0K1NCDTF9",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "人民广场-公共厕所",
+    "lat": 35.06364528166465,
+    "lng": 107.6145266804205,
+    "address": "溪河大道与皇甫街交叉口西北50米",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A5002BR",
+    "rawAttributes": {
+      "originalName": "人民广场-公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "静宁埠服务区公共厕所",
+    "lat": 35.53894123187111,
+    "lng": 105.7344826760334,
+    "address": "青兰高速静宁埠服务区",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A50I1SJ",
+    "rawAttributes": {
+      "originalName": "静宁埠服务区公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "皇甫谧文化园-公共厕所",
+    "lat": 35.11952091133382,
+    "lng": 107.6167945896871,
+    "address": "(皇甫谧文化园)",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL2KE9X",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "皇甫谧文化园-公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "皇甫谧文化园-公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.31617662611602,
+    "lng": 107.02897087327322,
+    "address": "滨河东路0-3号",
+    "city": "平凉",
+    "district": "崇信县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KD65GEER",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.1779072707605,
+    "lng": 106.30719534864662,
+    "address": "云崖寺国家森林公园游客中心西北侧",
+    "city": "平凉",
+    "district": "庄浪县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GRDUJD7A",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "海寨沟服务区公共厕所",
+    "lat": 35.40891425520409,
+    "lng": 106.79804154060695,
+    "address": "G85银昆高速出口与G85银昆高速入口交叉口东北160米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0I2JZ3IRE",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "海寨沟服务区公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "海寨沟服务区公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.17848924203669,
+    "lng": 106.3068741081374,
+    "address": "云崖寺国家森林公园游客中心西北侧110米",
+    "city": "平凉",
+    "district": "庄浪县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GU7KFO6A",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "五龙山景区公共厕所",
+    "lat": 35.26764270454312,
+    "lng": 106.84461450188537,
+    "address": "203省道",
+    "city": "平凉",
+    "district": "崇信县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KAP5M4T9",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "五龙山景区公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "五龙山景区公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.19411382372624,
+    "lng": 106.05034597647183,
+    "address": "南河北路与梯田广场西路交叉口东南200米",
+    "city": "平凉",
+    "district": "庄浪县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JU49BMRH",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.25005927813805,
+    "lng": 107.3293267674535,
+    "address": "041县道",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KDCLHNCZ",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.552595909557425,
+    "lng": 106.63263181851475,
+    "address": "崆峒大道(西段)与太统路交叉口东380米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0LUDRF0KO",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.52864926456681,
+    "lng": 105.73188908069778,
+    "address": "东环路与北二环中路交叉口南60米",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A51486R",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.332630629811604,
+    "lng": 107.36482992440986,
+    "address": "安定街与泾灵路交叉口西南200米",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A5146GT",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54419811038778,
+    "lng": 105.71104104516016,
+    "address": "312国道与鼎元路交叉口西北120米",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JGHNMV06",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53433827933261,
+    "lng": 106.66640871324783,
+    "address": "圆通寺路与嘉苑路交叉口西南200米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL5E8UZ",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.21009939403639,
+    "lng": 106.77626287819683,
+    "address": "安口镇立新村佛爷崖石窟",
+    "city": "平凉",
+    "district": "华亭市",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL1APMI",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.406310109267544,
+    "lng": 107.08361558174995,
+    "address": "花所大戏台",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0I12H9WDK",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.38468530720387,
+    "lng": 107.34770343630395,
+    "address": "田家沟生态风景区-茶楼西北侧130米",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL83FN5",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.06518516352614,
+    "lng": 107.34453886061793,
+    "address": "082乡道",
+    "city": "平凉",
+    "district": "灵台县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0K1UHCW61",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共卫生间",
+    "lat": 35.538572272051944,
+    "lng": 106.68125888536915,
+    "address": "九天庙巷与东大街交叉口东北20米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0J32ATYQM",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共卫生间",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共卫生间",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.515115186819465,
+    "lng": 106.7427993586202,
+    "address": "弘盛家园东侧190米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JU9S5H3C",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.639137297367405,
+    "lng": 106.51748326170983,
+    "address": "312国道与064乡道交叉口东南340米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GUPO0OHW",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所(暂停营业)",
+    "lat": 35.552383507645914,
+    "lng": 106.62870599199915,
+    "address": "太统路与崆峒大道(西段)交叉口南100米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GDVR77HS",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所(暂停营业)",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所(暂停营业)",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.36610753578629,
+    "lng": 107.67973392535067,
+    "address": "牛角沟遗址南侧300米",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL9IZD3",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "人民巷移动公共厕所",
+    "lat": 35.51963580746775,
+    "lng": 105.72782351959248,
+    "address": "人民巷与新街交叉口北20米",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHUKNGV",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "人民巷移动公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "人民巷移动公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.52658996767476,
+    "lng": 105.72669247688584,
+    "address": "二天门巷与北环中路交叉口西北60米",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFFW3Z6A",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "旅游厕所",
+    "lat": 35.20203411963255,
+    "lng": 106.04096081781921,
+    "address": "文化路与新昌街交叉口东20米",
+    "city": "平凉",
+    "district": "庄浪县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0G0DA8T5R",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "旅游厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "旅游厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "水上公园-公共厕所",
+    "lat": 35.19515067427166,
+    "lng": 106.02735050330496,
+    "address": "公园街与南滨河路交叉口西南20米",
+    "city": "平凉",
+    "district": "庄浪县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFKSN38L",
+    "rawAttributes": {
+      "originalName": "水上公园-公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.53721914078398,
+    "lng": 106.65006081827131,
+    "address": "甘沟路与南环路交叉口东北80米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A5143KA",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.545840059174,
+    "lng": 106.69966315411692,
+    "address": "解放路与泾河风情大道交叉口西40米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0ID77MY37",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.37334111504566,
+    "lng": 107.19967448410526,
+    "address": "沪霍线王村镇政府北侧约255米",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GURCQTGU",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.55057966924652,
+    "lng": 106.574395548947,
+    "address": "古镇步行街",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFF2BBON",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.55135866480619,
+    "lng": 106.5749767556285,
+    "address": "泾阳路古镇北门",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFF2FIXU",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.52097686370816,
+    "lng": 105.72788434492224,
+    "address": "人民巷5号静宁县博物馆附近",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03A514857",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.650443759971346,
+    "lng": 106.50476577733635,
+    "address": "油坊农家乐北侧",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL6EMW7",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.55380659599781,
+    "lng": 106.51799822175619,
+    "address": "城西12公里处平凉崆峒山旅游区内",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFF2WOS1",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.202389055433464,
+    "lng": 106.0408261837196,
+    "address": "紫荆路与新昌街交叉口东北20米",
+    "city": "平凉",
+    "district": "庄浪县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GUDCSBXL",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.54918738147664,
+    "lng": 106.66501677017462,
+    "address": "崆峒大道(中段)与兴北路交叉口西北320米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JDUKGIV6",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.30771666488731,
+    "lng": 107.03869409828998,
+    "address": "东街",
+    "city": "平凉",
+    "district": "崇信县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFLALZ5D",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所(GS-PL-0415)",
+    "lat": 35.37410973143941,
+    "lng": 107.19852303578114,
+    "address": "G312(沪霍线)",
+    "city": "平凉",
+    "district": "泾川县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0GK66P60O",
+    "rawAttributes": {
+      "originalName": "公共厕所(GS-PL-0415)",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.259357662156624,
+    "lng": 106.7821640189071,
+    "address": "王东虎诊疗所西北侧100米",
+    "city": "平凉",
+    "district": "华亭市",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL8DEEI",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.465805732038646,
+    "lng": 106.87362231616689,
+    "address": "203省道与312国道交叉口东南200米",
+    "city": "平凉",
+    "district": "崆峒区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFI93O4P",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 35.529597782211525,
+    "lng": 105.74348359706843,
+    "address": "东环路与北环东路交叉口北320米",
+    "city": "平凉",
+    "district": "静宁县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHEIHGH",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  }
+]

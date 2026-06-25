@@ -1,0 +1,3473 @@
+[
+  {
+    "name": "新丝路美居",
+    "lat": 42.81911874478854,
+    "lng": 93.48563421682582,
+    "address": "人民西路与经十二路交叉口东南200米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0G3USZKC6",
+    "rawAttributes": {
+      "originalName": "新丝路美居",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "北辰丽家",
+    "lat": 42.84452944666281,
+    "lng": 93.52953449046342,
+    "address": "延安路附近",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B038600B3H",
+    "rawAttributes": {
+      "originalName": "北辰丽家",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "银顺苑",
+    "lat": 42.845667195303626,
+    "lng": 93.4865186758355,
+    "address": "规划十九路与新民路交叉口东80米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03860M4OT",
+    "rawAttributes": {
+      "originalName": "银顺苑",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.84710650521003,
+    "lng": 93.54457068113307,
+    "address": "龙泉社区火箭农场第二医院旁边",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0K2SH0DQR",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "书馨名苑",
+    "lat": 42.822341915243555,
+    "lng": 93.47110654725152,
+    "address": "人民路与状元路交叉口东北120米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFIR5B87",
+    "rawAttributes": {
+      "originalName": "书馨名苑",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "悦隆美居",
+    "lat": 42.838497644026866,
+    "lng": 93.49975773115601,
+    "address": "兴业园路口",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFH6B2DL",
+    "rawAttributes": {
+      "originalName": "悦隆美居",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.60028169778775,
+    "lng": 93.0156728813694,
+    "address": "巴里坤步行街西侧东北方向170米",
+    "city": "哈密",
+    "district": "巴里坤哈萨克自治县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0H337XWGU",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "030六中公共厕所",
+    "lat": 42.84115892108162,
+    "lng": 93.50012611404645,
+    "address": "步行街与友谊路交叉口南280米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0LGK9P5DG",
+    "rawAttributes": {
+      "originalName": "030六中公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.82438927756656,
+    "lng": 93.51834581239865,
+    "address": "时代广场东南侧",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B038600BL0",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共卫生间",
+    "lat": 42.84058675375249,
+    "lng": 93.51152266595263,
+    "address": "欣荣路与田园路交叉口西南60米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03860M51S",
+    "rawAttributes": {
+      "originalName": "公共卫生间",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.82999368289965,
+    "lng": 93.4938583704557,
+    "address": "天山西路附19B华电大厦附近",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03860M568",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "114九中公共厕所",
+    "lat": 42.84067650967013,
+    "lng": 93.49018332499747,
+    "address": "八一北路与宝丰路交叉口南140米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0L0U5VTB6",
+    "rawAttributes": {
+      "originalName": "114九中公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "豫园南016公共厕所",
+    "lat": 42.83111148597858,
+    "lng": 93.50601009632676,
+    "address": "广东路与复兴南路交叉口东260米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0LDCUVKIO",
+    "rawAttributes": {
+      "originalName": "豫园南016公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.82068167033091,
+    "lng": 93.51492372031552,
+    "address": "中山北路与文化东路交叉口东100米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFG6O71M",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "豫园北017公共厕所",
+    "lat": 42.8346620778263,
+    "lng": 93.50793565402809,
+    "address": "建设东路与滨河路交叉口东100米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0LDFUSRPC",
+    "rawAttributes": {
+      "originalName": "豫园北017公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.83389485158175,
+    "lng": 93.54706642563688,
+    "address": "青年北路与延安路交叉口东北220米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0ID7RRAVA",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "009滨河路B座公共厕所",
+    "lat": 42.82477387335129,
+    "lng": 93.50380047713594,
+    "address": "009滨河路",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0L2K9GH8Z",
+    "rawAttributes": {
+      "originalName": "009滨河路B座公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.83007546438207,
+    "lng": 93.54216096830365,
+    "address": "青年北路与红星东路交叉口东160米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFGBA6FH",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.835543458572275,
+    "lng": 93.50039741193967,
+    "address": "北控城市服务有限公司",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFH6B2D9",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "无障碍公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "042鎏金华府公共厕所",
+    "lat": 42.82848492048948,
+    "lng": 93.45402365929655,
+    "address": "红柳路与翰林路交叉口东北140米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0LGFHR5D6",
+    "rawAttributes": {
+      "originalName": "042鎏金华府公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.90398109547945,
+    "lng": 93.4920333114227,
+    "address": "迎宾东路与内环东路交叉口东南20米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B038600BJT",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.847276469428955,
+    "lng": 93.53922414877624,
+    "address": "玉龙湾小区一期西南侧290米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0K2RSF14G",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共卫生间",
+    "lat": 42.83597762572303,
+    "lng": 93.51689381176342,
+    "address": "光明路泽宇房产附近",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0386009AE",
+    "rawAttributes": {
+      "originalName": "公共卫生间",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "032广东路公共厕所",
+    "lat": 42.82772311734853,
+    "lng": 93.50722808548713,
+    "address": "032广东路",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JB7RN1S2",
+    "rawAttributes": {
+      "originalName": "032广东路公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所(XJ-HM-0156)",
+    "lat": 43.53639013436918,
+    "lng": 93.41891316895783,
+    "address": "335国道与051乡道交叉口东360米",
+    "city": "哈密",
+    "district": "巴里坤哈萨克自治县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0G39NKU5M",
+    "rawAttributes": {
+      "originalName": "公共厕所(XJ-HM-0156)",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.84606508706309,
+    "lng": 93.49330355245242,
+    "address": "天马路与新华路交叉口南20米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0IBX7RCY1",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "春天里62号楼057公共厕所",
+    "lat": 42.85365306664815,
+    "lng": 93.52368693166137,
+    "address": "惠民园东南侧140米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JDHP8593",
+    "rawAttributes": {
+      "originalName": "春天里62号楼057公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.811165237597415,
+    "lng": 93.50692648507743,
+    "address": "自由路顺驰苑",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFGMIF0C",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.830944311877275,
+    "lng": 93.52303832470908,
+    "address": "千禧花园对面",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFLFC969",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.80953812412209,
+    "lng": 93.51812047921229,
+    "address": "坝东路与坝东横路交叉口北60米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KGAHS9ND",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.84617049144383,
+    "lng": 93.48667326324077,
+    "address": "新民三路银顺苑",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFFWLI01",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "春天里高层062公共厕所",
+    "lat": 42.84874315772973,
+    "lng": 93.52062060861418,
+    "address": "北京路与希望路交叉口东南380米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 50,
+    "feeDescription": "57.00",
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JRHKKT1D",
+    "rawAttributes": {
+      "originalName": "春天里高层062公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共卫生间",
+    "lat": 42.832961192948424,
+    "lng": 93.51924695163981,
+    "address": "融合路与光明路交叉口东南160米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KA45FVQ3",
+    "rawAttributes": {
+      "originalName": "公共卫生间",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "097翰林翡翠城公共厕所",
+    "lat": 42.82547317352232,
+    "lng": 93.4689287339644,
+    "address": "哈密市气象局对面",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0I2LH9BDZ",
+    "rawAttributes": {
+      "originalName": "097翰林翡翠城公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.60000648402329,
+    "lng": 93.01950535568177,
+    "address": "汉城东街与古城路交叉口北240米",
+    "city": "哈密",
+    "district": "巴里坤哈萨克自治县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFLJYHUR",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.84248891070803,
+    "lng": 93.53963763471879,
+    "address": "尚宾路与安全路交叉口东140米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL14CFP",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "无障碍公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "无障碍公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.826581514959656,
+    "lng": 93.51760388511485,
+    "address": "胜利路与广场北路交叉口西240米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFIWL4V4",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.84008994531233,
+    "lng": 93.53074792534767,
+    "address": "延安路与融合路交叉口南300米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0LG016SM0",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.81217151739946,
+    "lng": 93.48552404902135,
+    "address": "哈密回王府景区附近",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KBAUBYWQ",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.81608136150952,
+    "lng": 93.51363786473834,
+    "address": "建国南路与解放东路交叉口东北80米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFH69R9O",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.86654986172299,
+    "lng": 93.44080801717324,
+    "address": "火箭农场玉秀路",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0H61ANAHH",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.25353134958385,
+    "lng": 94.69665607305711,
+    "address": "顺德路与振兴东路交叉口东北100米",
+    "city": "哈密",
+    "district": "伊吾县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFLCELSD",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.5958723157703,
+    "lng": 93.00958446669505,
+    "address": "汉城南街与汉城西街交叉口南240米",
+    "city": "哈密",
+    "district": "巴里坤哈萨克自治县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFLJYBFE",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.328682799241534,
+    "lng": 94.29289318002157,
+    "address": "鸿福饭庄西南侧180米",
+    "city": "哈密",
+    "district": "伊吾县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KRCCANUG",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.83421189351339,
+    "lng": 93.46793393215273,
+    "address": "伊州区文创园北门4号",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0H33LWOJN",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "禾禾商务酒店-洗手间",
+    "lat": 42.84763612480314,
+    "lng": 93.50254760861992,
+    "address": "天山北路2号",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFFDU6KQ",
+    "rawAttributes": {
+      "originalName": "禾禾商务酒店-洗手间",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.59327965707447,
+    "lng": 93.01286914733132,
+    "address": "335国道与广场南巷交叉口西100米",
+    "city": "哈密",
+    "district": "巴里坤哈萨克自治县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL94R5S",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.90971774345467,
+    "lng": 93.48846793189962,
+    "address": "内环西路与广场北路交叉口西160米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KG5RH5DO",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.7456602069607,
+    "lng": 94.96610715387605,
+    "address": "新疆维吾尔自治区哈密市伊吾县",
+    "city": "哈密",
+    "district": "伊吾县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFH20IZY",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.82939849365231,
+    "lng": 93.54253012580624,
+    "address": "青年北路与红星东路交叉口东200米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B038600BK5",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共卫生间",
+    "lat": 42.8356095671236,
+    "lng": 93.51161922695991,
+    "address": "建设东路兴业文轩苑",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B038600BJF",
+    "rawAttributes": {
+      "originalName": "公共卫生间",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.8226239460042,
+    "lng": 93.47446166908689,
+    "address": "人民路宝农农贸市场西北侧约220米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0H6HSFXY6",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "无障碍公共厕所",
+    "lat": 42.84769014057231,
+    "lng": 93.52194162682628,
+    "address": "延安路与幸福路交叉口西北260米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 50,
+    "feeDescription": "43.00",
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0K2PNHTH0",
+    "rawAttributes": {
+      "originalName": "无障碍公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.82563964484117,
+    "lng": 93.52815322849352,
+    "address": "青年南路与向阳东路交叉口西南340米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0ID7RQ2J6",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "哈密服务区第一公共厕所",
+    "lat": 42.88681011710383,
+    "lng": 93.6423933573593,
+    "address": "磐弘商贸有限公司北出口服务区北加液加气站西北侧180米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFIMTTG5",
+    "rawAttributes": {
+      "originalName": "哈密服务区第一公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.909345194749456,
+    "lng": 93.48516396313497,
+    "address": "公园南路与内环西路交叉口北360米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0LDKCP46E",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "111荷花园公共厕所",
+    "lat": 42.8098897205956,
+    "lng": 93.4972015176259,
+    "address": "环城路与滨河四路交叉口西100米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0L32S2YY7",
+    "rawAttributes": {
+      "originalName": "111荷花园公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.90701907180359,
+    "lng": 93.49571493895013,
+    "address": "六区胡记烤吧东侧15米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JRKS5DSN",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.5950990691045,
+    "lng": 93.02953446684924,
+    "address": "335国道与青石巷交叉口西260米",
+    "city": "哈密",
+    "district": "巴里坤哈萨克自治县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL3Q3YE",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.95910401576166,
+    "lng": 93.16996004365204,
+    "address": "二堡镇中心卫生院西南侧150米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0L34AFNLW",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所(暂停营业)",
+    "lat": 42.86013674049829,
+    "lng": 93.44130439285853,
+    "address": "火箭农场新民一路",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0H2FOL7JK",
+    "rawAttributes": {
+      "originalName": "公共厕所(暂停营业)",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.83125570545909,
+    "lng": 93.48205990147363,
+    "address": "经十二路西边",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03860M56Z",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.81478899157158,
+    "lng": 93.5182778952021,
+    "address": "中阿牙路与规划道路交叉口西北280米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0L3Y7J9WK",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.24974559341691,
+    "lng": 94.69153830414781,
+    "address": "建设路458号伊吾县道路运输管理局附近",
+    "city": "哈密",
+    "district": "伊吾县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFG6I0S9",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.83549932110637,
+    "lng": 93.51850201364113,
+    "address": "光明路与建设东路交叉口东80米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0K1OZ4IZ8",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.15172619781811,
+    "lng": 92.67311347773872,
+    "address": "移动营业厅后面直行20米左拐",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KDSDTPWO",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "湿地公园公共厕所",
+    "lat": 42.80859012722301,
+    "lng": 93.5138168347964,
+    "address": "坝东路与坝东横路交叉口西360米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JD7ZF10T",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "湿地公园公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "湿地公园公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "服务区公共厕所",
+    "lat": 42.298688312741255,
+    "lng": 94.21661853758299,
+    "address": "G30连霍高速与服务区交叉口北160米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KGK5NHG9",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "服务区公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "服务区公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.59578411169133,
+    "lng": 93.02054381549407,
+    "address": "古城路与育才路交叉口南100米",
+    "city": "哈密",
+    "district": "巴里坤哈萨克自治县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFLJYGT6",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "旅游公共厕所(装修中)",
+    "lat": 43.750694874715464,
+    "lng": 94.98452739684267,
+    "address": "伊吾瓜乡酒店附近",
+    "city": "哈密",
+    "district": "伊吾县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0L2Z141X8",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "旅游公共厕所(装修中)",
+          "rawTags": {}
+        },
+        {
+          "originalName": "旅游公共厕所(装修中)",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.82756809430075,
+    "lng": 93.50618793678711,
+    "address": "滨河北路与广东路交叉口南120米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JK75JF7L",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.806083568874875,
+    "lng": 93.49037136828078,
+    "address": "阿勒屯古街十角烤肉西侧",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0L3OAYCT7",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.89551626161638,
+    "lng": 93.50126569092657,
+    "address": "祥和路与怡园路交叉口东南80米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JD2A9TV3",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.83475317141,
+    "lng": 93.52789196954548,
+    "address": "前进东路与胜利路交叉口东40米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFH69JZB",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "鸭子泉服务区公共厕所",
+    "lat": 42.41222327717073,
+    "lng": 95.4028045541172,
+    "address": "鸭子泉服务区餐厅西北侧60米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL5ET2S",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "鸭子泉服务区公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "鸭子泉服务区公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.24971253946212,
+    "lng": 94.68876111035105,
+    "address": "振兴西路与利民巷交叉口东40米",
+    "city": "哈密",
+    "district": "伊吾县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B038600BKP",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.817349494372394,
+    "lng": 93.51071431389997,
+    "address": "伊州区大十字清真寺东南(中山北路北)",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0386009F5",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.83492935085697,
+    "lng": 93.51493324510496,
+    "address": "天山东路206哈密市干休所附近",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B038600BJE",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.840680249197696,
+    "lng": 93.53616239477714,
+    "address": "安全路海大风尚酒店",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFH6BNO0",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.84775243837012,
+    "lng": 93.49022321770968,
+    "address": "八一北路绿洲花园",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0ID77LBU4",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.05560253218718,
+    "lng": 92.86444763855938,
+    "address": "天山北路东50米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFG7075J",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.90924394223961,
+    "lng": 93.49825807946254,
+    "address": "内环东路与校园路交叉口东240米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B038600392",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.89775016215521,
+    "lng": 93.47864133628568,
+    "address": "永兴路与昌盛路交叉口西140米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFF2ON6L",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.36526457754239,
+    "lng": 93.62568160265492,
+    "address": "巴里坤哈萨克自治县S303",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFMF1AGM",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "骆驼圈子服务区公共厕所",
+    "lat": 42.57534194719183,
+    "lng": 94.13152900529509,
+    "address": "骆驼圈子服务区与G30连霍高速交叉口西北200米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03860M5OT",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "骆驼圈子服务区公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "骆驼圈子服务区公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "骆驼圈子服务区公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.83527525175145,
+    "lng": 93.50399888814447,
+    "address": "复兴北路与建设东路交叉口西北60米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHK1G0E",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所(BT-13S-0019)",
+    "lat": 42.86548256422098,
+    "lng": 93.44101853259367,
+    "address": "银花小区南侧270米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0G33SXHDJ",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "公共厕所(BT-13S-0019)",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所(BT-13S-0019)",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所(BT-13S-0019)",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.82055717028009,
+    "lng": 93.5082042368578,
+    "address": "中华路与人民路交叉口东北120米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0H33LVU5Y",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.83223801223642,
+    "lng": 93.53875516421442,
+    "address": "红星东路与红星北路交叉口南120米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03860M5EQ",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 4,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "102阿勒屯古街公共厕所",
+    "lat": 42.80818809173014,
+    "lng": 93.49042249232433,
+    "address": "哈密市伊州区",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0H33LWOJQ",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "102阿勒屯古街公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "102阿勒屯古街公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "102阿勒屯古街公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.819257924039235,
+    "lng": 93.50730771147552,
+    "address": "中华路与人民路交叉口西南40米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFHG5YII",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.742767091552956,
+    "lng": 93.47414156485951,
+    "address": "235省道东50米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFGOG1ZX",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.84603035113355,
+    "lng": 93.50548946786246,
+    "address": "前进东路103号",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0386004DZ",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "岔哈泉服务区公共厕所",
+    "lat": 44.0099361070635,
+    "lng": 93.83208883252968,
+    "address": "岔哈泉服务区北侧",
+    "city": "哈密",
+    "district": "巴里坤哈萨克自治县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0K197AP1U",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "岔哈泉服务区公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "岔哈泉服务区公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "岔哈泉服务区公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.819949407449236,
+    "lng": 93.51510344634457,
+    "address": "文化东路1号伊州区图书馆附近",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B03860M5L8",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.82263688641267,
+    "lng": 93.48433000256372,
+    "address": "经十二路与大营门路交叉口南80米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0L1KMUHLD",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.82962169553103,
+    "lng": 93.50053920024327,
+    "address": "广东路与复兴南路交叉口西200米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JD151W5Q",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 3,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "骆驼圈子服务区公共厕所",
+    "lat": 42.57452965995941,
+    "lng": 94.12880785603066,
+    "address": "G30连霍高速与骆驼圈子服务区交叉口西北340米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFGXHGMY",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "骆驼圈子服务区公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "骆驼圈子服务区公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.0539466828616,
+    "lng": 92.86273441770042,
+    "address": "天山北路西100米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFG708WZ",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "一碗泉服务区公共厕所",
+    "lat": 43.3781820424693,
+    "lng": 92.12725954156676,
+    "address": "G30连霍高速与一碗泉服务区交叉口东180米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFFTK8R1",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "一碗泉服务区公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "一碗泉服务区公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "下涝坝服务区公共厕所",
+    "lat": 43.77251393987913,
+    "lng": 91.76883447679985,
+    "address": "下涝坝服务区与G7京新高速交叉口东南300米",
+    "city": "哈密",
+    "district": "巴里坤哈萨克自治县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0I23CYNME",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "下涝坝服务区公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "下涝坝服务区公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.84377118411996,
+    "lng": 93.53906475948057,
+    "address": "安全路高铁安置小区",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B038600BKG",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "风电场停车区公共厕所",
+    "lat": 41.819463084716766,
+    "lng": 94.95355353880267,
+    "address": "中国石化风电场南侧服务区LNG加气站西侧",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFLBFF2L",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "风电场停车区公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "风电场停车区公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "梯子泉服务区公共厕所",
+    "lat": 43.25095032060491,
+    "lng": 92.54669470991594,
+    "address": "洪通燃气梯子泉服务区LNG/CNG加气站西北侧130米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0K6D5AB45",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "梯子泉服务区公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "梯子泉服务区公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.82368989330172,
+    "lng": 93.47346599346115,
+    "address": "七一路与大营门路交叉口东南100米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KDYCTI92",
+    "rawAttributes": {
+      "sources": [
+        "gaode",
+        "gaode"
+      ],
+      "mergedCount": 2,
+      "allRaw": [
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        },
+        {
+          "originalName": "公共厕所",
+          "rawTags": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.24920203530285,
+    "lng": 94.68907734431895,
+    "address": "振兴西路与利民巷交叉口东南100米",
+    "city": "哈密",
+    "district": "伊吾县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0KR2DJ5OS",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.82458959030489,
+    "lng": 93.52426510321071,
+    "address": "建国北路与广场北路交叉口东南200米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0JRT6VSB2",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.2514061954831,
+    "lng": 94.69934503682795,
+    "address": "潮安街与滨河路交叉口西北120米",
+    "city": "哈密",
+    "district": "伊吾县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFL4B15B",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.82755827759371,
+    "lng": 93.53997622697771,
+    "address": "红星东路与青年北路交叉口西南50米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFF2R8BR",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.63441268589046,
+    "lng": 93.22168478025826,
+    "address": "三高段",
+    "city": "哈密",
+    "district": "巴里坤哈萨克自治县",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0FFMED77T",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.81384970644256,
+    "lng": 93.50871852666846,
+    "address": "花果山路与中阿牙路交叉口西300米",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0HRV95K6K",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 43.249825968193555,
+    "lng": 93.45290758847347,
+    "address": null,
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0HGVHQLI6",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  },
+  {
+    "name": "公共厕所",
+    "lat": 42.82982740725731,
+    "lng": 93.5154544565117,
+    "address": "人民公园附近厕所",
+    "city": "哈密",
+    "district": "伊州区",
+    "hasSquat": true,
+    "hasSeated": false,
+    "hasToiletPaper": false,
+    "hasHandWash": true,
+    "hasHandicap": false,
+    "hasChangingTable": false,
+    "hasMirror": false,
+    "feeCents": 0,
+    "feeDescription": null,
+    "openingHours": null,
+    "openingHoursType": "unknown",
+    "dataSource": "gaode",
+    "sourceId": "gaode-B0J07UGW57",
+    "rawAttributes": {
+      "originalName": "公共厕所",
+      "rawTags": {}
+    }
+  }
+]

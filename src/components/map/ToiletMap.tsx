@@ -184,135 +184,82 @@ export function ToiletMap() {
     );
   }, [mapInstance, setCenter]);
 
-  // Draw route — polyline fallback + AMap plugin for real road path
+  // Draw route — AMap.Walking/Riding/Driving plugin
   const drawRoute = useCallback((loc: { lng: number; lat: number }, toilet: ToiletSummary, mode: "walking" | "riding" | "driving") => {
-    console.log("[drawRoute] entry, amap:", !!amapInstance, "map:", !!mapInstance, "loc:", loc, "toilet:", toilet.lng, toilet.lat);
-    if (!amapInstance || !mapInstance) { console.log("[drawRoute] no amap/map"); return; }
-    if (!Number.isFinite(loc.lng) || !Number.isFinite(loc.lat)) { console.log("[drawRoute] bad loc"); return; }
-    if (!Number.isFinite(toilet.lng) || !Number.isFinite(toilet.lat)) { console.log("[drawRoute] bad toilet coords"); return; }
-    mapRef.current = mapInstance; // always track latest
+    if (!amapInstance || !mapInstance || !mapRef.current) return;
+    if (!Number.isFinite(loc.lng) || !Number.isFinite(loc.lat)) return;
+    if (!Number.isFinite(toilet.lng) || !Number.isFinite(toilet.lat)) return;
 
-    // Increment sequence so stale responses are discarded
+    // Prevent overlapping calls
     routeSeqRef.current++;
     const seq = routeSeqRef.current;
-
-    // Clear previous
-    if (polylineRef.current && mapRef.current) {
-      mapRef.current.remove(polylineRef.current);
-      polylineRef.current = null;
-    }
 
     const start = wgs84ToGcj02(loc);
     const end = wgs84ToGcj02({ lng: toilet.lng, lat: toilet.lat });
     if (!Number.isFinite(start.lng) || !Number.isFinite(start.lat)) return;
     if (!Number.isFinite(end.lng) || !Number.isFinite(end.lat)) return;
 
-    const colors: Record<string, string> = { walking: "#22c55e", riding: "#3b82f6", driving: "#f97316" };
-
-    // ── Fallback: always draw a straight dashed polyline immediately ──
-    const fallbackLine = new amapInstance.Polyline({
-      path: [[start.lng, start.lat], [end.lng, end.lat]],
-      strokeColor: colors[mode],
-      strokeWeight: 5,
-      strokeOpacity: 0.5,
-      strokeStyle: "dashed",
-      showDir: true,
-      zIndex: 50,
-    });
-    fallbackLine.setMap(mapRef.current!);
-    polylineRef.current = fallbackLine;
-
-    // ── Real road path via AMap.Walking/Riding/Driving ──
-    // Plugins are pre-loaded by the AMap SDK loader, so they're available on window.AMap
     const AMapGlobal = (window as any).AMap;
-    if (!AMapGlobal) { console.log("[drawRoute] window.AMap not found"); return; }
+    if (!AMapGlobal) return;
 
-    const pluginKey = mode === "walking" ? "Walking" : mode === "riding" ? "Riding" : "Driving";
-    const Cls = AMapGlobal[pluginKey];
-    console.log("[drawRoute] AMap plugin check:", { pluginKey, hasClass: !!Cls, availableKeys: Object.keys(AMapGlobal).filter(k => k.match(/Walk|Rid|Driv/i)) });
-    if (!Cls) { console.log("[drawRoute] plugin class not available for", mode); return; }
+    const Cls = AMapGlobal[mode === "walking" ? "Walking" : mode === "riding" ? "Riding" : "Driving"];
+    if (!Cls) return;
 
-    // Remove fallback
-    if (polylineRef.current && mapRef.current) {
-      mapRef.current.remove(polylineRef.current);
-      polylineRef.current = null;
-    }
+    // Create the route planner — it auto-draws on the map
+    const router = new Cls({ map: mapRef.current });
 
-    const router = new Cls({ map: mapRef.current, hideMarkers: true });
     router.search(
       new amapInstance.LngLat(start.lng, start.lat),
       new amapInstance.LngLat(end.lng, end.lat),
       (status: string, result: { info?: { distance?: string; duration?: string } }) => {
-        if (status === "complete") {
-          const d = result?.info?.distance ? `${result.info.distance}米` : "";
-          const t = result?.info?.duration ? `${Math.round(Number(result.info.duration) / 60)}分钟` : "";
-          console.log(`✅ ${mode} 路线: ${d} ${t}`);
+        if (status === "complete" && seq === routeSeqRef.current) {
+          console.log(`✅ ${mode} 路线: ${result?.info?.distance || "?"}m`);
         }
       }
     );
   }, [amapInstance, mapInstance]);
 
-  // Find nearest toilet + draw route
   const handleFindNearest = useCallback(async (mode: "walking" | "riding" | "driving" = "walking") => {
-    console.log("[handleFindNearest] called, amap:", !!amapInstance, "map:", !!mapInstance);
-    if (!amapInstance || !mapInstance) { console.log("[handleFindNearest] no amap/map, abort"); return; }
+    if (!amapInstance || !mapInstance) return;
     setRouteMode(mode);
-    setLocationError(null); // clear stale errors from page load
+    setLocationError(null);
 
-    // Get user location — fall back to map center if geolocation unavailable
     let loc = userLocation;
-    if (!loc) {
-      if (navigator.geolocation) {
-        setIsLocating(true);
-        try {
-          loc = await new Promise<{ lng: number; lat: number }>((res, rej) => {
-            navigator.geolocation.getCurrentPosition(
-              (p) => res({ lng: p.coords.longitude, lat: p.coords.latitude }),
-              () => rej(new Error()),
-              { enableHighAccuracy: true, timeout: 8000 }
-            );
-          });
-          setIsLocating(false);
-        } catch {
-          setIsLocating(false);
-        }
-      }
-      // If still no location, use map center
-      if (!loc && mapInstance) {
-        const c = mapInstance.getCenter();
-        if (c) {
-          loc = { lng: c.getLng(), lat: c.getLat() };
-          console.log("[handleFindNearest] using map center as location:", loc);
-        }
-      }
-      if (!loc) {
-        setLocationError("无法获取位置");
-        return;
-      }
+    if (!loc && navigator.geolocation) {
+      try {
+        loc = await new Promise<{ lng: number; lat: number }>((res, rej) => {
+          navigator.geolocation.getCurrentPosition(
+            (p) => res({ lng: p.coords.longitude, lat: p.coords.latitude }),
+            () => rej(new Error()),
+            { enableHighAccuracy: true, timeout: 6000 }
+          );
+        });
+      } catch {}
     }
-    console.log("[handleFindNearest] using location:", loc);
+    // Fallback to map center
+    if (!loc && mapInstance) {
+      const c = mapInstance.getCenter();
+      if (c) loc = { lng: c.getLng(), lat: c.getLat() };
+    }
+    if (!loc) { setLocationError("无法获取位置"); return; }
 
     setIsFindingNearest(true);
     try {
-    // Try progressively larger radii until we find a toilet
-    let toilet: ToiletSummary | undefined;
-    for (const radius of [5000, 20000, 100000]) {
-      const apiUrl = `/api/toilets/nearby?lat=${loc.lat}&lng=${loc.lng}&radius=${radius}&pageSize=1&sortBy=distance`;
-      console.log("[handleFindNearest] fetching radius:", radius);
-      const res = await fetch(apiUrl);
-      if (!res.ok) continue;
-      const data = await res.json();
-      if (data.data?.length) { toilet = data.data[0]; break; }
-    }
-
-    if (!toilet) { setLocationError("附近未找到卫生间（已搜索100km范围）"); setIsFindingNearest(false); return; }
+      // Progressively expand radius
+      let toilet: ToiletSummary | undefined;
+      for (const radius of [5000, 20000, 100000]) {
+        const res = await fetch(`/api/toilets/nearby?lat=${loc.lat}&lng=${loc.lng}&radius=${radius}&pageSize=1&sortBy=distance`);
+        if (!res.ok) continue;
+        const data = await res.json();
+        if (data.data?.length) { toilet = data.data[0]; break; }
+      }
+      if (!toilet) { setLocationError("附近未找到卫生间"); setIsFindingNearest(false); return; }
 
       setNearestToilet(toilet);
       setSelectedToilet(toilet);
       setInfoWindowPos({ lng: toilet.lng, lat: toilet.lat });
       nearestLocRef.current = loc;
       nearestToiletRef.current = toilet;
-      console.log("[handleFindNearest] found toilet:", toilet.name, "calling drawRoute");
       drawRoute(loc, toilet, mode);
     } catch {
       setLocationError("搜索附近厕所时出错");

@@ -55,6 +55,7 @@ export function ToiletMap() {
   const nearestLocRef = useRef<{ lng: number; lat: number } | null>(null);
   const nearestToiletRef = useRef<ToiletSummary | null>(null);
   const markersRef = useRef<AMap.Marker[]>([]);
+  const [heading, setHeading] = useState<number | null>(null);
   const userMarkerRef = useRef<AMap.Marker | null>(null);
   const polylineRef = useRef<AMap.Polyline | null>(null);
   const routeSeqRef = useRef(0);
@@ -152,7 +153,18 @@ export function ToiletMap() {
     });
   }, [toilets, amapInstance, mapInstance, nearestToilet?.id]);
 
-  // User location blue dot
+  // Track device heading (orientation)
+  useEffect(() => {
+    if (!navigator.geolocation) return;
+    const watchId = navigator.geolocation.watchPosition(
+      (pos) => { if (pos.coords.heading != null) setHeading(pos.coords.heading); },
+      () => {},
+      { enableHighAccuracy: true }
+    );
+    return () => navigator.geolocation.clearWatch(watchId);
+  }, []);
+
+  // User location blue dot with direction arrow
   useEffect(() => {
     if (!amapInstance || !mapInstance || !userLocation) return;
     if (!Number.isFinite(userLocation.lng) || !Number.isFinite(userLocation.lat)) return;
@@ -160,15 +172,25 @@ export function ToiletMap() {
       userMarkerRef.current?.remove();
       const gcj = wgs84ToGcj02(userLocation);
       if (!Number.isFinite(gcj.lng) || !Number.isFinite(gcj.lat)) return;
+
+      const hasHeading = heading != null;
+      const rotation = hasHeading ? heading : 0;
+
       const dot = document.createElement("div");
-      dot.style.cssText = `width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#4A90D9,#2563EB);border:3px solid white;box-shadow:0 2px 8px rgba(37,99,235,0.4);`;
-      const pulse = document.createElement("div");
-      pulse.style.cssText = `position:absolute;top:-8px;left:-8px;width:36px;height:36px;border-radius:50%;background:rgba(37,99,235,0.15);animation:pulse-soft 2s ease-in-out infinite;`;
-      dot.appendChild(pulse);
+      dot.style.cssText = `position:relative;width:${hasHeading ? '28px' : '20px'};height:${hasHeading ? '28px' : '20px'};`;
+      dot.innerHTML = hasHeading
+        ? `<div style="position:absolute;inset:0;border-radius:50%;background:linear-gradient(135deg,#4A90D9,#2563EB);border:3px solid white;box-shadow:0 2px 8px rgba(37,99,235,0.4);z-index:1"></div>
+           <div style="position:absolute;top:-14px;left:50%;margin-left:-5px;z-index:2;transform:rotate(${rotation}deg);transform-origin:5px 28px">
+             <svg width="10" height="16" viewBox="0 0 10 16"><path d="M5 0 L0 16 L5 10 L10 16 Z" fill="#2563EB" stroke="white" stroke-width="1"/></svg>
+           </div>
+           <div style="position:absolute;top:-8px;left:-8px;width:44px;height:44px;border-radius:50%;background:rgba(37,99,235,0.15);animation:pulse-soft 2s ease-in-out infinite;z-index:0"></div>`
+        : `<div style="width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#4A90D9,#2563EB);border:3px solid white;box-shadow:0 2px 8px rgba(37,99,235,0.4);"></div>
+           <div style="position:absolute;top:-8px;left:-8px;width:36px;height:36px;border-radius:50%;background:rgba(37,99,235,0.15);animation:pulse-soft 2s ease-in-out infinite;"></div>`;
+
       const marker = new amapInstance.Marker({
         position: new amapInstance.LngLat(gcj.lng, gcj.lat),
         content: dot,
-        offset: new amapInstance.Pixel(-18, -18),
+        offset: hasHeading ? new amapInstance.Pixel(-14, -32) : new amapInstance.Pixel(-18, -18),
         zIndex: 1000,
       });
       marker.setMap(mapInstance);
@@ -176,7 +198,7 @@ export function ToiletMap() {
     } catch (err) {
       console.warn("Failed to render user location marker:", err);
     }
-  }, [userLocation, amapInstance, mapInstance]);
+  }, [userLocation, heading, amapInstance, mapInstance]);
 
   // Get position (Capacitor native → browser API → IP geolocation)
   const getPosition = useCallback(async (): Promise<{ lng: number; lat: number } | null> => {

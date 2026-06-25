@@ -13,13 +13,23 @@ import { SlidersHorizontal, MapPin, Loader2, LocateFixed, ChevronDown, Navigatio
 
 const CITIES = [
   { name: "北京", center: [116.397428, 39.90923] as [number, number] },
+  { name: "上海", center: [121.473701, 31.230416] as [number, number] },
   { name: "广州", center: [113.264385, 23.12911] as [number, number] },
   { name: "深圳", center: [114.057868, 22.543099] as [number, number] },
+  { name: "成都", center: [104.065735, 30.659862] as [number, number] },
+  { name: "杭州", center: [120.153576, 30.287459] as [number, number] },
+  { name: "武汉", center: [114.298572, 30.584355] as [number, number] },
+  { name: "南京", center: [118.767413, 32.041544] as [number, number] },
+  { name: "重庆", center: [106.504962, 29.533155] as [number, number] },
+  { name: "天津", center: [117.190182, 39.125596] as [number, number] },
+  { name: "苏州", center: [120.619907, 31.317987] as [number, number] },
+  { name: "西安", center: [108.948024, 34.263161] as [number, number] },
+  { name: "长沙", center: [112.982279, 28.19409] as [number, number] },
+  { name: "青岛", center: [120.355173, 36.082982] as [number, number] },
+  { name: "厦门", center: [118.089425, 24.479834] as [number, number] },
+  { name: "昆明", center: [102.712251, 25.040609] as [number, number] },
+  { name: "大连", center: [121.618622, 38.914003] as [number, number] },
   { name: "珠海", center: [113.576726, 22.270715] as [number, number] },
-  { name: "佛山", center: [113.121416, 23.021478] as [number, number] },
-  { name: "东莞", center: [113.751765, 23.020536] as [number, number] },
-  { name: "惠州", center: [114.416783, 23.111847] as [number, number] },
-  { name: "上海", center: [121.473701, 31.230416] as [number, number] },
 ];
 
 export function ToiletMap() {
@@ -32,6 +42,8 @@ export function ToiletMap() {
 
   const [toilets, setToilets] = useState<ToiletSummary[]>([]);
   const [selectedToilet, setSelectedToilet] = useState<ToiletSummary | null>(null);
+  const [currentZoom, setCurrentZoom] = useState(14);
+  const MIN_ZOOM_FOR_MARKERS = 13; // hide markers when zoomed out beyond city level
   const [infoWindowPos, setInfoWindowPos] = useState<{ lng: number; lat: number } | null>(null);
   const [isLocating, setIsLocating] = useState(false);
   const [locationError, setLocationError] = useState<string | null>(null);
@@ -64,6 +76,9 @@ export function ToiletMap() {
   // Fetch toilets when map moves or filters change
   const fetchToilets = useCallback(async () => {
     if (!mapInstance) return;
+    const zoom = mapInstance.getZoom();
+    setCurrentZoom(zoom);
+    if (zoom < MIN_ZOOM_FOR_MARKERS) { setToilets([]); return; }
     const bounds = mapInstance.getBounds();
     if (!bounds) return;
     const c = bounds.getCenter();
@@ -413,11 +428,15 @@ export function ToiletMap() {
       {/* Bottom status bar */}
       <div className="absolute bottom-20 left-3 right-3">
         <div className="flex items-center justify-between">
-          {toilets.length > 0 && (
+          {currentZoom < MIN_ZOOM_FOR_MARKERS ? (
+            <div className="rounded-full bg-card/90 px-3 py-1.5 text-xs font-medium text-muted-foreground shadow-lg backdrop-blur">
+              🔍 放大查看卫生间
+            </div>
+          ) : toilets.length > 0 ? (
             <div className="rounded-full bg-card/90 px-3 py-1.5 text-xs font-medium shadow-lg backdrop-blur">
               🚻 {toilets.length} 个卫生间
             </div>
-          )}
+          ) : null}
           <div className="ml-auto">
             {locationError && (
               <button onClick={handleGeolocate} className="flex items-center gap-1.5 rounded-full bg-red-500/90 px-3 py-1.5 text-xs font-medium text-white shadow-lg backdrop-blur hover:bg-red-500">

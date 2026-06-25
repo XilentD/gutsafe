@@ -277,13 +277,15 @@ export function ToiletMap() {
         solid.setMap(mapRef.current!);
         polylineRef.current = solid;
 
-        // Fit view (safe min/max to avoid Infinity when array is empty)
+        // Fit view, but don't zoom out further than city level for long routes
         let minX = pts[0][0], minY = pts[0][1], maxX = pts[0][0], maxY = pts[0][1];
         for (const p of pts) {
           if (p[0] < minX) minX = p[0]; if (p[0] > maxX) maxX = p[0];
           if (p[1] < minY) minY = p[1]; if (p[1] > maxY) maxY = p[1];
         }
-        if (Number.isFinite(minX) && Number.isFinite(maxX)) {
+        const spanX = maxX - minX, spanY = maxY - minY;
+        if (Number.isFinite(minX) && Number.isFinite(maxX) && spanX < 2 && spanY < 2) {
+          // Only zoom for short routes; long routes keep current zoom
           mapRef.current!.setFitView(null, false, [minX, minY, maxX, maxY] as any);
         }
       })
@@ -299,10 +301,26 @@ export function ToiletMap() {
     if (loc && (!Number.isFinite(loc.lng) || !Number.isFinite(loc.lat))) loc = null;
     // Try Capacitor geolocation, then browser API
     if (!loc) loc = await getPosition();
-    // Fallback to map center
+    // Fallback: map center → try IP geolocation → Beijing default
     if (!loc && mapInstance) {
       const c = mapInstance.getCenter();
       if (c) loc = { lng: c.getLng(), lat: c.getLat() };
+      // If the user hasn't moved the map (still at default Beijing), try IP geolocation
+      if (loc && Math.abs(loc.lat - 39.9) < 0.01 && Math.abs(loc.lng - 116.4) < 0.01) {
+        try {
+          const ipRes = await fetch("https://ipapi.co/json/");
+          if (ipRes.ok) {
+            const ip = await ipRes.json();
+            if (ip.latitude && ip.longitude) {
+              loc = { lng: ip.longitude, lat: ip.latitude };
+              // Also move the map to the IP location
+              const gcj = wgs84ToGcj02(loc);
+              mapInstance.setCenter(new AMap.LngLat(gcj.lng, gcj.lat));
+              mapInstance.setZoom(13);
+            }
+          }
+        } catch {}
+      }
     }
     if (!loc) { setLocationError("无法获取位置"); return; }
 

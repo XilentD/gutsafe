@@ -313,37 +313,17 @@ export function ToiletMap() {
     if (loc && (!Number.isFinite(loc.lng) || !Number.isFinite(loc.lat))) loc = null;
     // Try Capacitor geolocation, then browser API
     if (!loc) loc = await getPosition();
-    // Fallback: map center → try IP geolocation → Beijing default
+    // Fallback: map center
     if (!loc && mapInstance) {
       const c = mapInstance.getCenter();
       if (c) loc = { lng: c.getLng(), lat: c.getLat() };
-      // If the user hasn't moved the map (still at default Beijing), try IP geolocation
-      if (loc && Math.abs(loc.lat - 39.9) < 0.01 && Math.abs(loc.lng - 116.4) < 0.01) {
-        try {
-          // Try multiple IP geolocation services (some blocked in China)
-          const services = [
-            "https://ipapi.co/json/",
-            "https://api.ip.sb/geoip",
-            "https://ip.useragentinfo.com/json",
-          ];
-          for (const svc of services) {
-            try {
-              const ipRes = await fetch(svc);
-              if (!ipRes.ok) continue;
-              const ip = await ipRes.json();
-              const lat = ip.latitude || ip.lat;
-              const lng = ip.longitude || ip.lon || ip.lng;
-              if (lat && lng) {
-                loc = { lng: Number(lng), lat: Number(lat) };
-                const gcj = wgs84ToGcj02(loc);
-                mapInstance.setCenter(new AMap.LngLat(gcj.lng, gcj.lat));
-                mapInstance.setZoom(13);
-                break;
-              }
-            } catch {}
-          }
-        } catch {}
-      }
+    }
+    // If still at Beijing default, show city picker instead of failing
+    if (loc && Math.abs(loc.lat - 39.9) < 0.03 && Math.abs(loc.lng - 116.4) < 0.03) {
+      setLocationError("请先选择你所在的城市");
+      setShowCityPicker(true);
+      setIsFindingNearest(false);
+      return;
     }
     if (!loc) { setLocationError("无法获取位置"); return; }
 
@@ -419,7 +399,7 @@ export function ToiletMap() {
       <div ref={containerRef} className="h-full w-full" />
 
       {/* City quick-switch */}
-      <div className="absolute left-3 top-3 z-10">
+      <div className="absolute left-3 top-14 z-10">
         <button onClick={() => setShowCityPicker(!showCityPicker)}
           className="flex items-center gap-1.5 rounded-xl bg-card/95 px-3 py-2 text-sm font-medium shadow-lg backdrop-blur transition-all hover:bg-card">
           <MapPin className="h-4 w-4 text-primary" /> 切换城市 <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
@@ -442,7 +422,7 @@ export function ToiletMap() {
       )}
 
       {/* Control buttons */}
-      <div className="absolute right-3 top-3 flex flex-col gap-2">
+      <div className="absolute right-3 top-14 flex flex-col gap-2">
         <button onClick={handleGeolocate} disabled={isLocating}
           className="flex h-10 w-10 items-center justify-center rounded-xl bg-card shadow-lg transition-all hover:bg-muted active:scale-95 disabled:opacity-50"
           aria-label="我的位置" title="我的位置">

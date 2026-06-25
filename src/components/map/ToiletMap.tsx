@@ -300,17 +300,19 @@ export function ToiletMap() {
     console.log("[handleFindNearest] using location:", loc);
 
     setIsFindingNearest(true);
-    const apiUrl = `/api/toilets/nearby?lat=${loc.lat}&lng=${loc.lng}&radius=5000&pageSize=1&sortBy=distance`;
-    console.log("[handleFindNearest] fetching:", apiUrl);
-    try {
+    // Try progressively larger radii until we find a toilet
+    let toilet: ToiletSummary | undefined;
+    for (const radius of [5000, 20000, 100000]) {
+      const apiUrl = `/api/toilets/nearby?lat=${loc.lat}&lng=${loc.lng}&radius=${radius}&pageSize=1&sortBy=distance`;
+      console.log("[handleFindNearest] fetching radius:", radius);
       const res = await fetch(apiUrl);
-      console.log("[handleFindNearest] API status:", res.status);
-      if (!res.ok) throw new Error("搜索失败");
+      if (!res.ok) continue;
       const data = await res.json();
-      console.log("[handleFindNearest] API result:", data.pagination?.total, "toilets");
-      if (!data.data?.length) { setLocationError("附近未找到卫生间"); setIsFindingNearest(false); return; }
+      if (data.data?.length) { toilet = data.data[0]; break; }
+    }
 
-      const toilet = data.data[0] as ToiletSummary;
+    if (!toilet) { setLocationError("附近未找到卫生间（已搜索100km范围）"); setIsFindingNearest(false); return; }
+
       setNearestToilet(toilet);
       setSelectedToilet(toilet);
       setInfoWindowPos({ lng: toilet.lng, lat: toilet.lat });

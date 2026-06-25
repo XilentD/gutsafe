@@ -261,27 +261,38 @@ export function ToiletMap() {
 
   // Find nearest toilet + draw route
   const handleFindNearest = useCallback(async (mode: "walking" | "riding" | "driving" = "walking") => {
-    console.log("[handleFindNearest] called, amap:", !!amapInstance, "map:", !!mapInstance, "loc:", !!userLocation);
+    console.log("[handleFindNearest] called, amap:", !!amapInstance, "map:", !!mapInstance);
     if (!amapInstance || !mapInstance) { console.log("[handleFindNearest] no amap/map, abort"); return; }
     setRouteMode(mode);
 
-    // Get user location
+    // Get user location — fall back to map center if geolocation unavailable
     let loc = userLocation;
     if (!loc) {
-      if (!navigator.geolocation) { setLocationError("定位功能不可用"); return; }
-      setIsLocating(true);
-      try {
-        loc = await new Promise<{ lng: number; lat: number }>((res, rej) => {
-          navigator.geolocation.getCurrentPosition(
-            (p) => res({ lng: p.coords.longitude, lat: p.coords.latitude }),
-            () => rej(new Error()),
-            { enableHighAccuracy: true, timeout: 10000 }
-          );
-        });
-        setIsLocating(false);
-      } catch {
-        setIsLocating(false);
-        setLocationError("定位失败，请先允许位置权限");
+      if (navigator.geolocation) {
+        setIsLocating(true);
+        try {
+          loc = await new Promise<{ lng: number; lat: number }>((res, rej) => {
+            navigator.geolocation.getCurrentPosition(
+              (p) => res({ lng: p.coords.longitude, lat: p.coords.latitude }),
+              () => rej(new Error()),
+              { enableHighAccuracy: true, timeout: 8000 }
+            );
+          });
+          setIsLocating(false);
+        } catch {
+          setIsLocating(false);
+        }
+      }
+      // If still no location, use map center
+      if (!loc && mapInstance) {
+        const c = mapInstance.getCenter();
+        if (c) {
+          loc = { lng: c.getLng(), lat: c.getLat() };
+          console.log("[handleFindNearest] using map center as location:", loc);
+        }
+      }
+      if (!loc) {
+        setLocationError("无法获取位置");
         return;
       }
     }

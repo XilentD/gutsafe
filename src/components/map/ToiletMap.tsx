@@ -194,7 +194,7 @@ export function ToiletMap() {
           mapInstance.setZoom(16);
         }
       },
-      () => { setIsLocating(false); setLocationError("定位失败"); },
+      () => { setIsLocating(false); setLocationError(location.protocol === "http:" ? "定位需HTTPS（当前HTTP）" : "定位失败"); },
       { enableHighAccuracy: true, timeout: 10000 }
     );
   }, [mapInstance, setCenter]);

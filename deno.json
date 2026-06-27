@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "deploy": "deno run -A scripts/deploy-deno.ts"
+  },
+  "exports": "./src/app/layout.tsx",
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx"
+  }
+}

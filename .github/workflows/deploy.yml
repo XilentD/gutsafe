@@ -1,0 +1,54 @@
+name: Deploy to Deno Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      id-token: write
+      contents: read
+
+    services:
+      postgres:
+        image: postgis/postgis:15-3.4
+        env:
+          POSTGRES_USER: opcwc
+          POSTGRES_PASSWORD: opcwc
+          POSTGRES_DB: opcwc
+        ports:
+          - 5432:5432
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+        env:
+          DATABASE_URL: postgresql://opcwc:opcwc@localhost:5432/opcwc?schema=public
+          AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
+          GAODE_JS_API_KEY: ${{ secrets.GAODE_JS_API_KEY }}
+          GAODE_WEB_API_KEY: ${{ secrets.GAODE_WEB_API_KEY }}
+          NEXT_PUBLIC_GAODE_JS_API_KEY: ${{ secrets.GAODE_JS_API_KEY }}
+
+      - name: Deploy to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: gutsafe
+          entrypoint: next.config.ts
+          root: .

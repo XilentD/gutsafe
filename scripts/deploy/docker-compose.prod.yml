@@ -1,0 +1,40 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgis/postgis:15-3.4
+    container_name: gutsafe-db
+    restart: always
+    environment:
+      POSTGRES_USER: opcwc
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-change-me}
+      POSTGRES_DB: opcwc
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U opcwc -d opcwc"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build:
+      context: ../..
+      dockerfile: scripts/deploy/Dockerfile
+    container_name: gutsafe-app
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://opcwc:${DB_PASSWORD:-change-me}@postgres:5432/opcwc?schema=public
+      AUTH_SECRET: ${AUTH_SECRET}
+      AUTH_URL: ${AUTH_URL:-https://your-domain.com}
+      GAODE_JS_API_KEY: ${GAODE_JS_API_KEY}
+      GAODE_WEB_API_KEY: ${GAODE_WEB_API_KEY}
+      NEXT_PUBLIC_GAODE_JS_API_KEY: ${GAODE_JS_API_KEY}
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  pgdata:

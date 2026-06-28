@@ -59,10 +59,14 @@ jobs:
       - name: Package for deploy
         run: |
           tar -czf deploy.tar.gz \
-            --exclude='node_modules' --exclude='.git' --exclude='.next/cache' \
+            --warning=no-file-changed \
+            --exclude='node_modules' --exclude='.git' --exclude='.next' \
             --exclude='.pgdata' --exclude='data/processed' --exclude='data/raw' \
-            --exclude='android' \
-            .
+            --exclude='android' --exclude='.claude' \
+            src/ prisma/ public/ scripts/ package.json pnpm-lock.yaml next.config.ts tsconfig.json \
+            tailwind.config.ts postcss.config.mjs vitest.config.ts \
+            capacitor.config.ts ecosystem.config.js deno.json \
+            .env.example docker-compose.yml
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4

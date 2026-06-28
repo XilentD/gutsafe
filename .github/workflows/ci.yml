@@ -29,16 +29,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm
 
-      - run: pnpm install --frozen-lockfile
+      - run: npm install
 
       - name: Run database migrations
         run: npx prisma db push --skip-generate
@@ -46,12 +41,12 @@ jobs:
           DATABASE_URL: postgresql://opcwc:opcwc@localhost:5432/opcwc?schema=public
 
       - name: Run tests
-        run: pnpm test
+        run: npm test
         env:
           DATABASE_URL: postgresql://opcwc:opcwc@localhost:5432/opcwc?schema=public
 
       - name: Build
-        run: pnpm build
+        run: npm run build
         env:
           DATABASE_URL: postgresql://opcwc:opcwc@localhost:5432/opcwc?schema=public
           AUTH_SECRET: ci-test-secret-do-not-use-in-production

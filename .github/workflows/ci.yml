@@ -65,7 +65,7 @@ jobs:
             --exclude='android' --exclude='.claude' \
             src/ prisma/ public/ scripts/ package.json pnpm-lock.yaml next.config.ts tsconfig.json \
             tailwind.config.ts postcss.config.mjs vitest.config.ts \
-            capacitor.config.ts ecosystem.config.js deno.json \
+            capacitor.config.ts deno.json \
             .env.example docker-compose.yml
 
       - name: Upload artifact

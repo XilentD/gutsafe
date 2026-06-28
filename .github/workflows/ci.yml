@@ -29,12 +29,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: pnpm
 
-      - run: npm install --ignore-scripts
-      - run: npx prisma generate
+      - run: pnpm install
 
       - name: Run database migrations
         run: npx prisma db push --skip-generate
@@ -42,12 +46,12 @@ jobs:
           DATABASE_URL: postgresql://opcwc:opcwc@localhost:5432/opcwc?schema=public
 
       - name: Run tests
-        run: npm test
+        run: pnpm test
         env:
           DATABASE_URL: postgresql://opcwc:opcwc@localhost:5432/opcwc?schema=public
 
       - name: Build
-        run: npm run build
+        run: pnpm build
         env:
           DATABASE_URL: postgresql://opcwc:opcwc@localhost:5432/opcwc?schema=public
           AUTH_SECRET: ci-test-secret-do-not-use-in-production

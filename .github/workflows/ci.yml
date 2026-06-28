@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD
 
 on:
   push:
@@ -58,3 +58,50 @@ jobs:
           GAODE_JS_API_KEY: ${{ secrets.GAODE_JS_API_KEY }}
           GAODE_WEB_API_KEY: ${{ secrets.GAODE_WEB_API_KEY }}
           NEXT_PUBLIC_GAODE_JS_API_KEY: ${{ secrets.GAODE_JS_API_KEY }}
+
+      - name: Package for deploy
+        run: |
+          mkdir -p deploy-pkg
+          rsync -av --exclude='node_modules' --exclude='.git' --exclude='.next/cache' --exclude='.pgdata' --exclude='data/processed' --exclude='data/raw' . deploy-pkg/
+          tar -czf deploy.tar.gz deploy-pkg/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: deploy-package
+          path: deploy.tar.gz
+
+  deploy:
+    needs: build-and-test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: deploy-package
+
+      - name: Deploy to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: deploy.tar.gz
+          target: /tmp/
+
+      - name: Restart app
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /opt/gutsafe
+            tar -xzf /tmp/deploy.tar.gz --strip-components=1
+            npm install --silent 2>&1 | tail -3
+            npm run build 2>&1 | tail -3
+            pm2 restart gutsafe
+            echo "✓ Deployed"

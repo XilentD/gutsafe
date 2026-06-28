@@ -63,7 +63,7 @@ jobs:
             --exclude='node_modules' --exclude='.git' --exclude='.next' \
             --exclude='.pgdata' --exclude='data/processed' --exclude='data/raw' \
             --exclude='android' --exclude='.claude' \
-            src/ prisma/ public/ scripts/ package.json pnpm-lock.yaml next.config.ts tsconfig.json \
+            src/ .next/ prisma/ public/ scripts/ package.json pnpm-lock.yaml next.config.ts tsconfig.json \
             tailwind.config.ts postcss.config.mjs vitest.config.ts \
             capacitor.config.ts deno.json \
             .env.example docker-compose.yml
@@ -104,11 +104,8 @@ jobs:
           script: |
             set -e
             cd /opt/gutsafe
-            mkdir -p /opt/gutsafe
-            tar -xzf /tmp/deploy.tar.gz -C /opt/gutsafe
-            cd /opt/gutsafe
-            npm install --silent 2>&1 | tail -3
-            npm run build 2>&1 | tail -5
+            tar -xzf /tmp/deploy.tar.gz
+            # Only install deps if needed, skip build (pre-built .next is included)
             pm2 restart gutsafe
             sleep 3
-            curl -sf -o /dev/null http://localhost:80/login && echo "✓ Deploy OK" || echo "⚠ Deploy finished but health check failed"
+            curl -sf -o /dev/null http://localhost:80/login && echo "✓ Deploy OK" || echo "⚠ Check failed"

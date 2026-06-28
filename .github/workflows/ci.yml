@@ -56,9 +56,11 @@ jobs:
 
       - name: Package for deploy
         run: |
-          mkdir -p deploy-pkg
-          rsync -av --exclude='node_modules' --exclude='.git' --exclude='.next/cache' --exclude='.pgdata' --exclude='data/processed' --exclude='data/raw' . deploy-pkg/
-          tar -czf deploy.tar.gz deploy-pkg/
+          tar -czf deploy.tar.gz \
+            --exclude='node_modules' --exclude='.git' --exclude='.next/cache' \
+            --exclude='.pgdata' --exclude='data/processed' --exclude='data/raw' \
+            --exclude='android' \
+            .
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -94,9 +96,13 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            set -e
             cd /opt/gutsafe
-            tar -xzf /tmp/deploy.tar.gz --strip-components=1
+            mkdir -p /opt/gutsafe
+            tar -xzf /tmp/deploy.tar.gz -C /opt/gutsafe
+            cd /opt/gutsafe
             npm install --silent 2>&1 | tail -3
-            npm run build 2>&1 | tail -3
+            npm run build 2>&1 | tail -5
             pm2 restart gutsafe
-            echo "✓ Deployed"
+            sleep 3
+            curl -sf -o /dev/null http://localhost:80/login && echo "✓ Deploy OK" || echo "⚠ Deploy finished but health check failed"

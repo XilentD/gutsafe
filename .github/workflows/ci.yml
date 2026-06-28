@@ -79,6 +79,8 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    permissions:
+      contents: write
 
     steps:
       - name: Download artifact
@@ -86,28 +88,10 @@ jobs:
         with:
           name: deploy-package
 
-      - name: Deploy to server
-        uses: appleboy/scp-action@v0.1.7
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: root
-          password: ${{ secrets.SSH_PASSWORD }}
-          port: 22
-          timeout: 30s
-          source: deploy.tar.gz
-          target: /tmp/
-
-      - name: Restart app
-        uses: appleboy/ssh-action@v1.1.0
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: root
-          password: ${{ secrets.SSH_PASSWORD }}
-          port: 22
-          timeout: 30s
-          script: |
-            cd /opt/gutsafe
-            tar -xzf /tmp/deploy.tar.gz
-            pm2 restart gutsafe
-            sleep 3
-            curl -sf -o /dev/null http://localhost:80/login && echo "✓ Deploy OK" || echo "⚠ Check failed"
+          name: latest
+          tag_name: latest
+          prerelease: true
+          files: deploy.tar.gz

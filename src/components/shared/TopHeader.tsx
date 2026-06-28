@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const PAGE_TITLES: Record<string, string> = {
-  "/map": "肠安地图",
+  "/map": "拉了么",
   "/log": "肠道日志",
   "/log/new": "记录日志",
   "/insights": "健康洞察",
@@ -25,8 +25,8 @@ export function TopHeader() {
       Object.entries(PAGE_TITLES).find(([key]) =>
         pathname.startsWith(key)
       )?.[1] ??
-      "肠安地图"
-    : "肠安地图";
+      "拉了么"
+    : "拉了么";
 
   const canGoBack =
     pathname !== "/map" &&

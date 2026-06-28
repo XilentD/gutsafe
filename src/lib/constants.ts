@@ -1,8 +1,8 @@
 // ─── App Constants ────────────────────────────────────
 
-export const APP_NAME = "肠安地图";
-export const APP_NAME_EN = "GutSafe Map";
-export const APP_DESCRIPTION = "肠道友好地图 — 规划每一条带厕所的路线";
+export const APP_NAME = "拉了么";
+export const APP_NAME_EN = "Laleme";
+export const APP_DESCRIPTION = "找厕所神器 — 规划每一条带厕所的路线";
 export const APP_URL =
   process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 

@@ -11,16 +11,16 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "肠安地图 — 肠道友好地图",
-    template: "%s | 肠安地图",
+    default: "拉了么 — 找厕所神器",
+    template: "%s | 拉了么",
   },
   description:
-    "一份比美食地图更精准的肠道友好地图。标记厕所细节，规划肠易激友好路线，记录肠道日志。让外出不再焦虑。",
+    "拉了么 — 找厕所神器。标记厕所细节，规划带厕所的路线，记录肠道日志。让外出不再焦虑。",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "肠安地图",
+    title: "拉了么",
   },
   other: {
     "mobile-web-app-capable": "yes",

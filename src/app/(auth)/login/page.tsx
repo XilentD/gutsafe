@@ -86,7 +86,7 @@ function LoginForm() {
         <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
           <MapPin className="h-8 w-8 text-primary" />
         </div>
-        <h1 className="mt-4 text-xl font-bold">肠安地图</h1>
+        <h1 className="mt-4 text-xl font-bold">拉了么</h1>
         <p className="mt-1 text-sm text-muted-foreground">
           肠道友好，出行无忧
         </p>

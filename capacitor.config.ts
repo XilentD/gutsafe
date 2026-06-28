@@ -2,7 +2,7 @@ import type { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
   appId: "com.gutsafe.app",
-  appName: "肠安地图",
+  appName: "拉了么",
   webDir: "public",
   server: {
     // Dev: use local Next.js server. Prod: omit or set CAP_SERVER_URL env var.

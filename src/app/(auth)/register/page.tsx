@@ -89,7 +89,7 @@ export default function RegisterPage() {
         <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
           <MapPin className="h-8 w-8 text-primary" />
         </div>
-        <h1 className="mt-4 text-xl font-bold">注册肠安地图</h1>
+        <h1 className="mt-4 text-xl font-bold">注册拉了么</h1>
         <p className="mt-1 text-sm text-muted-foreground">
           开启你的肠道友好之旅
         </p>

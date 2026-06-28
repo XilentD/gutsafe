@@ -63,7 +63,7 @@ export default function ProfilePage() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `肠安地图-数据导出-${new Date().toISOString().slice(0, 10)}.json`;
+      a.download = `拉了么-数据导出-${new Date().toISOString().slice(0, 10)}.json`;
       a.click();
       URL.revokeObjectURL(url);
       toast.success("数据导出成功");

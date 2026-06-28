@@ -1,6 +1,6 @@
 {
-  "name": "肠安地图 — 肠道友好地图",
-  "short_name": "肠安地图",
+  "name": "拉了么 — 肠道友好地图",
+  "short_name": "拉了么",
   "description": "标记厕所细节，规划肠易激友好路线，记录肠道日志",
   "start_url": "/",
   "display": "standalone",
